@@ -1,0 +1,3 @@
+[submodule "src/apollo-5.0.0/deps/googletest"]
+	path = src/apollo-5.0.0/deps/googletest
+	url = https://github.com/google/googletest.git
