@@ -48,3 +48,11 @@ add_subdirectory(modules/routing)
 add_subdirectory(modules/planning)
 add_subdirectory(modules/dreamview)
 add_subdirectory(third_party/json)
+
+##################################
+# Just make the test runnable with
+#   $ make test
+# `make test` or `ctest` to run the tests, `ctest -V` see output
+enable_testing()
+add_test(apollo-utest utest)
+
