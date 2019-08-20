@@ -60,6 +60,14 @@ add_library(cyber::util ALIAS cyber_util)
 ## gtest
 add_executable(file_test file_test.cc)
 target_link_libraries(file_test gtest gtest_main gmock cyber::proto cyber::common)
+add_executable(log_test log_test.cc)
+target_link_libraries(log_test gtest gtest_main cyber::log)
+add_executable(macros_test macros_test.cc)
+target_link_libraries(macros_test gtest gtest_main cyber::base cyber::common cyber::proto)
+
+
+
+
 
 install(TARGETS cyber_common
                 cyber_file
@@ -71,6 +79,8 @@ install(TARGETS cyber_common
                 cyber_types
                 cyber_util
                 file_test
+		log_test
+                macros_test
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
