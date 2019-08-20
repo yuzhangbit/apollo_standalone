@@ -26,6 +26,7 @@ target_link_libraries(utest gtest gtest_main)
 
 
 add_subdirectory(cyber)
+add_subdirectory(modules/common)
 
 
 
