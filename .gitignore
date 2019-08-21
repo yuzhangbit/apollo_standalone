@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# protobuf generated files
+*.pb.cc
+*.pb.h
