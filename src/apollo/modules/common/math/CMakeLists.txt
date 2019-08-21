@@ -9,7 +9,8 @@ add_library(common_geometry aabox2d.cc
                             vec2d.cc)
 target_link_libraries(common_geometry cyber::common
                                       common::string_util
-                                      common::proto)
+                                      common::proto
+                                      osqp::osqp)
 add_library(common::geometry ALIAS common_geometry)
 
 add_library(common_sin_table sin_table.cc)
@@ -44,7 +45,7 @@ add_library(common_kalman_filter kalman_filter.h)
 set_target_properties(common_kalman_filter PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(common_kalman_filter cyber::common
                                            common::matrix_operations)
-add_library(common::matrix_operations ALIAS common_matrix_operations)
+add_library(common::kalman_filter ALIAS common_kalman_filter)
 
 add_library(common_extended_kalman_filter extended_kalman_filter.h)
 set_target_properties(common_extended_kalman_filter PROPERTIES LINKER_LANGUAGE CXX)
@@ -75,8 +76,7 @@ target_link_libraries(common_nonlinear_interpolation common::geometry
                                                      common::proto)
 add_library(common::nonlinear_interpolation ALIAS common_nonlinear_interpolation)
 
-add_library(common_search search.h)
-set_target_properties(common_search PROPERTIES LINKER_LANGUAGE CXX)
+add_library(common_search search.cc)
 add_library(common::search ALIAS common_search)
 
 add_library(common_integral integral.cc)
@@ -89,7 +89,8 @@ add_library(common::lqr ALIAS common_lqr)
 
 add_library(common_mpc mpc_solver.cc)
 target_link_libraries(common_mpc cyber::common
-                                 common::qp_solver)
+                                 common::qp_solver
+                                 common::active_set_qp_solver)
 add_library(common::mpc ALIAS common_mpc)
 
 
@@ -104,3 +105,112 @@ target_link_libraries(common_hermite_spline cyber::common)
 add_library(common::hermite_spline ALIAS common_hermite_spline)
 
 add_subdirectory(qp_solver)
+
+add_executable(angle_test angle_test.cc)
+target_link_libraries(angle_test gtest
+                                 gtest_main
+                                 common::angle)
+
+add_executable(mpc_test mpc_solver_test.cc)
+target_link_libraries(mpc_test gtest
+                               gtest_main
+                               common::qp_solver
+                               common::active_set_qp_solver
+                               common::mpc)
+
+add_executable(math_utils_test math_utils_test.cc)
+target_link_libraries(math_utils_test gtest
+                                      gtest_main
+                                      common::geometry)
+
+add_executable(linear_interpolation_test linear_interpolation_test.cc)
+target_link_libraries(linear_interpolation_test gtest
+                                                gtest_main
+                                                common::linear_interpolation)
+
+add_executable(search_test search_test.cc)
+target_link_libraries(search_test gtest gtest_main
+common::search)
+
+add_executable(integral_test integral_test.cc)
+target_link_libraries(integral_test gtest gtest_main
+common::integral)
+
+add_executable(vec2d_test vec2d_test.cc)
+target_link_libraries(vec2d_test gtest gtest_main
+common::geometry)
+
+add_executable(quaternion_test quaternion_test.cc)
+target_link_libraries(quaternion_test gtest gtest_main
+common::quaternion)
+
+add_executable(euler_angles_zxy_test euler_angles_zxy_test.cc)
+target_link_libraries(euler_angles_zxy_test gtest gtest_main
+common::euler_angles_zxy)
+
+add_executable(aabox2d_test aabox2d_test.cc)
+target_link_libraries(aabox2d_test gtest gtest_main
+common::geometry)
+
+add_executable(aaboxkdtree2d_test aaboxkdtree2d_test.cc)
+target_link_libraries(aaboxkdtree2d_test gtest gtest_main
+common::geometry)
+
+add_executable(box2d_test box2d_test.cc)
+target_link_libraries(box2d_test gtest gtest_main
+common::geometry)
+
+add_executable(polygon2d_test polygon2d_test.cc)
+target_link_libraries(polygon2d_test gtest gtest_main
+common::geometry)
+
+add_executable(line_segment2d_test line_segment2d_test.cc)
+target_link_libraries(line_segment2d_test gtest gtest_main
+common::geometry)
+
+add_executable(kalman_filter_test kalman_filter_test.cc)
+target_link_libraries(kalman_filter_test gtest gtest_main
+common::kalman_filter)
+
+add_executable(cartesian_frenet_conversion_test cartesian_frenet_conversion_test.cc)
+target_link_libraries(cartesian_frenet_conversion_test gtest gtest_main
+common::cartesian_frenet_conversion)
+
+install(TARGETS common_geometry
+                common_sin_table
+                common_euler_angles_zxy
+                common_quaternion
+                common_curve_fitting
+                common_matrix_operations
+                common_kalman_filter
+                common_extended_kalman_filter
+                common_factorial
+                common_path_matcher
+                common_linear_interpolation
+                common_nonlinear_interpolation
+                common_search
+                common_integral
+                common_lqr
+                common_mpc
+                common_cartesian_frenet_conversion
+                common_hermite_spline
+                mpc_test
+                angle_test
+                math_utils_test
+                linear_interpolation_test
+                search_test
+                integral_test
+                vec2d_test
+                quaternion_test
+                euler_angles_zxy_test
+                aabox2d_test
+                aaboxkdtree2d_test
+                box2d_test
+                polygon2d_test
+                line_segment2d_test
+                kalman_filter_test
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION bin
+INCLUDES DESTINATION .
+)

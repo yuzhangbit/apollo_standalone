@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-#include "osqp/include/osqp.h"
+#include "osqp/osqp.h"
 
 namespace apollo {
 namespace common {
