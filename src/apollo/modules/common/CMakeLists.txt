@@ -9,7 +9,11 @@ if(NOT EIGEN3_FOUND)
 endif()
 
 include_directories(${EIGEN3_INCLUDE_DIR})
-add_subdirectory(util) #partial
-add_subdirectory(proto)
+add_subdirectory(util) #done
+add_subdirectory(proto) #done
 add_subdirectory(math) #done
+add_subdirectory(configs) #done
+add_subdirectory(time) #done
+add_subdirectory(status) #done
+add_subdirectory(adapters) #done
 

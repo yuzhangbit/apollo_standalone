@@ -13,7 +13,7 @@ find_package(gflags REQUIRED)
 find_package(qpOASES REQUIRED)
 find_package(osqp REQUIRED)
 find_package(GLOG REQUIRED)
-
+find_package(curlpp REQUIRED)
 include_directories(include
                     ${gtest_SOURCE_DIR}/include/
                     ${gmock_SOURCE_DIR}/include/
@@ -27,3 +27,6 @@ target_link_libraries(utest gtest gtest_main)
 
 add_subdirectory(cyber)
 add_subdirectory(modules/common)
+add_subdirectory(modules/localization)
+add_subdirectory(modules/canbus)
+add_subdirectory(third_party/json)
