@@ -1,4 +1,4 @@
-        cmake_minimum_required(VERSION 3.5.1)
+cmake_minimum_required(VERSION 3.5.1)
 
 add_library(cyber_base atomic_hash_map.h
                        atomic_rw_lock.h
