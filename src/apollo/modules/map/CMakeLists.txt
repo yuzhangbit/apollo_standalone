@@ -3,3 +3,4 @@ project(map)
 
 add_subdirectory(proto)
 add_subdirectory(relative_map)
+add_subdirectory(hdmap)

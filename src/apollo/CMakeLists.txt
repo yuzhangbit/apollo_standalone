@@ -14,13 +14,25 @@ find_package(qpOASES REQUIRED)
 find_package(osqp REQUIRED)
 find_package(GLOG REQUIRED)
 find_package(curlpp REQUIRED)
+find_package(TinyXML2 REQUIRED)
+find_package(PROJ4 REQUIRED)
+find_package(Eigen3 QUIET)
+if(NOT EIGEN3_FOUND)
+  find_package(PkgConfig REQUIRED)
+  pkg_check_modules(EIGEN3 REQUIRED eigen3)
+  set(EIGEN3_INCLUDE_DIR ${EIGEN3_INCLUDE_DIRS})
+endif()
+
 include_directories(include
                     ${gtest_SOURCE_DIR}/include/
                     ${gmock_SOURCE_DIR}/include/
                     ${gtest_SOURCE_DIR}
                     ${CMAKE_CURRENT_SOURCE_DIR}
                     ${qpOASES_INCLUDE_DIRS}
-                    ${osqp_INCLUDE_DIRS})
+                    ${osqp_INCLUDE_DIRS}
+                    ${TINYXML2_INCLUDE_DIRS}
+                    ${PROJ4_INCLUDE_DIRS}
+                    ${EIGEN3_INCLUDE_DIR})
 
 add_executable(utest utest.cc)
 target_link_libraries(utest gtest gtest_main)
