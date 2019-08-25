@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5.1)
 
 set(PROTOS poi.proto
            routing.proto
-           routing_confige.proto
+           routing_config.proto
            topo_graph.proto)
 
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTOS})
