@@ -24,7 +24,6 @@ add_library(map::hdmap_util ALIAS map_hdmap_util)
 
 add_executable(hdmap_map_test hdmap_common_test.cc
                               hdmap_impl_test.cc)
-
 target_link_libraries(hdmap_map_test gtest
                                      gtest_main
                                      common::util

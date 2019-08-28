@@ -42,7 +42,16 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTOS})
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 
 add_library(planning_proto ${PROTO_SRCS} ${PROTO_HDRS})
-target_link_libraries(planning_proto ${PROTOBUF_LIBRARIES})
+target_link_libraries(planning_proto ${PROTOBUF_LIBRARIES}
+                                     canbus::proto
+                                     common::proto
+                                     localization::proto
+                                     perception::proto
+                                     prediciton::proto
+                                     routing::proto
+                                     dreamview::proto
+                                     map::relative_map_proto
+                                     )
 add_library(planning::proto ALIAS planning_proto)
 
 install(TARGETS planning_proto

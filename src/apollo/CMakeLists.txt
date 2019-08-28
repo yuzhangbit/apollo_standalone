@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.5.1)
-
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
+endif()
 project(apollo)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -16,13 +19,15 @@ find_package(GLOG REQUIRED)
 find_package(curlpp REQUIRED)
 find_package(TinyXML2 REQUIRED)
 find_package(PROJ4 REQUIRED)
+find_package(IPOPT REQUIRED)
+find_package(ADOLC REQUIRED)
 find_package(Eigen3 QUIET)
+
 if(NOT EIGEN3_FOUND)
   find_package(PkgConfig REQUIRED)
   pkg_check_modules(EIGEN3 REQUIRED eigen3)
   set(EIGEN3_INCLUDE_DIR ${EIGEN3_INCLUDE_DIRS})
 endif()
-
 include_directories(include
                     ${gtest_SOURCE_DIR}/include/
                     ${gmock_SOURCE_DIR}/include/
@@ -31,7 +36,9 @@ include_directories(include
                     ${qpOASES_INCLUDE_DIRS}
                     ${osqp_INCLUDE_DIRS}
                     ${TINYXML2_INCLUDE_DIRS}
+                    ${IPOPT_INCLUDE_DIRS}
                     ${PROJ4_INCLUDE_DIRS}
+                    ${ADOLC_INCLUDE_DIRS}
                     ${EIGEN3_INCLUDE_DIR})
 
 add_executable(utest utest.cc)
