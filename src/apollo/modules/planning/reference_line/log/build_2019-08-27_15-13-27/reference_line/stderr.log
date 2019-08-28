@@ -1,0 +1,867 @@
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "cyber::common" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "common::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "common::map_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "map::hdmap" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "map::hdmap_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::discrete_points_math" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::cos_theta_smoother" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::fem_pos_deviation_smoother" but the target was not found.
+  Perhaps a find_package() call is missing for an IMPORTED target, or an
+  ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:47 (add_library):
+  Target "planning_discrete_points_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "cyber::common" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target "common::math"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "common::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "common::map_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target "common::math"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::quintic_spiral_path" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:89 (add_executable):
+  Target "spiral_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "cyber::common" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "common::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "common::map_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::curve_math" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::active_set_spline_2d_solver" but the target was not found.
+  Perhaps a find_package() call is missing for an IMPORTED target, or an
+  ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:22 (add_library):
+  Target "planning_qp_spline_reference_line_smoother" links to target
+  "planning::osqp_spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "cyber::common" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "common::math" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "common::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "common::map_util" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "common::string_util" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:3 (add_library):
+  Target "planning_reference_line" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "cyber::common" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "common::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "common::map_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::quintic_spiral_path" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:32 (add_library):
+  Target "planning_spiral_reference_line_smoother" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "cyber::common" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "common::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "common::map_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "map::hdmap" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "map::hdmap_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::discrete_points_math" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::cos_theta_smoother" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::fem_pos_deviation_smoother" but the target was not found.
+  Perhaps a find_package() call is missing for an IMPORTED target, or an
+  ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:99 (add_executable):
+  Target "discrete_points_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "cyber::common" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "common::math" but the target was not found.  Perhaps a find_package() call
+  is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "common::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "common::map_util" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::proto" but the target was not found.  Perhaps a find_package()
+  call is missing for an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::curve_math" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::active_set_spline_2d_solver" but the target was not found.
+  Perhaps a find_package() call is missing for an IMPORTED target, or an
+  ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:94 (add_executable):
+  Target "qp_spline_reference_line_smoother_test" links to target
+  "planning::osqp_spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "cyber::common" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "common::math" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "common::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "common::map_util" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "common::string_util" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::planning_gflags"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "common::math" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "map::hdmap" but the target
+  was not found.  Perhaps a find_package() call is missing for an IMPORTED
+  target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "map::hdmap_util" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::planning_gflags"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::discrete_points_math" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::cos_theta_smoother" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::fem_pos_deviation_smoother" but the target was not found.
+  Perhaps a find_package() call is missing for an IMPORTED target, or an
+  ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::curve_math" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::active_set_spline_2d_solver" but the target was not found.
+  Perhaps a find_package() call is missing for an IMPORTED target, or an
+  ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::osqp_spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "common::math" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::planning_gflags"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::quintic_spiral_path" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target
+  "planning::spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:74 (add_library):
+  Target "planning_smoother_util" links to target "planning::proto" but the
+  target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "planning::proto"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "cyber::common" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "common::math" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "common::proto" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "common::map_util"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target
+  "common::string_util" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "planning::proto"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "planning::proto"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "common::math" but
+  the target was not found.  Perhaps a find_package() call is missing for an
+  IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target
+  "planning::planning_gflags" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target
+  "planning::quintic_spiral_path" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target
+  "planning::spline_2d_solver" but the target was not found.  Perhaps a
+  find_package() call is missing for an IMPORTED target, or an ALIAS target
+  is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "planning::proto"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+
+CMake Error at CMakeLists.txt:82 (add_library):
+  Target "planning_spiral_smoother_util" links to target "planning::proto"
+  but the target was not found.  Perhaps a find_package() call is missing for
+  an IMPORTED target, or an ALIAS target is missing?
+
+

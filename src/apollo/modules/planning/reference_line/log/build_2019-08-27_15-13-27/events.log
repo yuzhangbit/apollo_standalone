@@ -1,0 +1,908 @@
+[0.000000] (-) TimerEvent: {}
+[0.002408] (reference_line) JobQueued: {'dependencies': OrderedDict(), 'identifier': 'reference_line'}
+[0.006094] (reference_line) JobStarted: {'identifier': 'reference_line'}
+[0.040056] (reference_line) JobProgress: {'progress': 'cmake', 'identifier': 'reference_line'}
+[0.040731] (reference_line) Command: {'cwd': '/home/yuzhang/apollo_standalone/src/apollo/modules/planning/reference_line/build/reference_line', 'cmd': ['/usr/bin/cmake', '/home/yuzhang/apollo_standalone/src/apollo/modules/planning/reference_line', '-DCMAKE_INSTALL_PREFIX=/home/yuzhang/apollo_standalone/src/apollo/modules/planning/reference_line/install/reference_line'], 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GNOME_KEYRING_PID', ''), ('USER', 'yuzhang'), ('LANGUAGE', 'en_US'), ('UPSTART_INSTANCE', ''), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2393'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'ubuntu'), ('GREP_COLOR', '1;33'), ('ORBIT_SOCKETDIR', '/tmp/orbit-yuzhang'), ('LD_LIBRARY_PATH', '/usr/local/cuda-9.0/lib64:'), ('AUTOFEATURE', 'true autotest'), ('SHLVL', '1'), ('OLDPWD', '/home/yuzhang/apollo_standalone/src/apollo/modules/planning'), ('RBENV_ROOT', '/home/yuzhang/.rbenv'), ('VREP_ROOT', '/home/yuzhang/workspace/software/V-REP_PRO_EDU_V3_6_1_Ubuntu16_04'), ('HOME', '/home/yuzhang'), ('QT4_IM_MODULE', 'fcitx'), ('DESKTOP_SESSION', 'ubuntu'), ('LSCOLORS', 'Gxfxcxdxdxegedabagacad'), ('QT_LINUX_ACCESSIBILITY_ALWAYS_ON', '1'), ('GTK_MODULES', 'gail:atk-bridge:unity-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('GIT_HOSTING', 'git@git.domain.com'), ('INSTANCE', 'Unity'), ('SCM_CHECK', 'true'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:abstract=/tmp/dbus-NSu9DUNWxz'), ('COLORTERM', 'gnome-terminal'), ('GNOME_KEYRING_CONTROL', ''), ('QT_QPA_PLATFORMTHEME', 'appmenu-qt5'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('SESSIONTYPE', 'gnome-session'), ('INFOPATH', ':/usr/local/texlive/2018/texmf-dist/doc/info'), ('UPSTART_JOB', 'unity-settings-daemon'), ('LOGNAME', 'yuzhang'), ('GTK_IM_MODULE', 'fcitx'), ('WINDOWID', '62914564'), ('SSH_AGENT_ENV', '/home/yuzhang/.ssh/agent_env.yuzhang-ThinkPad-T470'), ('TODO', 't'), ('_', '/usr/local/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('XDG_SESSION_ID', 'c2'), ('TERM', 'xterm'), ('RBENV_SHELL', 'bash'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('HISTCONTROL', 'ignoreboth'), ('GTK2_MODULES', 'overlay-scrollbar'), ('PATH', '/usr/local/cuda/bin:/home/yuzhang/.rbenv/shims:/home/yuzhang/.rbenv/bin:/home/yuzhang/.rbenv/shims:/home/yuzhang/.rbenv/shims:/home/yuzhang/.rbenv/bin:/home/yuzhang/.pyenv/bin:./node_modules/.bin:/home/yuzhang/bin:/home/yuzhang/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/texlive/2018/bin/x86_64-linux:/snap/bin:/home/yuzhang/.gem/ruby/2.3.0/bin:/usr/local/texlive/2018/bin/x86_64-linux'), ('GDM_LANG', 'en_US'), ('IRC_CLIENT', 'irssi'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('IBUS_DISABLE_SNOOPER', '1'), ('HISTSIZE', '1000'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('SDKMAN_DIR', '/home/yuzhang/.sdkman'), ('XAUTHORITY', '/home/yuzhang/.Xauthority'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/yuzhang'), ('SSH_AUTH_SOCK', '/tmp/ssh-er7eMD1TwOEw/agent.2392'), ('TERMINATOR_UUID', 'urn:uuid:c3c742b2-6ec8-4c8a-8100-add3a5be70bf'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('UPSTART_EVENTS', 'started starting'), ('GPG_AGENT_INFO', '/home/yuzhang/.gnupg/S.gpg-agent:0:1'), ('UPSTART_SESSION', 'unix:abstract=/com/ubuntu/upstart-session/1000/1387'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('XDG_VTNR', '7'), ('BASH_IT_THEME', 'bobby'), ('QT_IM_MODULE', 'fcitx'), ('CUDA_HOME', '/usr/local/cuda-9.0'), ('PWD', '/home/yuzhang/apollo_standalone/src/apollo/modules/planning/reference_line/build/reference_line'), ('CLUTTER_IM_MODULE', 'xim'), ('PYENV_ROOT', '/home/yuzhang/.pyenv'), ('BASH_IT', '/home/yuzhang/.bash_it'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('MANPATH', ':/usr/local/texlive/2018/texmf-dist/doc/man'), ('JOB', 'gnome-session')]), 'shell': False}
+[0.099804] (-) TimerEvent: {}
+[0.200305] (-) TimerEvent: {}
+[0.213654] (reference_line) StdoutLine: {'line': b'-- The C compiler identification is GNU 5.5.0\n'}
+[0.300483] (-) TimerEvent: {}
+[0.308202] (reference_line) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 5.5.0\n'}
+[0.314687] (reference_line) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.382858] (reference_line) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.384339] (reference_line) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400708] (-) TimerEvent: {}
+[0.491619] (reference_line) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.500867] (-) TimerEvent: {}
+[0.505175] (reference_line) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.603773] (-) TimerEvent: {}
+[0.705297] (-) TimerEvent: {}
+[0.805838] (-) TimerEvent: {}
+[0.828535] (reference_line) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.837396] (reference_line) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.906017] (-) TimerEvent: {}
+[0.977307] (reference_line) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.978676] (reference_line) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.006107] (-) TimerEvent: {}
+[1.076571] (reference_line) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.086924] (reference_line) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.106186] (-) TimerEvent: {}
+[1.206635] (-) TimerEvent: {}
+[1.307693] (-) TimerEvent: {}
+[1.397848] (reference_line) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.399714] (reference_line) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.404498] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.404952] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.405301] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.405653] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.405953] (reference_line) StderrLine: {'line': b'\n'}
+[1.406228] (reference_line) StderrLine: {'line': b'\n'}
+[1.406548] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.406879] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.407164] (reference_line) StderrLine: {'line': b'  "cyber::common" but the target was not found.  Perhaps a find_package()\n'}
+[1.407396] (-) TimerEvent: {}
+[1.408932] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.409822] (reference_line) StderrLine: {'line': b'\n'}
+[1.410175] (reference_line) StderrLine: {'line': b'\n'}
+[1.411023] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.411773] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.412370] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.412721] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.412916] (reference_line) StderrLine: {'line': b'\n'}
+[1.413087] (reference_line) StderrLine: {'line': b'\n'}
+[1.413280] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.413444] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.413617] (reference_line) StderrLine: {'line': b'  "common::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.413780] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.413942] (reference_line) StderrLine: {'line': b'\n'}
+[1.414099] (reference_line) StderrLine: {'line': b'\n'}
+[1.414255] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.414409] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.414570] (reference_line) StderrLine: {'line': b'  "common::map_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.414728] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.414886] (reference_line) StderrLine: {'line': b'\n'}
+[1.415040] (reference_line) StderrLine: {'line': b'\n'}
+[1.415195] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.415349] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.415560] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.415723] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.415883] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.416039] (reference_line) StderrLine: {'line': b'\n'}
+[1.416195] (reference_line) StderrLine: {'line': b'\n'}
+[1.416350] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.416508] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.416673] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.416831] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.416993] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.417157] (reference_line) StderrLine: {'line': b'\n'}
+[1.417816] (reference_line) StderrLine: {'line': b'\n'}
+[1.418035] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.418254] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.418473] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.418755] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.418985] (reference_line) StderrLine: {'line': b'\n'}
+[1.419187] (reference_line) StderrLine: {'line': b'\n'}
+[1.419361] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.419560] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.419787] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.420001] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.420541] (reference_line) StderrLine: {'line': b'\n'}
+[1.421273] (reference_line) StderrLine: {'line': b'\n'}
+[1.421508] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.421745] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.422014] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.422292] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.422587] (reference_line) StderrLine: {'line': b'\n'}
+[1.422826] (reference_line) StderrLine: {'line': b'\n'}
+[1.423112] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.423829] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.424391] (reference_line) StderrLine: {'line': b'  "map::hdmap" but the target was not found.  Perhaps a find_package() call\n'}
+[1.424683] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.424970] (reference_line) StderrLine: {'line': b'\n'}
+[1.425267] (reference_line) StderrLine: {'line': b'\n'}
+[1.425555] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.425804] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.426406] (reference_line) StderrLine: {'line': b'  "map::hdmap_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.430600] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.430874] (reference_line) StderrLine: {'line': b'\n'}
+[1.431057] (reference_line) StderrLine: {'line': b'\n'}
+[1.431233] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.431405] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.431600] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.431801] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.431976] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.432148] (reference_line) StderrLine: {'line': b'\n'}
+[1.432318] (reference_line) StderrLine: {'line': b'\n'}
+[1.432489] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.432659] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.432829] (reference_line) StderrLine: {'line': b'  "planning::discrete_points_math" but the target was not found.  Perhaps a\n'}
+[1.433007] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.433177] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.433345] (reference_line) StderrLine: {'line': b'\n'}
+[1.433515] (reference_line) StderrLine: {'line': b'\n'}
+[1.433684] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.433855] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.434023] (reference_line) StderrLine: {'line': b'  "planning::cos_theta_smoother" but the target was not found.  Perhaps a\n'}
+[1.434234] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.434503] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.434730] (reference_line) StderrLine: {'line': b'\n'}
+[1.434976] (reference_line) StderrLine: {'line': b'\n'}
+[1.435172] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.435345] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.435583] (reference_line) StderrLine: {'line': b'  "planning::fem_pos_deviation_smoother" but the target was not found.\n'}
+[1.435757] (reference_line) StderrLine: {'line': b'  Perhaps a find_package() call is missing for an IMPORTED target, or an\n'}
+[1.435926] (reference_line) StderrLine: {'line': b'  ALIAS target is missing?\n'}
+[1.436096] (reference_line) StderrLine: {'line': b'\n'}
+[1.436320] (reference_line) StderrLine: {'line': b'\n'}
+[1.436824] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:47 (add_library):\n'}
+[1.437500] (reference_line) StderrLine: {'line': b'  Target "planning_discrete_points_reference_line_smoother" links to target\n'}
+[1.437903] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.438147] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.438335] (reference_line) StderrLine: {'line': b'\n'}
+[1.438519] (reference_line) StderrLine: {'line': b'\n'}
+[1.438762] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.439046] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.439342] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.439649] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.439919] (reference_line) StderrLine: {'line': b'\n'}
+[1.440504] (reference_line) StderrLine: {'line': b'\n'}
+[1.441354] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.441678] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.441958] (reference_line) StderrLine: {'line': b'  "cyber::common" but the target was not found.  Perhaps a find_package()\n'}
+[1.442244] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.442568] (reference_line) StderrLine: {'line': b'\n'}
+[1.442860] (reference_line) StderrLine: {'line': b'\n'}
+[1.443194] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.445379] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target "common::math"\n'}
+[1.447279] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.447591] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.447869] (reference_line) StderrLine: {'line': b'\n'}
+[1.448095] (reference_line) StderrLine: {'line': b'\n'}
+[1.448280] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.448467] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.448698] (reference_line) StderrLine: {'line': b'  "common::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.448919] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.449123] (reference_line) StderrLine: {'line': b'\n'}
+[1.449299] (reference_line) StderrLine: {'line': b'\n'}
+[1.449470] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.449641] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.449811] (reference_line) StderrLine: {'line': b'  "common::map_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.449980] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.450148] (reference_line) StderrLine: {'line': b'\n'}
+[1.450337] (reference_line) StderrLine: {'line': b'\n'}
+[1.450507] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.450677] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.450847] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.451013] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.451181] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.451350] (reference_line) StderrLine: {'line': b'\n'}
+[1.451609] (reference_line) StderrLine: {'line': b'\n'}
+[1.451786] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.451957] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.452152] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.452325] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.452495] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.452664] (reference_line) StderrLine: {'line': b'\n'}
+[1.452833] (reference_line) StderrLine: {'line': b'\n'}
+[1.453064] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.453256] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.453671] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.454504] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.454802] (reference_line) StderrLine: {'line': b'\n'}
+[1.455062] (reference_line) StderrLine: {'line': b'\n'}
+[1.455325] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.455623] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.455911] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.456196] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.456454] (reference_line) StderrLine: {'line': b'\n'}
+[1.456673] (reference_line) StderrLine: {'line': b'\n'}
+[1.457120] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.458025] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target "common::math"\n'}
+[1.458393] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.458680] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.458962] (reference_line) StderrLine: {'line': b'\n'}
+[1.459284] (reference_line) StderrLine: {'line': b'\n'}
+[1.459589] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.459875] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.460408] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.462059] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.462542] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.462905] (reference_line) StderrLine: {'line': b'\n'}
+[1.463416] (reference_line) StderrLine: {'line': b'\n'}
+[1.463657] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.463841] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.464018] (reference_line) StderrLine: {'line': b'  "planning::quintic_spiral_path" but the target was not found.  Perhaps a\n'}
+[1.464191] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.464373] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.464553] (reference_line) StderrLine: {'line': b'\n'}
+[1.464724] (reference_line) StderrLine: {'line': b'\n'}
+[1.464894] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.465063] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.465232] (reference_line) StderrLine: {'line': b'  "planning::spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.465402] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.465580] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.465748] (reference_line) StderrLine: {'line': b'\n'}
+[1.465915] (reference_line) StderrLine: {'line': b'\n'}
+[1.466084] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:89 (add_executable):\n'}
+[1.466250] (reference_line) StderrLine: {'line': b'  Target "spiral_reference_line_smoother_test" links to target\n'}
+[1.466418] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.466586] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.466753] (reference_line) StderrLine: {'line': b'\n'}
+[1.466919] (reference_line) StderrLine: {'line': b'\n'}
+[1.467086] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.467293] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.467485] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.467659] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.467829] (reference_line) StderrLine: {'line': b'\n'}
+[1.467998] (reference_line) StderrLine: {'line': b'\n'}
+[1.468168] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.468335] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.468505] (reference_line) StderrLine: {'line': b'  "cyber::common" but the target was not found.  Perhaps a find_package()\n'}
+[1.468675] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.468845] (reference_line) StderrLine: {'line': b'\n'}
+[1.469011] (reference_line) StderrLine: {'line': b'\n'}
+[1.469186] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.469386] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.469578] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.469797] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.470006] (reference_line) StderrLine: {'line': b'\n'}
+[1.470860] (reference_line) StderrLine: {'line': b'\n'}
+[1.471392] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.471746] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.472021] (reference_line) StderrLine: {'line': b'  "common::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.472301] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.472584] (reference_line) StderrLine: {'line': b'\n'}
+[1.472808] (reference_line) StderrLine: {'line': b'\n'}
+[1.473063] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.473605] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.474442] (reference_line) StderrLine: {'line': b'  "common::map_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.474738] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.474930] (reference_line) StderrLine: {'line': b'\n'}
+[1.475105] (reference_line) StderrLine: {'line': b'\n'}
+[1.475274] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.475490] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.475674] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.475899] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.476156] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.476436] (reference_line) StderrLine: {'line': b'\n'}
+[1.476754] (reference_line) StderrLine: {'line': b'\n'}
+[1.477045] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.477328] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.477558] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.478334] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.479800] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.480170] (reference_line) StderrLine: {'line': b'\n'}
+[1.480469] (reference_line) StderrLine: {'line': b'\n'}
+[1.481001] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.481224] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.481402] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.481575] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.481745] (reference_line) StderrLine: {'line': b'\n'}
+[1.481933] (reference_line) StderrLine: {'line': b'\n'}
+[1.482105] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.482273] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.482442] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.482610] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.482790] (reference_line) StderrLine: {'line': b'\n'}
+[1.482958] (reference_line) StderrLine: {'line': b'\n'}
+[1.483126] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.483294] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.483540] (reference_line) StderrLine: {'line': b'  "planning::curve_math" but the target was not found.  Perhaps a\n'}
+[1.483745] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.483899] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.484047] (reference_line) StderrLine: {'line': b'\n'}
+[1.484195] (reference_line) StderrLine: {'line': b'\n'}
+[1.484339] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.484482] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.484672] (reference_line) StderrLine: {'line': b'  "planning::active_set_spline_2d_solver" but the target was not found.\n'}
+[1.484836] (reference_line) StderrLine: {'line': b'  Perhaps a find_package() call is missing for an IMPORTED target, or an\n'}
+[1.484983] (reference_line) StderrLine: {'line': b'  ALIAS target is missing?\n'}
+[1.485131] (reference_line) StderrLine: {'line': b'\n'}
+[1.485277] (reference_line) StderrLine: {'line': b'\n'}
+[1.485423] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:22 (add_library):\n'}
+[1.485567] (reference_line) StderrLine: {'line': b'  Target "planning_qp_spline_reference_line_smoother" links to target\n'}
+[1.485713] (reference_line) StderrLine: {'line': b'  "planning::osqp_spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.485865] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.486012] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.486156] (reference_line) StderrLine: {'line': b'\n'}
+[1.486428] (reference_line) StderrLine: {'line': b'\n'}
+[1.486644] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.486975] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "cyber::common" but the\n'}
+[1.487882] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.488088] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.488259] (reference_line) StderrLine: {'line': b'\n'}
+[1.488430] (reference_line) StderrLine: {'line': b'\n'}
+[1.488598] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.488778] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "common::math" but the\n'}
+[1.488948] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.489116] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.489339] (reference_line) StderrLine: {'line': b'\n'}
+[1.489523] (reference_line) StderrLine: {'line': b'\n'}
+[1.489696] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.489875] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "common::proto" but the\n'}
+[1.490043] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.490212] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.490381] (reference_line) StderrLine: {'line': b'\n'}
+[1.490548] (reference_line) StderrLine: {'line': b'\n'}
+[1.490715] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.490893] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "common::map_util" but the\n'}
+[1.491071] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.491241] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.491409] (reference_line) StderrLine: {'line': b'\n'}
+[1.491591] (reference_line) StderrLine: {'line': b'\n'}
+[1.491760] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.491958] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "common::string_util" but\n'}
+[1.492209] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.492472] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.492759] (reference_line) StderrLine: {'line': b'\n'}
+[1.493066] (reference_line) StderrLine: {'line': b'\n'}
+[1.493367] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.493582] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target\n'}
+[1.494084] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.497433] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.497972] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.498977] (reference_line) StderrLine: {'line': b'\n'}
+[1.499321] (reference_line) StderrLine: {'line': b'\n'}
+[1.499542] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.499720] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "planning::proto" but the\n'}
+[1.499893] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.500066] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.500238] (reference_line) StderrLine: {'line': b'\n'}
+[1.500415] (reference_line) StderrLine: {'line': b'\n'}
+[1.500589] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:3 (add_library):\n'}
+[1.500770] (reference_line) StderrLine: {'line': b'  Target "planning_reference_line" links to target "planning::proto" but the\n'}
+[1.500953] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.501127] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.501298] (reference_line) StderrLine: {'line': b'\n'}
+[1.501468] (reference_line) StderrLine: {'line': b'\n'}
+[1.501637] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.501805] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.501977] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.502146] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.502316] (reference_line) StderrLine: {'line': b'\n'}
+[1.502485] (reference_line) StderrLine: {'line': b'\n'}
+[1.502653] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.502821] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.503066] (reference_line) StderrLine: {'line': b'  "cyber::common" but the target was not found.  Perhaps a find_package()\n'}
+[1.503280] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.504189] (reference_line) StderrLine: {'line': b'\n'}
+[1.504617] (reference_line) StderrLine: {'line': b'\n'}
+[1.504806] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.504978] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.505160] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.505331] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.505503] (reference_line) StderrLine: {'line': b'\n'}
+[1.505671] (reference_line) StderrLine: {'line': b'\n'}
+[1.505839] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.506006] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.506175] (reference_line) StderrLine: {'line': b'  "common::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.506342] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.506507] (reference_line) StderrLine: {'line': b'\n'}
+[1.506673] (reference_line) StderrLine: {'line': b'\n'}
+[1.506838] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.507006] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.507173] (reference_line) StderrLine: {'line': b'  "common::map_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.507341] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.507550] (-) TimerEvent: {}
+[1.507781] (reference_line) StderrLine: {'line': b'\n'}
+[1.508096] (reference_line) StderrLine: {'line': b'\n'}
+[1.508364] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.508627] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.508901] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.509178] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.509390] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.509650] (reference_line) StderrLine: {'line': b'\n'}
+[1.510167] (reference_line) StderrLine: {'line': b'\n'}
+[1.511035] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.511343] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.511693] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.511982] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.512271] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.512557] (reference_line) StderrLine: {'line': b'\n'}
+[1.512779] (reference_line) StderrLine: {'line': b'\n'}
+[1.513351] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.514491] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.515230] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.515632] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.516191] (reference_line) StderrLine: {'line': b'\n'}
+[1.516386] (reference_line) StderrLine: {'line': b'\n'}
+[1.516562] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.516733] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.516904] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.517075] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.517254] (reference_line) StderrLine: {'line': b'\n'}
+[1.517424] (reference_line) StderrLine: {'line': b'\n'}
+[1.517594] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.517763] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.517991] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.518307] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.518528] (reference_line) StderrLine: {'line': b'\n'}
+[1.518704] (reference_line) StderrLine: {'line': b'\n'}
+[1.518877] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.519046] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.519225] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.519394] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.519692] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.519886] (reference_line) StderrLine: {'line': b'\n'}
+[1.520400] (reference_line) StderrLine: {'line': b'\n'}
+[1.521309] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.521612] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.521882] (reference_line) StderrLine: {'line': b'  "planning::quintic_spiral_path" but the target was not found.  Perhaps a\n'}
+[1.522156] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.522433] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.522675] (reference_line) StderrLine: {'line': b'\n'}
+[1.523062] (reference_line) StderrLine: {'line': b'\n'}
+[1.524004] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.524380] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.524587] (reference_line) StderrLine: {'line': b'  "planning::spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.524770] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.524950] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.525124] (reference_line) StderrLine: {'line': b'\n'}
+[1.525297] (reference_line) StderrLine: {'line': b'\n'}
+[1.525470] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:32 (add_library):\n'}
+[1.525643] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_reference_line_smoother" links to target\n'}
+[1.525816] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.525989] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.526161] (reference_line) StderrLine: {'line': b'\n'}
+[1.526335] (reference_line) StderrLine: {'line': b'\n'}
+[1.526508] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.526679] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.526851] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.527024] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.527195] (reference_line) StderrLine: {'line': b'\n'}
+[1.527366] (reference_line) StderrLine: {'line': b'\n'}
+[1.527618] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.527797] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.527981] (reference_line) StderrLine: {'line': b'  "cyber::common" but the target was not found.  Perhaps a find_package()\n'}
+[1.528197] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.528374] (reference_line) StderrLine: {'line': b'\n'}
+[1.528548] (reference_line) StderrLine: {'line': b'\n'}
+[1.528719] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.528891] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.529079] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.529257] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.529428] (reference_line) StderrLine: {'line': b'\n'}
+[1.529601] (reference_line) StderrLine: {'line': b'\n'}
+[1.529797] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.530014] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.530190] (reference_line) StderrLine: {'line': b'  "common::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.530363] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.530537] (reference_line) StderrLine: {'line': b'\n'}
+[1.530710] (reference_line) StderrLine: {'line': b'\n'}
+[1.530880] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.531087] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.531340] (reference_line) StderrLine: {'line': b'  "common::map_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.531626] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.531949] (reference_line) StderrLine: {'line': b'\n'}
+[1.532239] (reference_line) StderrLine: {'line': b'\n'}
+[1.532516] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.532739] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.533437] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.534915] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.535277] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.535636] (reference_line) StderrLine: {'line': b'\n'}
+[1.535936] (reference_line) StderrLine: {'line': b'\n'}
+[1.537418] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.537845] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.538135] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.538455] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.538738] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.539014] (reference_line) StderrLine: {'line': b'\n'}
+[1.539335] (reference_line) StderrLine: {'line': b'\n'}
+[1.540462] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.540803] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.541046] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.541230] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.541408] (reference_line) StderrLine: {'line': b'\n'}
+[1.541596] (reference_line) StderrLine: {'line': b'\n'}
+[1.541771] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.541949] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.542127] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.542301] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.542473] (reference_line) StderrLine: {'line': b'\n'}
+[1.542645] (reference_line) StderrLine: {'line': b'\n'}
+[1.542817] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.542988] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.543159] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.543329] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.543518] (reference_line) StderrLine: {'line': b'\n'}
+[1.543693] (reference_line) StderrLine: {'line': b'\n'}
+[1.543863] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.544035] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.544206] (reference_line) StderrLine: {'line': b'  "map::hdmap" but the target was not found.  Perhaps a find_package() call\n'}
+[1.544387] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.544559] (reference_line) StderrLine: {'line': b'\n'}
+[1.544733] (reference_line) StderrLine: {'line': b'\n'}
+[1.544904] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.545076] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.545249] (reference_line) StderrLine: {'line': b'  "map::hdmap_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.545419] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.545590] (reference_line) StderrLine: {'line': b'\n'}
+[1.545762] (reference_line) StderrLine: {'line': b'\n'}
+[1.545933] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.546104] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.546275] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.546478] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.546661] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.546833] (reference_line) StderrLine: {'line': b'\n'}
+[1.547005] (reference_line) StderrLine: {'line': b'\n'}
+[1.547179] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.547350] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.547544] (reference_line) StderrLine: {'line': b'  "planning::discrete_points_math" but the target was not found.  Perhaps a\n'}
+[1.547716] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.547888] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.548098] (reference_line) StderrLine: {'line': b'\n'}
+[1.548375] (reference_line) StderrLine: {'line': b'\n'}
+[1.548652] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.548945] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.549246] (reference_line) StderrLine: {'line': b'  "planning::cos_theta_smoother" but the target was not found.  Perhaps a\n'}
+[1.549562] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.549773] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.550888] (reference_line) StderrLine: {'line': b'\n'}
+[1.552237] (reference_line) StderrLine: {'line': b'\n'}
+[1.552593] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.553241] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.554436] (reference_line) StderrLine: {'line': b'  "planning::fem_pos_deviation_smoother" but the target was not found.\n'}
+[1.554731] (reference_line) StderrLine: {'line': b'  Perhaps a find_package() call is missing for an IMPORTED target, or an\n'}
+[1.554999] (reference_line) StderrLine: {'line': b'  ALIAS target is missing?\n'}
+[1.555264] (reference_line) StderrLine: {'line': b'\n'}
+[1.555550] (reference_line) StderrLine: {'line': b'\n'}
+[1.555825] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:99 (add_executable):\n'}
+[1.556093] (reference_line) StderrLine: {'line': b'  Target "discrete_points_reference_line_smoother_test" links to target\n'}
+[1.557185] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.557517] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.557785] (reference_line) StderrLine: {'line': b'\n'}
+[1.557974] (reference_line) StderrLine: {'line': b'\n'}
+[1.558155] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.558330] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.558578] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.558760] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.558936] (reference_line) StderrLine: {'line': b'\n'}
+[1.559113] (reference_line) StderrLine: {'line': b'\n'}
+[1.559285] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.559473] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.559652] (reference_line) StderrLine: {'line': b'  "cyber::common" but the target was not found.  Perhaps a find_package()\n'}
+[1.559826] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.559998] (reference_line) StderrLine: {'line': b'\n'}
+[1.560169] (reference_line) StderrLine: {'line': b'\n'}
+[1.560338] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.560510] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.560680] (reference_line) StderrLine: {'line': b'  "common::math" but the target was not found.  Perhaps a find_package() call\n'}
+[1.560853] (reference_line) StderrLine: {'line': b'  is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.561026] (reference_line) StderrLine: {'line': b'\n'}
+[1.561197] (reference_line) StderrLine: {'line': b'\n'}
+[1.561367] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.561538] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.561709] (reference_line) StderrLine: {'line': b'  "common::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.561888] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.562148] (reference_line) StderrLine: {'line': b'\n'}
+[1.562364] (reference_line) StderrLine: {'line': b'\n'}
+[1.562555] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.562750] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.562928] (reference_line) StderrLine: {'line': b'  "common::map_util" but the target was not found.  Perhaps a find_package()\n'}
+[1.563127] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.563318] (reference_line) StderrLine: {'line': b'\n'}
+[1.563548] (reference_line) StderrLine: {'line': b'\n'}
+[1.563721] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.563898] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.564069] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.564239] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.564432] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.564603] (reference_line) StderrLine: {'line': b'\n'}
+[1.564772] (reference_line) StderrLine: {'line': b'\n'}
+[1.565002] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.565253] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.565541] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.565834] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.566137] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.566386] (reference_line) StderrLine: {'line': b'\n'}
+[1.566576] (reference_line) StderrLine: {'line': b'\n'}
+[1.568204] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.569046] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.569392] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.570021] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.571248] (reference_line) StderrLine: {'line': b'\n'}
+[1.571494] (reference_line) StderrLine: {'line': b'\n'}
+[1.571737] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.572087] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.572370] (reference_line) StderrLine: {'line': b'  "planning::proto" but the target was not found.  Perhaps a find_package()\n'}
+[1.572654] (reference_line) StderrLine: {'line': b'  call is missing for an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.572932] (reference_line) StderrLine: {'line': b'\n'}
+[1.573190] (reference_line) StderrLine: {'line': b'\n'}
+[1.574147] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.574613] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.574912] (reference_line) StderrLine: {'line': b'  "planning::curve_math" but the target was not found.  Perhaps a\n'}
+[1.575111] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.575300] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.575537] (reference_line) StderrLine: {'line': b'\n'}
+[1.575712] (reference_line) StderrLine: {'line': b'\n'}
+[1.575883] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.576052] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.576222] (reference_line) StderrLine: {'line': b'  "planning::active_set_spline_2d_solver" but the target was not found.\n'}
+[1.576401] (reference_line) StderrLine: {'line': b'  Perhaps a find_package() call is missing for an IMPORTED target, or an\n'}
+[1.576572] (reference_line) StderrLine: {'line': b'  ALIAS target is missing?\n'}
+[1.576740] (reference_line) StderrLine: {'line': b'\n'}
+[1.576908] (reference_line) StderrLine: {'line': b'\n'}
+[1.577096] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:94 (add_executable):\n'}
+[1.577267] (reference_line) StderrLine: {'line': b'  Target "qp_spline_reference_line_smoother_test" links to target\n'}
+[1.577436] (reference_line) StderrLine: {'line': b'  "planning::osqp_spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.577604] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.577773] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.577941] (reference_line) StderrLine: {'line': b'\n'}
+[1.578107] (reference_line) StderrLine: {'line': b'\n'}
+[1.578273] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.578442] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.578661] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.578950] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.579176] (reference_line) StderrLine: {'line': b'\n'}
+[1.579356] (reference_line) StderrLine: {'line': b'\n'}
+[1.579549] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.579727] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "cyber::common" but the\n'}
+[1.579938] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.580113] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.580285] (reference_line) StderrLine: {'line': b'\n'}
+[1.580456] (reference_line) StderrLine: {'line': b'\n'}
+[1.580626] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.580797] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "common::math" but the\n'}
+[1.580971] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.581144] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.581342] (reference_line) StderrLine: {'line': b'\n'}
+[1.581588] (reference_line) StderrLine: {'line': b'\n'}
+[1.581849] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.582135] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "common::proto" but the\n'}
+[1.582440] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.582729] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.584341] (reference_line) StderrLine: {'line': b'\n'}
+[1.585109] (reference_line) StderrLine: {'line': b'\n'}
+[1.585481] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.586128] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "common::map_util" but the\n'}
+[1.586438] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.587546] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.587837] (reference_line) StderrLine: {'line': b'\n'}
+[1.588108] (reference_line) StderrLine: {'line': b'\n'}
+[1.588375] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.588638] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "common::string_util" but\n'}
+[1.588947] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.589291] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.590254] (reference_line) StderrLine: {'line': b'\n'}
+[1.590530] (reference_line) StderrLine: {'line': b'\n'}
+[1.590692] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.590846] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::planning_gflags"\n'}
+[1.590998] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.591148] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.591305] (reference_line) StderrLine: {'line': b'\n'}
+[1.591478] (reference_line) StderrLine: {'line': b'\n'}
+[1.591635] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.591786] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.591936] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.592086] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.592234] (reference_line) StderrLine: {'line': b'\n'}
+[1.592382] (reference_line) StderrLine: {'line': b'\n'}
+[1.592531] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.592680] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.592828] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.592986] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.593136] (reference_line) StderrLine: {'line': b'\n'}
+[1.593283] (reference_line) StderrLine: {'line': b'\n'}
+[1.593433] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.593580] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "common::math" but the\n'}
+[1.593729] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.593878] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.594032] (reference_line) StderrLine: {'line': b'\n'}
+[1.594182] (reference_line) StderrLine: {'line': b'\n'}
+[1.594330] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.594480] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "map::hdmap" but the target\n'}
+[1.594629] (reference_line) StderrLine: {'line': b'  was not found.  Perhaps a find_package() call is missing for an IMPORTED\n'}
+[1.594778] (reference_line) StderrLine: {'line': b'  target, or an ALIAS target is missing?\n'}
+[1.594926] (reference_line) StderrLine: {'line': b'\n'}
+[1.595075] (reference_line) StderrLine: {'line': b'\n'}
+[1.595224] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.595372] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "map::hdmap_util" but the\n'}
+[1.595567] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.595718] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.595878] (reference_line) StderrLine: {'line': b'\n'}
+[1.596041] (reference_line) StderrLine: {'line': b'\n'}
+[1.596191] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.596339] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::planning_gflags"\n'}
+[1.596530] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.596688] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.596839] (reference_line) StderrLine: {'line': b'\n'}
+[1.596987] (reference_line) StderrLine: {'line': b'\n'}
+[1.597137] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.597285] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.597434] (reference_line) StderrLine: {'line': b'  "planning::discrete_points_math" but the target was not found.  Perhaps a\n'}
+[1.597582] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.597731] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.597885] (reference_line) StderrLine: {'line': b'\n'}
+[1.598035] (reference_line) StderrLine: {'line': b'\n'}
+[1.598183] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.598360] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.598546] (reference_line) StderrLine: {'line': b'  "planning::cos_theta_smoother" but the target was not found.  Perhaps a\n'}
+[1.598733] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.598939] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.599119] (reference_line) StderrLine: {'line': b'\n'}
+[1.599289] (reference_line) StderrLine: {'line': b'\n'}
+[1.600171] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.601396] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.601623] (reference_line) StderrLine: {'line': b'  "planning::fem_pos_deviation_smoother" but the target was not found.\n'}
+[1.601811] (reference_line) StderrLine: {'line': b'  Perhaps a find_package() call is missing for an IMPORTED target, or an\n'}
+[1.602296] (reference_line) StderrLine: {'line': b'  ALIAS target is missing?\n'}
+[1.602476] (reference_line) StderrLine: {'line': b'\n'}
+[1.602647] (reference_line) StderrLine: {'line': b'\n'}
+[1.602866] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.603590] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.604196] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.604467] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.604721] (reference_line) StderrLine: {'line': b'\n'}
+[1.604974] (reference_line) StderrLine: {'line': b'\n'}
+[1.605234] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.605498] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.606137] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.606771] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.607044] (reference_line) StderrLine: {'line': b'\n'}
+[1.607225] (reference_line) StderrLine: {'line': b'\n'}
+[1.607397] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.607585] (-) TimerEvent: {}
+[1.607759] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::curve_math" but\n'}
+[1.607949] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.608124] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.608297] (reference_line) StderrLine: {'line': b'\n'}
+[1.608469] (reference_line) StderrLine: {'line': b'\n'}
+[1.608640] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.608822] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.609017] (reference_line) StderrLine: {'line': b'  "planning::active_set_spline_2d_solver" but the target was not found.\n'}
+[1.609214] (reference_line) StderrLine: {'line': b'  Perhaps a find_package() call is missing for an IMPORTED target, or an\n'}
+[1.609386] (reference_line) StderrLine: {'line': b'  ALIAS target is missing?\n'}
+[1.609564] (reference_line) StderrLine: {'line': b'\n'}
+[1.609746] (reference_line) StderrLine: {'line': b'\n'}
+[1.609918] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.610088] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.610259] (reference_line) StderrLine: {'line': b'  "planning::osqp_spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.610429] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.610600] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.610770] (reference_line) StderrLine: {'line': b'\n'}
+[1.610942] (reference_line) StderrLine: {'line': b'\n'}
+[1.611113] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.611286] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.611513] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.611696] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.611897] (reference_line) StderrLine: {'line': b'\n'}
+[1.612080] (reference_line) StderrLine: {'line': b'\n'}
+[1.612250] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.612417] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "common::math" but the\n'}
+[1.612583] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.612750] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.612919] (reference_line) StderrLine: {'line': b'\n'}
+[1.613086] (reference_line) StderrLine: {'line': b'\n'}
+[1.613283] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.613451] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::planning_gflags"\n'}
+[1.613619] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.613786] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.613953] (reference_line) StderrLine: {'line': b'\n'}
+[1.614119] (reference_line) StderrLine: {'line': b'\n'}
+[1.614284] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.614451] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.614615] (reference_line) StderrLine: {'line': b'  "planning::quintic_spiral_path" but the target was not found.  Perhaps a\n'}
+[1.614792] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.614960] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.615126] (reference_line) StderrLine: {'line': b'\n'}
+[1.615308] (reference_line) StderrLine: {'line': b'\n'}
+[1.615505] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.615696] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target\n'}
+[1.615880] (reference_line) StderrLine: {'line': b'  "planning::spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.616057] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.616245] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.616941] (reference_line) StderrLine: {'line': b'\n'}
+[1.618433] (reference_line) StderrLine: {'line': b'\n'}
+[1.618920] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.619287] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.619532] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.619765] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.620703] (reference_line) StderrLine: {'line': b'\n'}
+[1.620904] (reference_line) StderrLine: {'line': b'\n'}
+[1.621116] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:74 (add_library):\n'}
+[1.621349] (reference_line) StderrLine: {'line': b'  Target "planning_smoother_util" links to target "planning::proto" but the\n'}
+[1.621591] (reference_line) StderrLine: {'line': b'  target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.621846] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.622100] (reference_line) StderrLine: {'line': b'\n'}
+[1.622339] (reference_line) StderrLine: {'line': b'\n'}
+[1.622527] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.622729] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "planning::proto"\n'}
+[1.623781] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.623990] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.624164] (reference_line) StderrLine: {'line': b'\n'}
+[1.624332] (reference_line) StderrLine: {'line': b'\n'}
+[1.624502] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.624670] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "cyber::common" but\n'}
+[1.624839] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.625010] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.625196] (reference_line) StderrLine: {'line': b'\n'}
+[1.625365] (reference_line) StderrLine: {'line': b'\n'}
+[1.625532] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.625700] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "common::math" but\n'}
+[1.625868] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.626035] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.626202] (reference_line) StderrLine: {'line': b'\n'}
+[1.626369] (reference_line) StderrLine: {'line': b'\n'}
+[1.626545] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.626794] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "common::proto" but\n'}
+[1.626987] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.627159] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.627330] (reference_line) StderrLine: {'line': b'\n'}
+[1.627516] (reference_line) StderrLine: {'line': b'\n'}
+[1.627688] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.627858] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "common::map_util"\n'}
+[1.628027] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.628197] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.628376] (reference_line) StderrLine: {'line': b'\n'}
+[1.628548] (reference_line) StderrLine: {'line': b'\n'}
+[1.628720] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.628890] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target\n'}
+[1.629060] (reference_line) StderrLine: {'line': b'  "common::string_util" but the target was not found.  Perhaps a\n'}
+[1.629258] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.629432] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.629604] (reference_line) StderrLine: {'line': b'\n'}
+[1.629794] (reference_line) StderrLine: {'line': b'\n'}
+[1.629968] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.630138] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target\n'}
+[1.630309] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.630479] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.630652] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.630823] (reference_line) StderrLine: {'line': b'\n'}
+[1.630993] (reference_line) StderrLine: {'line': b'\n'}
+[1.631164] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.631334] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "planning::proto"\n'}
+[1.631516] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.631688] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.631856] (reference_line) StderrLine: {'line': b'\n'}
+[1.632061] (reference_line) StderrLine: {'line': b'\n'}
+[1.632302] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.632560] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "planning::proto"\n'}
+[1.632853] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.633130] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.633422] (reference_line) StderrLine: {'line': b'\n'}
+[1.635154] (reference_line) StderrLine: {'line': b'\n'}
+[1.635656] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.635968] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "common::math" but\n'}
+[1.636467] (reference_line) StderrLine: {'line': b'  the target was not found.  Perhaps a find_package() call is missing for an\n'}
+[1.637731] (reference_line) StderrLine: {'line': b'  IMPORTED target, or an ALIAS target is missing?\n'}
+[1.638018] (reference_line) StderrLine: {'line': b'\n'}
+[1.638253] (reference_line) StderrLine: {'line': b'\n'}
+[1.638513] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.638782] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target\n'}
+[1.639255] (reference_line) StderrLine: {'line': b'  "planning::planning_gflags" but the target was not found.  Perhaps a\n'}
+[1.640172] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.640356] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.640512] (reference_line) StderrLine: {'line': b'\n'}
+[1.640664] (reference_line) StderrLine: {'line': b'\n'}
+[1.640814] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.640970] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target\n'}
+[1.641133] (reference_line) StderrLine: {'line': b'  "planning::quintic_spiral_path" but the target was not found.  Perhaps a\n'}
+[1.641284] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.641454] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.641605] (reference_line) StderrLine: {'line': b'\n'}
+[1.641755] (reference_line) StderrLine: {'line': b'\n'}
+[1.641908] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.642059] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target\n'}
+[1.642211] (reference_line) StderrLine: {'line': b'  "planning::spline_2d_solver" but the target was not found.  Perhaps a\n'}
+[1.642367] (reference_line) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[1.642519] (reference_line) StderrLine: {'line': b'  is missing?\n'}
+[1.642667] (reference_line) StderrLine: {'line': b'\n'}
+[1.642815] (reference_line) StderrLine: {'line': b'\n'}
+[1.642965] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.643116] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "planning::proto"\n'}
+[1.643265] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.643428] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.643584] (reference_line) StderrLine: {'line': b'\n'}
+[1.643732] (reference_line) StderrLine: {'line': b'\n'}
+[1.643879] (reference_line) StderrLine: {'line': b'CMake Error at CMakeLists.txt:82 (add_library):\n'}
+[1.644025] (reference_line) StderrLine: {'line': b'  Target "planning_spiral_smoother_util" links to target "planning::proto"\n'}
+[1.644172] (reference_line) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[1.644319] (reference_line) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[1.644466] (reference_line) StderrLine: {'line': b'\n'}
+[1.644614] (reference_line) StderrLine: {'line': b'\n'}
+[1.644762] (reference_line) StdoutLine: {'line': b'-- Generating done\n'}
+[1.644919] (reference_line) StdoutLine: {'line': b'-- Build files have been written to: /home/yuzhang/apollo_standalone/src/apollo/modules/planning/reference_line/build/reference_line\n'}
+[1.645083] (reference_line) CommandEnded: {'returncode': 1}
+[1.645725] (reference_line) JobEnded: {'rc': 1, 'identifier': 'reference_line'}
+[1.674550] (-) EventReactorShutdown: {}
