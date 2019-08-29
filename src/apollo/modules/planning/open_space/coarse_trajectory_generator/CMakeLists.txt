@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-
-
 add_library(planning_node3d node3d.cc)
 target_link_libraries(planning_node3d
     cyber::common

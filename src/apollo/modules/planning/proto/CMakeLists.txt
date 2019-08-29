@@ -47,7 +47,7 @@ target_link_libraries(planning_proto ${PROTOBUF_LIBRARIES}
                                      common::proto
                                      localization::proto
                                      perception::proto
-                                     prediciton::proto
+                                     prediction::proto
                                      routing::proto
                                      dreamview::proto
                                      map::relative_map_proto

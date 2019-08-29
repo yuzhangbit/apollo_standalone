@@ -106,7 +106,7 @@ target_link_libraries(planning_local_view
         map::relative_map_proto
         perception::proto
         planning::proto
-        prediciton::proto)
+        prediction::proto)
 add_library(planning::local_view ALIAS planning_local_view)
 
 
