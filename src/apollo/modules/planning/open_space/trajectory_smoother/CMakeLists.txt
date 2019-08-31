@@ -164,9 +164,43 @@ target_link_libraries(distance_approach_ipopt_interface_test
     planning::distance_approach_ipopt_interface
     cyber::common
     ${OpenMP_CXX_FLAGS}
+    ${ADOLC_LIBRARIES}
     gtest
     gtest_main)
 
+add_executable(distance_approach_problem_test
+distance_approach_problem_test.cc)
+target_link_libraries(distance_approach_problem_test
+    planning::distance_approach_problem
+    cyber::common
+    ${OpenMP_CXX_FLAGS}
+    ${ADOLC_LIBRARIES}
+    gtest
+    gtest_main)
+
+
+add_executable(dual_variable_warm_start_ipopt_interface_test
+dual_variable_warm_start_ipopt_interface_test.cc)
+target_link_libraries(dual_variable_warm_start_ipopt_interface_test
+    planning::dual_variable_warm_start_ipopt_interface
+    gtest
+    gtest_main)
+
+add_executable(dual_variable_warm_start_osqp_interface_test
+dual_variable_warm_start_osqp_interface_test.cc)
+target_link_libraries(dual_variable_warm_start_osqp_interface_test
+    planning::dual_variable_warm_start_ipopt_qp_interface
+    planning::dual_variable_warm_start_osqp_interface
+    ${IPOPT_LIBRARIES}
+    gtest
+    gtest_main)
+
+add_executable(dual_variable_warm_start_problem_test
+dual_variable_warm_start_problem_test.cc)
+target_link_libraries(dual_variable_warm_start_problem_test
+    planning::dual_variable_warm_start_problem
+    gtest
+    gtest_main)
 
 install(TARGETS planning_block
                 planning_iterative_anchoring_smoother
@@ -181,6 +215,10 @@ install(TARGETS planning_block
                 planning_dual_variable_warm_start_problem
                 planning_dual_variable_warm_start_osqp_interface
                 distance_approach_ipopt_interface_test
+                distance_approach_problem_test
+                dual_variable_warm_start_ipopt_interface_test
+                dual_variable_warm_start_osqp_interface_test
+                dual_variable_warm_start_problem_test
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

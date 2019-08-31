@@ -1,2 +1,0 @@
-/usr/bin/ar qc libplanning_reference_line_smoother.a  
-/usr/bin/ranlib libplanning_reference_line_smoother.a

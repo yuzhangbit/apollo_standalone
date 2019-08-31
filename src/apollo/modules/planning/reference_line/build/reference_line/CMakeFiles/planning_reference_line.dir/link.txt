@@ -1,2 +1,0 @@
-/usr/bin/ar qc libplanning_reference_line.a  CMakeFiles/planning_reference_line.dir/reference_line.cc.o CMakeFiles/planning_reference_line.dir/reference_point.cc.o
-/usr/bin/ranlib libplanning_reference_line.a

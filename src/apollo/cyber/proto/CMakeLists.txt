@@ -1,20 +1,20 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-set(PROTOS #choreography_conf.proto
-           #classic_conf.proto
-           #component_conf.proto
+set(PROTOS choreography_conf.proto
+           classic_conf.proto
+           component_conf.proto
            cyber_conf.proto
-           #dag_conf.proto
-           #parameter.proto
-           #perception.proto
-           #proto_desc.proto
-           #qos_profile.proto
-           #record.proto
-           #role_attributes.proto
-           #run_mode_conf.proto
-           #scheduler_conf.proto
-           #topology_change.proto
-           #transport_conf.proto
+           dag_conf.proto
+           parameter.proto
+           perception.proto
+           proto_desc.proto
+           qos_profile.proto
+           record.proto
+           role_attributes.proto
+           run_mode_conf.proto
+           scheduler_conf.proto
+           topology_change.proto
+           transport_conf.proto
            unit_test.proto)
 
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTOS})

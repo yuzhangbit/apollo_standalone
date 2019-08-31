@@ -7,6 +7,8 @@ project(apollo)
 
 set(CMAKE_CXX_STANDARD 11)
 
+# set(BUILD_SHARED_LIBS ON)
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_subdirectory(deps/googletest EXCLUDE_FROM_ALL)
@@ -24,6 +26,10 @@ find_package(ADOLC REQUIRED)
 find_package(Eigen3 QUIET)
 find_package(CUDA REQUIRED)
 find_package(OpenMP)
+# message(WARNING "adolc lib" ${ADOLC_LIBRARIES})
+
+set(CMAKE_INSTALL_PREFIX /apollo)
+
 if (OPENMP_FOUND)
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
@@ -63,3 +69,33 @@ add_subdirectory(modules/routing)
 add_subdirectory(modules/planning)
 add_subdirectory(modules/dreamview)
 add_subdirectory(third_party/json)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.pb.txt"
+        PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.txt"
+        PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.bin"
+        PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.conf"
+        PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.conf"
+        PATTERN ".svn" EXCLUDE
+)

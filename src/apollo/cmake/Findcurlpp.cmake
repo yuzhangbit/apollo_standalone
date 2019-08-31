@@ -3,7 +3,7 @@
 find_package(CURL REQUIRED)
 
 set(store_cfls ${CMAKE_FIND_LIBRARY_SUFFIXES})
-set(CMAKE_FIND_LIBRARY_SUFFIXES ".a" ".so")
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".so")
 set(CURLPP_FIND_NAMES curlpp libcurlpp)
 set(CURLPP_INCLUDE_PREFIX "curlpp/")
 #~ set(CURLPP_INCLUDE_SEARCHES "Easy.hpp" "cURLpp.hpp" "Info.hpp" "Infos.hpp" "Option.hpp" "Options.hpp" "Form.hpp")

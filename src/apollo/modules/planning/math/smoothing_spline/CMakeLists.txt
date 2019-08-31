@@ -79,6 +79,7 @@ add_library(planning::spline_2d_kernel ALIAS planning_spline_2d_kernel)
 add_library(planning_spline_2d_solver active_set_spline_2d_solver.h
                                       osqp_spline_2d_solver.h
                                       spline_2d_solver.h)
+set_target_properties(planning_spline_2d_solver PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(planning_spline_2d_solver planning::spline_2d
                                                 planning::spline_2d_kernel
                                                 planning::spline_2d_constraint
