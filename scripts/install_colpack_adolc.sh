@@ -21,10 +21,10 @@ install_adolc()
     wget https://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.6.3.zip -O ADOL-C-2.6.3.zip
     unzip ADOL-C-2.6.3.zip
     cd ADOL-C-2.6.3
-    ./configure --prefix="/usr/local" --enable-sparse --enable-addexa --enable-static --with-openmp-flag="-fopenmp" --with-colpack="/usr/local/colpack" ADD_CXXFLAGS="-fPIC" ADD_CFLAGS="-fPIC" ADD_FFLAGS="-fPIC"
-    make -j8 all
+    ./configure --prefix="/usr/local" --enable-sparse --enable-addexa --enable-static --with-openmp-flag="-fopenmp" --with-colpack="/usr/local" ADD_CXXFLAGS="-fPIC" ADD_CFLAGS="-fPIC" ADD_FFLAGS="-fPIC"
+    sudo make -j8 all
     sudo make install
 }
 
-#install_copack
+install_copack
 install_adolc

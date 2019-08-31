@@ -15,12 +15,17 @@ before_install:
 
 install:
   - sudo apt-get install -qq g++-5
+  - ./install_dependencies.sh
 
 before_script:
   - printenv
 
 script:
   - pwd
+  - cd src/apollo
+  - mkdir -p build
+  - cd build && cmake ..
+  - make -j$(nproc)
 
 addons:
   apt:
