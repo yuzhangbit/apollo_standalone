@@ -1,0 +1,35 @@
+language: cpp
+
+ git:
+  submodules: true
+  quiet: false
+  depth: false
+
+compiler: gcc
+dist: xenial
+cache: ccache
+
+ before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+ install:
+  - sudo apt-get install -qq g++-5
+
+ before_script:
+  - ls
+
+ script: ls
+
+ # This section installs the necessary dependencies.
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    #- g++-4.9
+    #- cmake
+    update: true
+
+ notifications:
+  email: false
