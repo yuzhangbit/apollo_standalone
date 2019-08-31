@@ -15,7 +15,7 @@ before_install:
 
 install:
   - sudo apt-get install -qq g++-5
-  - ./install_dependencies.sh
+  - bash scripts/install_dependencies.sh
 
 before_script:
   - printenv
