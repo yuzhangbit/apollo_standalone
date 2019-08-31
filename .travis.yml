@@ -1,9 +1,9 @@
 language: cpp
 
-  git:
-    submodules: true
-    quiet: false
-    depth: false
+git:
+  submodules: true
+  quiet: false
+  depth: false
 
 compiler: gcc
 dist: xenial
@@ -17,12 +17,19 @@ install:
   - sudo apt-get install -qq g++-5
 
 before_script:
-  - ls
+  - printenv
 
 script:
   - pwd
-  - ls
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.9
+    - cmake
+    update: true
 
 notifications:
   email: false

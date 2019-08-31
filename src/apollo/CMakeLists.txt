@@ -26,7 +26,6 @@ find_package(ADOLC REQUIRED)
 find_package(Eigen3 QUIET)
 find_package(CUDA REQUIRED)
 find_package(OpenMP)
-# message(WARNING "adolc lib" ${ADOLC_LIBRARIES})
 
 set(CMAKE_INSTALL_PREFIX /apollo)
 
