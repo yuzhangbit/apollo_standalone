@@ -2,6 +2,8 @@
 set -e  # exit on first error
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+sudo apt-get install -y libeigen3-dev
+
 bash ${CURRENT_DIR}/install_curlpp.sh
 bash ${CURRENT_DIR}/install_colpack_adolc.sh
 bash ${CURRENT_DIR}/install_glogs_gflags.sh
