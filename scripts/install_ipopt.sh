@@ -4,7 +4,7 @@ SOURCE_DIR="/tmp"
 
 install_ipopt()
 {
-    sudo add-apt-repository universe && apt-get -y update
+    sudo add-apt-repository universe &&  sudo apt-get -y update
     sudo apt-get install -y libblas-dev liblapack-dev gfortran
     cd ${SOURCE_DIR} && rm -r Ipopt
     git clone --recursive https://github.com/coin-or/Ipopt.git
