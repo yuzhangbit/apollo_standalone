@@ -27,7 +27,7 @@ add_library(common_geometry aabox2d.cc
 target_link_libraries(common_geometry cyber::common
                                       common::string_util
                                       common::proto
-                                      osqp::osqp)
+                                      ${osqp_LIBRARIES})
 add_library(common::geometry ALIAS common_geometry)
 
 add_library(common_sin_table sin_table.cc)
@@ -139,7 +139,7 @@ add_executable(math_utils_test math_utils_test.cc)
 target_link_libraries(math_utils_test gtest
                                       gtest_main
                                       common::geometry
-                                      osqp::osqp)
+                                      ${osqp_LIBRARIES})
 
 add_executable(linear_interpolation_test linear_interpolation_test.cc)
 target_link_libraries(linear_interpolation_test gtest

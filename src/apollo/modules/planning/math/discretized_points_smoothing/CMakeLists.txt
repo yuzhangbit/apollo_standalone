@@ -20,7 +20,7 @@ add_library(planning::fem_pos_deviation_ipopt_interface ALIAS planning_fem_pos_d
 
 add_library(planning_fem_pos_deviation_osqp_interface fem_pos_deviation_osqp_interface.cc)
 target_link_libraries(planning_fem_pos_deviation_osqp_interface cyber::common
-                                                                osqp::osqp)
+                                                                ${osqp_LIBRARIES})
 add_library(planning::fem_pos_deviation_osqp_interface ALIAS planning_fem_pos_deviation_osqp_interface)
 
 add_library(planning_cos_theta_smoother cos_theta_smoother.cc)

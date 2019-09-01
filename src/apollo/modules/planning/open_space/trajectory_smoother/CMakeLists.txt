@@ -9,7 +9,7 @@ target_link_libraries(planning_dual_variable_warm_start_osqp_interface
     common::util
     planning::planning_gflags
     planning::proto
-    osqp::osqp)
+    ${osqp_LIBRARIES})
 add_library(planning::dual_variable_warm_start_osqp_interface ALIAS planning_dual_variable_warm_start_osqp_interface)
 
 
@@ -193,7 +193,7 @@ dual_variable_warm_start_osqp_interface_test.cc)
 target_link_libraries(dual_variable_warm_start_osqp_interface_test
     planning::dual_variable_warm_start_ipopt_qp_interface
     planning::dual_variable_warm_start_osqp_interface
-    ${IPOPT_LIBRARIES}
+    ${osqp_LIBRARIES}
     gtest
     gtest_main)
 

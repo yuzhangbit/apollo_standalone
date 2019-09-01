@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5.1)
 add_library(planning_piecewise_jerk_problem piecewise_jerk_problem.cc)
 target_link_libraries(planning_piecewise_jerk_problem cyber::common
                                                       planning::planning_gflags
-                                                      osqp::osqp)
+                                                      ${osqp_LIBRARIES})
 add_library(planning::piecewise_jerk_problem ALIAS planning_piecewise_jerk_problem)
 
 
