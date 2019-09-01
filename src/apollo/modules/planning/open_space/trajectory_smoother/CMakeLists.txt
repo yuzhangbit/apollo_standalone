@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-add_definitions(-DUSE_GPU)
-include_directories(${CUDA_INCLUDE_DIRS})
 
 add_library(planning_dual_variable_warm_start_osqp_interface
     dual_variable_warm_start_osqp_interface.cc)

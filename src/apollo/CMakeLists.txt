@@ -13,6 +13,8 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_subdirectory(deps/googletest EXCLUDE_FROM_ALL)
 
+set(ENABLE_CUDA OFF)
+
 find_package(PROTOBUF REQUIRED)
 find_package(gflags REQUIRED)
 find_package(qpOASES REQUIRED)
@@ -24,8 +26,17 @@ find_package(PROJ4 REQUIRED)
 find_package(IPOPT REQUIRED)
 find_package(ADOLC REQUIRED)
 find_package(Eigen3 QUIET)
-find_package(CUDA REQUIRED)
 find_package(OpenMP)
+
+if(ENABLE_CUDA)
+  find_package(CUDA REQUIRED)
+  add_definitions(-DUSE_GPU)
+  include_directories(${CUDA_INCLUDE_DIRS})
+else()
+  set(CUDA_LIBRARIES "")
+  set(CUDA_INCLUDE_DIRS "")
+endif(ENABLE_CUDA)
+
 
 set(CMAKE_INSTALL_PREFIX /apollo)
 
