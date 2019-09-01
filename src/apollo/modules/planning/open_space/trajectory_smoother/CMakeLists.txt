@@ -204,8 +204,7 @@ target_link_libraries(dual_variable_warm_start_problem_test
     gtest
     gtest_main)
 
-install(TARGETS planning_block
-                planning_iterative_anchoring_smoother
+install(TARGETS planning_iterative_anchoring_smoother
                 planning_distance_approach_ipopt_cuda_interface
                 planning_distance_approach_ipopt_interface
                 planning_distance_approach_ipopt_relax_end_interface
@@ -226,3 +225,12 @@ install(TARGETS planning_block
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+if(ENABLE_CUDA)
+    install(TARGETS planning_block
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    INCLUDES DESTINATION .
+    )
+endif(ENABLE_CUDA)
