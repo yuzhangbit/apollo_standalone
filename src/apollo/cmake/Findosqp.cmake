@@ -1,6 +1,6 @@
 find_path(osqp_INCLUDE_PATH osqp/include/osqp.h)
 
-find_library(osqp_LIBRARY libosqp.a)
+# find_library(osqp_LIBRARY libosqp.a)
 find_library(osqp_LIBRARY  libosqp.so)
 if(osqp_INCLUDE_PATH AND osqp_LIBRARY)
   set(osqp_FOUND TRUE)
