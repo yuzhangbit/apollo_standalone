@@ -138,7 +138,8 @@ target_link_libraries(mpc_test gtest
 add_executable(math_utils_test math_utils_test.cc)
 target_link_libraries(math_utils_test gtest
                                       gtest_main
-                                      common::geometry)
+                                      common::geometry
+                                      osqp::osqp)
 
 add_executable(linear_interpolation_test linear_interpolation_test.cc)
 target_link_libraries(linear_interpolation_test gtest
