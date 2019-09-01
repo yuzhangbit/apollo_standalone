@@ -2,7 +2,7 @@
 set -e  # exit on first error
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-sudo apt-get install -y libeigen3-dev
+sudo apt-get install -y libeigen3-dev libboost-all-dev cmake
 
 bash ${CURRENT_DIR}/install_curlpp.sh
 bash ${CURRENT_DIR}/install_colpack_adolc.sh

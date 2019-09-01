@@ -152,8 +152,12 @@ target_link_libraries(planning_iterative_anchoring_smoother
 add_library(planning::iterative_anchoring_smoother ALIAS planning_iterative_anchoring_smoother)
 
 
-cuda_add_library(planning_block planning_block.cu)
-target_link_libraries(planning_block ${CUDA_LIBRARIES})
+if(ENABLE_CUDA)
+    cuda_add_library(planning_block planning_block.cu)
+    target_link_libraries(planning_block ${CUDA_LIBRARIES})
+else()
+    set(planning_block "")
+endif(ENABLE_CUDA)
 
 
 add_executable(distance_approach_ipopt_interface_test
