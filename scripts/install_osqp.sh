@@ -8,4 +8,4 @@ cd osqp && mkdir -p build && cd build && cmake ..
 make -j$(nproc)
 sudo make install
 sudo mkdir /usr/local/include/osqp/include
-cd /usr/local/include/osqp && cp *.h include/
+cd /usr/local/include/osqp && sudo cp *.h include/
