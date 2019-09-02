@@ -1,1 +1,1 @@
-# apollo_standalone
+# apollo_standalone [![Build Status](https://travis-ci.com/yuzhangbit/apollo_standalone.svg?token=Jmj6MSYSGZmX9ePjdawa&branch=master)](https://travis-ci.com/yuzhangbit/apollo_standalone)
