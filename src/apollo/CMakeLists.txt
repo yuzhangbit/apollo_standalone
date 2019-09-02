@@ -1,13 +1,12 @@
 cmake_minimum_required(VERSION 3.5.1)
+project(apollo)
+
 find_program(CCACHE_PROGRAM ccache)
 if(CCACHE_PROGRAM)
     set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
 endif()
-project(apollo)
 
 set(CMAKE_CXX_STANDARD 11)
-
-# set(BUILD_SHARED_LIBS ON)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -21,16 +20,12 @@ find_package(qpOASES REQUIRED)
 find_package(osqp REQUIRED)
 find_package(GLOG REQUIRED)
 find_package(curlpp REQUIRED)
-find_package(TinyXML2 REQUIRED)
+find_package(TINYXML2 REQUIRED)
 find_package(PROJ4 REQUIRED)
 find_package(IPOPT REQUIRED)
 find_package(ADOLC REQUIRED)
 find_package(Eigen3 QUIET)
 find_package(OpenMP)
-
-message(WARNING "osqp found:" ${osqp_FOUND})
-message(WARNING "osqp lib:" ${osqp_LIBRARIES})
-message(WARNING "osqp include:" ${osqp_INCLUDE_DIRS})
 
 if(ENABLE_CUDA)
   find_package(CUDA REQUIRED)
@@ -69,20 +64,19 @@ include_directories(include
                     ${CUDA_INCLUDE_DIRS}
                     ${EIGEN3_INCLUDE_DIR})
 
-add_executable(utest utest.cc)
-target_link_libraries(utest gtest gtest_main)
+# add_subdirectory(cyber)
+# add_subdirectory(modules/common)
+# add_subdirectory(modules/localization)
+# add_subdirectory(modules/canbus)
+# add_subdirectory(modules/map)
+# add_subdirectory(modules/perception)
+# add_subdirectory(modules/prediction)
+# add_subdirectory(modules/routing)
+# add_subdirectory(modules/planning)
+# add_subdirectory(modules/dreamview)
+# add_subdirectory(third_party/json)
 
-add_subdirectory(cyber)
-add_subdirectory(modules/common)
-add_subdirectory(modules/localization)
-add_subdirectory(modules/canbus)
-add_subdirectory(modules/map)
-add_subdirectory(modules/perception)
-add_subdirectory(modules/prediction)
-add_subdirectory(modules/routing)
-add_subdirectory(modules/planning)
-add_subdirectory(modules/dreamview)
-add_subdirectory(third_party/json)
+
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
         DESTINATION .
