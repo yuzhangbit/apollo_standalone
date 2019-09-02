@@ -32,15 +32,16 @@ add_library(planning::qp_spline_reference_line_smoother ALIAS planning_qp_spline
 
 add_library(planning_spiral_reference_line_smoother spiral_reference_line_smoother.cc
                                                     spiral_problem_interface.cc)
-target_link_libraries(planning_spiral_reference_line_smoother planning::proto
-                                                              planning::reference_line
-                                                              planning::reference_line_smoother
-                                                              common::math
-                                                              planning::planning_gflags
-                                                              planning::quintic_spiral_path
-                                                              planning::spline_2d_solver
-                                                              planning::proto
-                                                              ${IPOPT_LIBRARIES})
+target_link_libraries(planning_spiral_reference_line_smoother
+        planning::proto
+        planning::reference_line
+        planning::reference_line_smoother
+        common::math
+        planning::planning_gflags
+        planning::quintic_spiral_path
+        planning::spline_2d_solver
+        planning::proto
+        ${IPOPT_LIBRARIES})
 add_library(planning::spiral_reference_line_smoother ALIAS planning_spiral_reference_line_smoother)
 
 

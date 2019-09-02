@@ -15,10 +15,9 @@ before_install:
 
 install:
   - sudo apt-get install -qq g++-5
-  - bash scripts/install_dependencies.sh
 
 before_script:
-  - pwd
+  - bash scripts/install_dependencies.sh
 
 script:
   - pwd
@@ -28,18 +27,7 @@ script:
   - make -j$(nproc)
   - sudo make install
   - cd /apollo/bin
-  - ./spiral_reference_line_smoother_test
   - ./hybrid_a_star_test
-
-
-# addons:
-#   apt:
-#     sources:
-#     - ubuntu-toolchain-r-test
-#     packages:
-#     - g++-4.9
-#     - cmake
-#     update: true
 
 notifications:
   email: false
