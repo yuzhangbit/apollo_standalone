@@ -142,12 +142,10 @@ function(PROTOBUF_GENERATE_CPP SRCS HDRS)
     #  COMMAND ${PROTOBUF_COMPILER} --proto_path=${PROTO_DIR} --cpp_out=${PROTO_DIR} ${ABS_FIL}
     # )
     add_custom_command(
-      OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/${FIL_WE}.pb.cc"
-             "${CMAKE_CURRENT_BINARY_DIR}/${FIL_WE}.pb.h"
-      COMMAND  ${PROTOBUF_COMPILER}
-      ARGS --cpp_out ${PROTO_DIR} ${ABS_FIL} --proto_path ${PROTO_DIR}
+      OUTPUT ${GENERATED_SRC} ${GENERATED_HDR}
+      COMMAND  ${PROTOBUF_COMPILER} --proto_path=${PROTO_DIR} --cpp_out=${PROTO_DIR} ${ABS_FIL}
       DEPENDS ${ABS_FIL} ${PROTOBUF_COMPILER}
-      COMMENT "Running C++ protocol buffer compiler on ${FIL}"
+      COMMENT "Running C++ protocol buffer compiler on ${ABS_FIL}"
       VERBATIM)
   endforeach()
   set_source_files_properties(${${SRCS}} ${${HDRS}} PROPERTIES GENERATED TRUE)
