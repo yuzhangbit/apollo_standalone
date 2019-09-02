@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 
+if(ENABLE_CUDA)
+    cuda_add_library(planning_block planning_block.cu)
+    target_link_libraries(planning_block ${CUDA_LIBRARIES})
+else()
+    set(planning_block "")
+endif(ENABLE_CUDA)
+
 add_library(planning_dual_variable_warm_start_osqp_interface
     dual_variable_warm_start_osqp_interface.cc)
 target_link_libraries(planning_dual_variable_warm_start_osqp_interface
@@ -132,7 +139,7 @@ target_link_libraries(planning_distance_approach_ipopt_cuda_interface
     common::util
     planning::planning_gflags
     planning::proto
-    planning_block
+    ${planning_block}
     ${ADOLC_LIBRARIES}
     ${IPOPT_LIBRARIES})
 add_library(planning::distance_approach_ipopt_cuda_interface ALIAS planning_distance_approach_ipopt_cuda_interface)
@@ -152,12 +159,7 @@ target_link_libraries(planning_iterative_anchoring_smoother
 add_library(planning::iterative_anchoring_smoother ALIAS planning_iterative_anchoring_smoother)
 
 
-if(ENABLE_CUDA)
-    cuda_add_library(planning_block planning_block.cu)
-    target_link_libraries(planning_block ${CUDA_LIBRARIES})
-else()
-    set(planning_block "")
-endif(ENABLE_CUDA)
+
 
 
 add_executable(distance_approach_ipopt_interface_test
@@ -193,7 +195,6 @@ dual_variable_warm_start_osqp_interface_test.cc)
 target_link_libraries(dual_variable_warm_start_osqp_interface_test
     planning::dual_variable_warm_start_ipopt_qp_interface
     planning::dual_variable_warm_start_osqp_interface
-    ${osqp_LIBRARIES}
     gtest
     gtest_main)
 

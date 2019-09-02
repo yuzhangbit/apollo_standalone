@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.5.1)
+find_package(PROTOBUF REQUIRED)
 
 set(PROTOS choreography_conf.proto
            classic_conf.proto

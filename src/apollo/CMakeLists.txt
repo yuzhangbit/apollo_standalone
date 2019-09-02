@@ -28,6 +28,10 @@ find_package(ADOLC REQUIRED)
 find_package(Eigen3 QUIET)
 find_package(OpenMP)
 
+message(WARNING "osqp found:" ${osqp_FOUND})
+message(WARNING "osqp lib:" ${osqp_LIBRARIES})
+message(WARNING "osqp include:" ${osqp_INCLUDE_DIRS})
+
 if(ENABLE_CUDA)
   find_package(CUDA REQUIRED)
   add_definitions(-DUSE_GPU)

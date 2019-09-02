@@ -190,31 +190,32 @@ int SpiralReferenceLineSmoother::SmoothStandAlone(
     std::vector<double>* ptr_s, std::vector<double>* ptr_x,
     std::vector<double>* ptr_y) const {
   CHECK_GT(point2d.size(), 1);
+  std::cout << "smoothStandAlone beginning" << std::endl;
 
   SpiralProblemInterface* ptop = new SpiralProblemInterface(point2d);
-
+  std::cout << "new done." << std::endl;
   ptop->set_default_max_point_deviation(config_.spiral().max_deviation());
   ptop->set_element_weight_curve_length(config_.spiral().weight_curve_length());
   ptop->set_element_weight_kappa(config_.spiral().weight_kappa());
   ptop->set_element_weight_dkappa(config_.spiral().weight_dkappa());
-
+  std::cout << "after config." << std::endl;
   Ipopt::SmartPtr<Ipopt::TNLP> problem = ptop;
 
   // Create an instance of the IpoptApplication
   Ipopt::SmartPtr<Ipopt::IpoptApplication> app = IpoptApplicationFactory();
-
+  std::cout << "after factory." << std::endl;
   app->Options()->SetStringValue("hessian_approximation", "limited-memory");
   app->Options()->SetIntegerValue("max_iter", config_.spiral().max_iteration());
   app->Options()->SetNumericValue("tol", config_.spiral().opt_tol());
   app->Options()->SetNumericValue("acceptable_tol",
                                   config_.spiral().opt_acceptable_tol());
-
+  std::cout << "set option done." << std::endl;
   Ipopt::ApplicationReturnStatus status = app->Initialize();
   if (status != Ipopt::Solve_Succeeded) {
     ADEBUG << "*** Error during initialization!";
     return -1;
   }
-
+  std::cout << "init done!" << std::endl;
   status = app->OptimizeTNLP(problem);
 
   if (status == Ipopt::Solve_Succeeded ||
@@ -229,7 +230,7 @@ int SpiralReferenceLineSmoother::SmoothStandAlone(
   } else {
     ADEBUG << "Return status: " << int(status);
   }
-
+  std::cout << "solved." << std::endl;
   ptop->get_optimization_results(ptr_theta, ptr_kappa, ptr_dkappa, ptr_s, ptr_x,
                                  ptr_y);
 

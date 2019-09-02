@@ -70,7 +70,7 @@ bool PiecewiseJerkProblem::OptimizeWithOsqp(
   data->l = lower_bounds.data();
   data->u = upper_bounds.data();
 
-  *work = osqp_setup(data, settings);
+  OSQPWorkspace* osqp_work = osqp_setup(data, settings);
 
   // Solve Problem
   osqp_solve(*work);
