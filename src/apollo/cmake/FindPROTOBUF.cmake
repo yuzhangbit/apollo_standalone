@@ -145,7 +145,7 @@ function(PROTOBUF_GENERATE_CPP SRCS HDRS)
       OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/${FIL_WE}.pb.cc"
              "${CMAKE_CURRENT_BINARY_DIR}/${FIL_WE}.pb.h"
       COMMAND  ${PROTOBUF_COMPILER}
-      ARGS --cpp_out ${PROTO_DIR} ${ABS_FIL}
+      ARGS --cpp_out ${PROTO_DIR} ${ABS_FIL} --proto_path ${PROTO_DIR}
       DEPENDS ${ABS_FIL} ${PROTOBUF_COMPILER}
       COMMENT "Running C++ protocol buffer compiler on ${FIL}"
       VERBATIM)
