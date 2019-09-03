@@ -28,7 +28,7 @@ namespace planning {
 
 TEST(basic_test, DiscretizedTrajectory) {
   const std::string path_of_standard_trajectory =
-      "modules/planning/testdata/trajectory_data/standard_trajectory.pb.txt";
+      "/apollo/modules/planning/testdata/trajectory_data/standard_trajectory.pb.txt";
   ADCTrajectory trajectory;
   EXPECT_TRUE(cyber::common::GetProtoFromFile(path_of_standard_trajectory,
                                               &trajectory));
