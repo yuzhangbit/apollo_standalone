@@ -30,6 +30,7 @@ install_adolc()
         echo "set library path..."
         sudo sed -i '$a\export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64' ~/.bashrc
     fi
+    source ~/.bashrc
 }
 
 install_copack

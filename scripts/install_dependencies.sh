@@ -20,3 +20,5 @@ else
     echo "set library path..."
     sudo sed -i '$a\export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' ~/.bashrc
 fi
+source ~/.bashrc
+sudo ldconfig
