@@ -26,8 +26,8 @@ script:
   - cd build && cmake ..
   - make -j$(nproc)
   - sudo make install
-  - cd /apollo/bin
-  - ./hybrid_a_star_test
+  - cd ../../../
+  - bash run_all_test.bash
 
 notifications:
   email: false
