@@ -21,7 +21,7 @@ DEFINE_string(output_dir, "/tmp", "output map directory");
 
 namespace {
 
-constexpr char kMapFilename[] = "modules/map/hdmap/test-data/base_map.bin";
+constexpr char kMapFilename[] = "/apollo/modules/map/hdmap/test-data/base_map.bin";
 
 }  // namespace
 

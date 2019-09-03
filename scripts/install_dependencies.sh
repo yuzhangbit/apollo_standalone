@@ -13,3 +13,5 @@ bash ${CURRENT_DIR}/install_proj4.sh
 bash ${CURRENT_DIR}/install_protobuf.sh
 bash ${CURRENT_DIR}/install_qpOASES.sh
 bash ${CURRENT_DIR}/install_tinyxml2.sh
+
+sudo ldconfig
