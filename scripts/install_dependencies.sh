@@ -4,14 +4,6 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 sudo apt-get install -y libeigen3-dev libboost-all-dev cmake
 
-if ( grep 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' ~/.bashrc); then 
-    echo "/usr/local/lib has been set in variable LD_LIBRARY_PATH"
-else
-    echo "set library path..."
-    sudo sed -i '$a\export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' ~/.bashrc
-fi
-source ~/.bashrc
-
 bash ${CURRENT_DIR}/install_curlpp.sh
 bash ${CURRENT_DIR}/install_colpack_adolc.sh
 bash ${CURRENT_DIR}/install_glogs_gflags.sh
@@ -22,5 +14,4 @@ bash ${CURRENT_DIR}/install_protobuf.sh
 bash ${CURRENT_DIR}/install_qpOASES.sh
 bash ${CURRENT_DIR}/install_tinyxml2.sh
 
-echo "****variable LD_LIBRARY_PATH is ${LD_LIBRARY_PATH} ..."
 sudo ldconfig

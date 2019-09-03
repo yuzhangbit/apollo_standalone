@@ -24,13 +24,9 @@ install_adolc()
     ./configure --prefix="/usr/local" --enable-sparse --enable-addexa --enable-static --with-openmp-flag="-fopenmp" --with-colpack="/usr/local" ADD_CXXFLAGS="-fPIC" ADD_CFLAGS="-fPIC" ADD_FFLAGS="-fPIC"
     sudo make -j8 all
     sudo make install
-    if ( grep 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64' ~/.bashrc); then 
-        echo "/usr/local/lib64 has been set in variable LD_LIBRARY_PATH"
-    else
-        echo "set library path..."
-        sudo sed -i '$a\export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64' ~/.bashrc
-    fi
-    source ~/.bashrc
+    echo "/usr/local/lib64" > libadolc.conf
+    sudo mv libadolc.conf /etc/ld.so.conf.d/
+    sudo ldconfig
 }
 
 install_copack

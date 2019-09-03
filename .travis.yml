@@ -21,8 +21,6 @@ before_script:
 
 script:
   - pwd
-  - echo -e "\033[42;31m variable LD_LIBRARY_PATH is ${LD_LIBRARY_PATH} \033[0m"
-  - sudo ldconfig
   - cd src/apollo
   - mkdir -p build
   - cd build && cmake ..
