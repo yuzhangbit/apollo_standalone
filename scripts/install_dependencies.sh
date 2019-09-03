@@ -13,3 +13,10 @@ bash ${CURRENT_DIR}/install_proj4.sh
 bash ${CURRENT_DIR}/install_protobuf.sh
 bash ${CURRENT_DIR}/install_qpOASES.sh
 bash ${CURRENT_DIR}/install_tinyxml2.sh
+
+if ( grep 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' ~/.bashrc); then 
+    echo "/usr/local/lib has been set in variable LD_LIBRARY_PATH"
+else
+    echo "set library path..."
+    sudo sed -i '$a\export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib' ~/.bashrc
+fi

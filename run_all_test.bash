@@ -1,7 +1,7 @@
 #! /bin/bash
-set -e
 function run_all_test() {
     cd /apollo/bin
+    declare -i file_count
     file_count=0
     for file in `ls`
     do 
