@@ -64,17 +64,17 @@ include_directories(include
                     ${CUDA_INCLUDE_DIRS}
                     ${EIGEN3_INCLUDE_DIR})
 
-add_subdirectory(cyber)
-add_subdirectory(modules/common)
-add_subdirectory(modules/localization)
-add_subdirectory(modules/canbus)
-add_subdirectory(modules/map)
-add_subdirectory(modules/perception)
-add_subdirectory(modules/prediction)
-add_subdirectory(modules/routing)
-add_subdirectory(modules/planning)
-add_subdirectory(modules/dreamview)
-add_subdirectory(third_party/json)
+# add_subdirectory(cyber)
+# add_subdirectory(modules/common)
+# add_subdirectory(modules/localization)
+# add_subdirectory(modules/canbus)
+# add_subdirectory(modules/map)
+# add_subdirectory(modules/perception)
+# add_subdirectory(modules/prediction)
+# add_subdirectory(modules/routing)
+# add_subdirectory(modules/planning)
+# add_subdirectory(modules/dreamview)
+# add_subdirectory(third_party/json)
 
 
 

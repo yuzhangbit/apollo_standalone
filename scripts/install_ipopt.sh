@@ -15,8 +15,6 @@ install_ipopt()
     ./configure --prefix /usr/local --disable-shared ADD_CXXFLAGS="-fPIC" ADD_CFLAGS="-fPIC" ADD_FFLAGS="-fPIC"
     make -j8 all
     sudo make install
-    sudo mkdir -p /usr/local/ipopt
-    sudo cp -r include /usr/local/ipopt && sudo cp -r lib /usr/local/ipopt
 }
 
 install_ipopt
