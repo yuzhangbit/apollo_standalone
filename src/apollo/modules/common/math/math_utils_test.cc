@@ -191,7 +191,7 @@ TEST(MathUtilsTest, QPSTTest) {
   osqp_set_default_settings(settings);
 
   // Setup workspace
-  OSQPWorkspace* work = osqp_setup(data, settings);
+  work = osqp_setup(data, settings);
 
   // Solve Problem
   osqp_solve(work);

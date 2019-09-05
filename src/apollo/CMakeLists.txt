@@ -12,7 +12,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_subdirectory(deps/googletest EXCLUDE_FROM_ALL)
 
-set(ENABLE_CUDA OFF)
+option(ENABLE_CUDA "enable cuda for planning" OFF)
 
 find_package(PROTOBUF REQUIRED)
 find_package(gflags REQUIRED)
