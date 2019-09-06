@@ -2,8 +2,10 @@ cmake_minimum_required(VERSION 3.5.1)
 
 
 if(ENABLE_CUDA)
-    cuda_add_library(planning_block planning_block.cu)
-    target_link_libraries(planning_block ${CUDA_LIBRARIES})
+    set(planning_block "planning_block")
+    message(INFO "add cuda library")
+    cuda_add_library(${planning_block} planning_block.cu)
+    target_link_libraries(${planning_block} ${CUDA_LIBRARIES})
 else()
     set(planning_block "")
 endif(ENABLE_CUDA)
@@ -221,6 +223,7 @@ install(TARGETS planning_iterative_anchoring_smoother
                 dual_variable_warm_start_ipopt_interface_test
                 dual_variable_warm_start_osqp_interface_test
                 dual_variable_warm_start_problem_test
+                ${planning_block}
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
@@ -228,7 +231,7 @@ install(TARGETS planning_iterative_anchoring_smoother
         )
 
 if(ENABLE_CUDA)
-    install(TARGETS planning_block
+    install(TARGETS ${planning_block}
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     RUNTIME DESTINATION bin
