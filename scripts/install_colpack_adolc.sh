@@ -2,7 +2,7 @@ set -e
 
 install_copack()
 {
-    cd /tmp
+    cd /tmp && rm -rf ColPack
     git clone https://github.com/CSCsw/ColPack.git
     cd ColPack
     cd build/automake
