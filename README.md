@@ -2,7 +2,7 @@
 
 **Tested OS: ubuntu 16.04 LTS**
 
-This is a cmake version of the Apollo5.0 release. The project structure is much more clear and simpler than our previous work – [port_apollo](https://github.com/yuzhangbit/port_apollo).  Every `CMakelists.txt` file correspond to a `bazel` `BUILD` file in the same folder.  
+This is a cmake version of the Apollo5.0 release. The project structure is much more clear and simpler than our previous work – [port_apollo](https://github.com/yuzhangbit/port_apollo).  Every `CMakelists.txt` file corresponds to a `bazel` `BUILD` file in the same folder.  
 
 ## Dependencies
 
