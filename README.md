@@ -37,7 +37,7 @@ sudo make install
 ```
 All the test binary and library targets, config files and testdata will be installed to `/apollo`. 
 
-If you have followed the [instruction](https://yuzhangbit.github.io/tools/nvidia-driver-and-cuda9-installation/) and installed the `Cuda`, you can enable cuda  when compiling the codes by
+If you have followed the [instruction](https://yuzhangbit.github.io/tools/nvidia-driver-and-cuda9-installation/) and installed the `cuda`, you can enable cuda by
 
 ```bash
 mkdir -p src/apollo/build && cd src/apollo/build
