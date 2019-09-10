@@ -5,7 +5,7 @@ install_gflags()
     cd /tmp
     wget https://github.com/gflags/gflags/archive/v2.2.0.tar.gz
     tar xzf v2.2.0.tar.gz
-    mkdir gflags-2.2.0/build
+    mkdir -p gflags-2.2.0/build
     cd gflags-2.2.0/build
     CXXFLAGS="-fPIC" cmake -DBUILD_SHARED_LIBS=true -DGFLAGS_NAMESPACE=google ..
     make -j8
