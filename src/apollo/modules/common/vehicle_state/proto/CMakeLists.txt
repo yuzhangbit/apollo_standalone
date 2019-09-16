@@ -9,7 +9,8 @@ include_directories(${PROTOBUF_INCLUDE_DIRS})
 add_library(common_vehicle_state_proto ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(common_vehicle_state_proto
         ${PROTOBUF_LIBRARIES}
-        localization::proto)
+        localization::proto
+        canbus::proto)
 add_library(common::vehicle_state_proto ALIAS common_vehicle_state_proto)
 
 install(TARGETS common_vehicle_state_proto
