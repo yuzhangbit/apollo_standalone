@@ -192,7 +192,10 @@ int main(int argc, char *argv[]) {
 
     // 2. get initial guess for dual variables /lamda and /miu
     Eigen::MatrixXd ego(4, 1);
-    ego << 0, 0, vehicle_param.length(), vehicle_param.width();
+    ego << vehicle_param.front_edge_to_center(),
+        vehicle_param.left_edge_to_center(),
+        vehicle_param.back_edge_to_center(),
+        vehicle_param.right_edge_to_center();
 
     Eigen::MatrixXd lamda_ws;
     Eigen::MatrixXd miu_ws;
