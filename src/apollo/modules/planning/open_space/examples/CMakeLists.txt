@@ -4,7 +4,7 @@ find_package(PythonLibs 2.7 REQUIRED)
 #find_package(OpenCV 3 REQUIRED)
 
 add_executable(open_space_palnner_demo
-  example.cpp)
+  open_space_demo.cpp)
 target_link_libraries(open_space_palnner_demo
   planning::hybrid_a_star
   planning::dual_variable_warm_start_problem
