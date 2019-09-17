@@ -53,7 +53,8 @@ typedef common::math::Vec2d Vec2d;
 
 void plotPython(const planning::HybridAStartResult &coarse_traj,
                 const Eigen::MatrixXd &smooth_traj,
-                const std::vector<std::vector<Vec2d>> &obs_list) {
+                const std::vector<std::vector<Vec2d>> &obs_list,
+                const common::VehicleParam &vehicle) {
     namespace plt = matplotlibcpp;
     plt::figure(1);
 //    plt::figure_size(1200, 1200);
@@ -76,49 +77,59 @@ void plotPython(const planning::HybridAStartResult &coarse_traj,
     for (size_t i(0); i < coarse_traj.x.size(); ++i) {
         smooth_x.push_back(smooth_traj(0, i));
         smooth_y.push_back(smooth_traj(1, i));
+        auto box = planning::Node3d::GetBoundingBox(vehicle,
+                                                    smooth_traj(0, i),
+                                                    smooth_traj(1, i),
+                                                    smooth_traj(2, i));
+        std::vector<double> corner_x;
+        std::vector<double> corner_y;
+        for (const auto &corner:box.GetAllCorners()) {
+            corner_x.push_back(corner.x());
+            corner_y.push_back(corner.y());
+        }
+        corner_x.push_back(corner_x.front());
+        corner_y.push_back(corner_y.front());
+        plt::plot(corner_x, corner_y, "green");
     }
 
     plt::plot(coarse_traj.x, coarse_traj.y, "blue", smooth_x, smooth_y, "red");
-//    plt::show();
     plt::axis("equal");
-
-    plt::figure(2);
-    std::vector<double> phi, vel, t;
-    for (int i = 0; i < coarse_traj.x.size(); ++i) {
-        phi.push_back(smooth_traj(2, i));
-        vel.push_back(smooth_traj(3, i));
-        t.push_back(i);
-    }
-    plt::plot(t, phi, "red");
     plt::show();
 }
 
-
 int main(int argc, char *argv[]) {
     FLAGS_stderrthreshold = 0;
+    // print apollo debug message
     FLAGS_v = 10;
+    // read configurature from file
     FLAGS_planner_open_space_config_filename =
         "/apollo/modules/planning/testdata/conf/"
         "open_space_standard_parking_lot.pb.txt";
-    auto vehicle_param =
-        common::VehicleConfigHelper::GetConfig().vehicle_param();
-
     planning::PlannerOpenSpaceConfig config;
     cyber::common::GetProtoFromFile(
         FLAGS_planner_open_space_config_filename, &config);
 
+    // read vehicle param from file
+    auto vehicle_param =
+        common::VehicleConfigHelper::GetConfig().vehicle_param();
+
     /// set scene:
     std::vector<Vec2d> obs1 =
-        {common::math::Vec2d(15, 30),
-         common::math::Vec2d(10, 30),
-         common::math::Vec2d(10, 10),
-         common::math::Vec2d(15, 10)};
+        {common::math::Vec2d(13, 8),
+         common::math::Vec2d(1.5, 8),
+         common::math::Vec2d(1.5, 0),
+         common::math::Vec2d(13, 0)};
     std::vector<Vec2d> obs2 =
-        {common::math::Vec2d(23, 30),
-         common::math::Vec2d(19, 30),
-         common::math::Vec2d(19, 10),
-         common::math::Vec2d(23, 10)};
-    std::vector<std::vector<Vec2d>> obs_list = {obs1, obs2};
+        {common::math::Vec2d(-1.5, 8),
+         common::math::Vec2d(-13, 8),
+         common::math::Vec2d(-13, 0),
+         common::math::Vec2d(-1.5, 0)};
+    std::vector<Vec2d> obs3 =
+        {common::math::Vec2d(1.5, 2),
+         common::math::Vec2d(-1.5, 2),
+         common::math::Vec2d(-1.5, 0),
+         common::math::Vec2d(1.5, 0)};
+    std::vector<std::vector<Vec2d>> obs_list = {obs1, obs2, obs3};
     Eigen::MatrixXi obs_edge_num(obs_list.size(), 1);
     for (size_t i(0); i < obs_list.size(); ++i) {
         obs_edge_num(i, 0) = obs_list.at(i).size();
@@ -133,22 +144,29 @@ int main(int argc, char *argv[]) {
         1, 0,
         0, 1,
         -1, 0,
+        0, -1,
+        1, 0,
+        0, 1,
+        -1, 0,
         0, -1;
     obsb << obs1[0].x(), obs1[1].y(), -obs1[2].x(), -obs1[3].y(),
-        obs2[0].x(), obs2[1].y(), -obs2[2].x(), -obs2[3].y();
-    std::cout << "obsA \n" << obsA << "\n" << "obsb: \n" << obsb << "\n";
-    std::vector<double> map_bounds = {-10, 50, -10, 50};
+        obs2[0].x(), obs2[1].y(), -obs2[2].x(), -obs2[3].y(),
+        obs3[0].x(), obs3[1].y(), -obs3[2].x(), -obs3[3].y();
+    std::vector<double> map_bounds = {-15, 15, 0, 40};
 
     /// Hybrid Astar search a coarse path:
     planning::HybridAStar hybrid_aster(config);
     planning::HybridAStartResult coarse_traj;
 
-    bool flag = hybrid_aster.Plan(0,
-                                  0,
-                                  0,
-                                  17,
-                                  20,
-                                  -M_PI_2,
+    double initial_state[3] = {-4, 10, 0};
+    double goal_state[3] = {0, 3.5, M_PI_2};
+
+    bool flag = hybrid_aster.Plan(initial_state[0],
+                                  initial_state[1],
+                                  initial_state[2],
+                                  goal_state[0],
+                                  goal_state[1],
+                                  goal_state[2],
                                   map_bounds,
                                   obs_list,
                                   &coarse_traj);
@@ -190,11 +208,7 @@ int main(int argc, char *argv[]) {
                                   xws.transpose(),
                                   &lamda_ws,
                                   &miu_ws);
-    printf(" lamda size: %d, %d, miu size: %d, %d\n",
-           lamda_ws.rows(),
-           lamda_ws.cols(),
-           miu_ws.rows(),
-           miu_ws.cols());
+
     if (!flag) {
         printf("dual variable warm start failed!!!\n");
         return 1;
@@ -226,7 +240,6 @@ int main(int argc, char *argv[]) {
                             obsA,
                             obsb, &state, &control, &time, &lamda, &miu);
 
-
-    plotPython(coarse_traj, state, obs_list);
+    plotPython(coarse_traj, state, obs_list, vehicle_param);
     return 0;
 }
