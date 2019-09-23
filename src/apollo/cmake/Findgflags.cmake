@@ -13,9 +13,9 @@
 #
 # Output variables:
 #
-# - Gflags_FOUND: Boolean that indicates if the package was found
-# - Gflags_LIBRARIES: Package libraries
-# - Gflags_INCLUDE_DIRS: Absolute path to package headers
+# - gflags_FOUND: Boolean that indicates if the package was found
+# - gflags_LIBRARIES: Package libraries
+# - gflags_INCLUDE_DIRS: Absolute path to package headers
 #
 # Example usage:
 #
@@ -41,9 +41,11 @@ if(gflags_INCLUDE_PATH AND gflags_LIBRARY)
 endif(gflags_INCLUDE_PATH AND gflags_LIBRARY)
 
 if(gflags_FOUND)
-  message(STATUS "Found gflags:" ${gflags_LIBRARY})
+  message(STATUS "Found gflags-lib:" ${gflags_LIBRARY})
+  message(STATUS "Found gflags-header:" ${gflags_INCLUDE_PATH})
+
   # Output variables
-  set(gflags_INCLUDE_DIRS ${gflags_INCLUDE_DIR})
+  set(gflags_INCLUDE_DIRS ${gflags_INCLUDE_PATH})
   set(gflags_LIBRARIES ${gflags_LIBRARY})
 else(gflags_FOUND)
   if(gflags_FIND_REQUIRED)

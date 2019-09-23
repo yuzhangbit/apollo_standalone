@@ -75,6 +75,7 @@ add_subdirectory(modules/routing)
 add_subdirectory(modules/planning)
 add_subdirectory(modules/dreamview)
 add_subdirectory(third_party/json)
+add_subdirectory(third_party/tf2)
 
 
 
@@ -99,6 +100,12 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
         DESTINATION .
         FILES_MATCHING PATTERN "*.conf"
+        PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.*.pb.txt"
         PATTERN ".svn" EXCLUDE
 )
 

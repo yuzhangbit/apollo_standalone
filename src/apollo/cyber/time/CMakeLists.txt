@@ -4,12 +4,6 @@ add_library(cyber_duration duration.cc)
 target_link_libraries(cyber_duration cyber::common)
 add_library(cyber::duration ALIAS cyber_duration)
 
-
-add_library(cyber_time time.cc)
-target_link_libraries(cyber_time cyber::common cyber::duration)
-add_library(cyber::time ALIAS cyber_time)
-
-
 add_library(cyber_rate rate.cc)
 target_link_libraries(cyber_rate cyber::common
                                  cyber::duration
@@ -26,6 +20,9 @@ target_link_libraries(time_test gtest
                                 cyber::time
                                 cyber::common)
 
+add_library(cyber_time time.cc)
+target_link_libraries(cyber_time cyber::duration)
+add_library(cyber::time ALIAS cyber_time)
 
 
 install(TARGETS cyber_duration
@@ -33,6 +30,7 @@ install(TARGETS cyber_duration
                 cyber_rate
                 duration_test
                 time_test
+                cyber_duration
 LIBRARY DESTINATION lib
 ARCHIVE DESTINATION lib
 RUNTIME DESTINATION bin
