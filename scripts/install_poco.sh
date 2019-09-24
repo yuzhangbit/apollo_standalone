@@ -29,4 +29,4 @@ pushd poco-poco-${VERSION}-release
 popd
 
 # clean up
-rm -rf poco-${VERSION}-release.tar.gz poco-poco-${VERSION}-release
+sudo rm -rf poco-${VERSION}-release.tar.gz poco-poco-${VERSION}-release
