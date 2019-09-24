@@ -1,5 +1,5 @@
 #! /bin/bash
-set -e
+set -ev
 
 SCRIPTS_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
@@ -19,7 +19,8 @@ function contains() {
 
 function run_all_test() {
     cd /apollo/bin
-    bash "${SCRIPTS_PATH}/scripts/cyber_setup.sh"
+    ls
+    source "${SCRIPTS_PATH}/scripts/cyber_setup.sh"
     declare -i file_count
     file_count=0
     declare -ar skip_file=("file_test"

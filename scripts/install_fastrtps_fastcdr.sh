@@ -32,6 +32,9 @@ pushd Fast-RTPS
     sudo make install
 popd
 
+echo  -e "\033[43;35m >>>>>>>> create ld for fast_rtps \033[0m"
+sudo sh -c 'echo "/usr/local/fast-rtps/lib" >> /etc/ld.so.conf.d/libfast_rtps.conf'
+sudo ldconfig
 
 # clean up
 rm -rf Fast-RTPS
