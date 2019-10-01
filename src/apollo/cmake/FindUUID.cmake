@@ -20,4 +20,6 @@ endif()
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(UUID DEFAULT_MSG ${UUID_REQUIRED})
 
+message("Found UUID    (include: ${UUID_INCLUDE_DIR}, library: ${UUID_LIBRARY})")
+
 mark_as_advanced(${UUID_REQUIRED})

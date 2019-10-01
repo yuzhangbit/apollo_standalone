@@ -32,12 +32,18 @@
 # lint_cmake: -convention/filename, -package/stdargs
 
 set(FastRTPS_FOUND FALSE)
+set(FastCDR_FOUND FALSE)
+
+find_path(FastCDR_INCLUDE_DIR
+  NAMES "fastcdr/Cdr.h"
+  PATHS /usr/local/fast-rtps/include/)
 
 find_path(FastRTPS_INCLUDE_DIR
-  NAMES fastrtps/)
+  NAMES "fastrtps/fastrtps_dll.h"
+  PATHS /usr/local/fast-rtps/include/)
 
-find_package(fastcdr REQUIRED CONFIG)
-find_package(fastrtps REQUIRED CONFIG)
+# find_package(fastrtps REQUIRED CONFIG)
+# find_package(fastcdr REQUIRED CONFIG)
 
 string(REGEX MATCH "^[0-9]+\\.[0-9]+" fastcdr_MAJOR_MINOR_VERSION "${fastcdr_VERSION}")
 string(REGEX MATCH "^[0-9]+\\.[0-9]+" fastrtps_MAJOR_MINOR_VERSION "${fastrtps_VERSION}")
@@ -65,7 +71,15 @@ else()
   set(FastCDR_LIBRARIES "")
 endif()
 
-set(FastCDR_LIBRARIES "/usr/local/lib/libfastcdr.so")
+set(FastCDR_LIBRARIES "/usr/local/fast-rtps/lib/libfastcdr.so")
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(FastCDR
+  FOUND_VAR FastCDR_FOUND
+  REQUIRED_VARS
+    FastCDR_INCLUDE_DIR
+    FastCDR_LIBRARIES
+)
 
 find_library(FastRTPS_LIBRARY_RELEASE
   NAMES fastrtps-${fastrtps_MAJOR_MINOR_VERSION} fastrtps)
@@ -93,6 +107,8 @@ else()
   set(FastRTPS_LIBRARIES "")
 endif()
 
+set(FastRTPS_LIBRARIES "/usr/local/fast-rtps/lib/libfastrtps.so")
+
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(FastRTPS
   FOUND_VAR FastRTPS_FOUND
@@ -100,3 +116,6 @@ find_package_handle_standard_args(FastRTPS
     FastRTPS_INCLUDE_DIR
     FastRTPS_LIBRARIES
 )
+
+message(STATUS "FastCDR_INCLUDE_DIR:" ${FastCDR_INCLUDE_DIR} ${FastCDR_LIBRARIES})
+message(STATUS "FastRTPS_INCLUDE_DIR:" ${FastRTPS_INCLUDE_DIR} ${FastRTPS_LIBRARIES})

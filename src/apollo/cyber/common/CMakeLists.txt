@@ -5,7 +5,7 @@ target_link_libraries(cyber_common cyber::environment
                                    cyber::file
                                    cyber::global_data
                                    cyber::log
-                                   cyber::macros
+                                   cyber::common_macros
                                    cyber::time_conversion
                                    cyber::types
                                    cyber::util)
@@ -33,15 +33,15 @@ add_library(cyber::environment ALIAS cyber_environment)
 add_library(cyber_global_data global_data.cc)
 target_link_libraries(cyber_global_data cyber::base
                                         cyber::file
-                                        cyber::macros
+                                        cyber::common_macros
                                         cyber::util
                                         cyber::proto)
 add_library(cyber::global_data ALIAS cyber_global_data)
 
-add_library(cyber_macros macros.h)
-set_target_properties(cyber_macros PROPERTIES LINKER_LANGUAGE CXX)
-target_link_libraries(cyber_macros cyber::base)
-add_library(cyber::macros ALIAS cyber_macros)
+add_library(cyber_common_macros macros.h)
+set_target_properties(cyber_common_macros PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries(cyber_common_macros cyber::base_macros)
+add_library(cyber::common_macros ALIAS cyber_common_macros)
 
 add_library(cyber_time_conversion time_conversion.h)
 set_target_properties(cyber_time_conversion PROPERTIES LINKER_LANGUAGE CXX)
@@ -74,7 +74,7 @@ install(TARGETS cyber_common
                 cyber_log
                 cyber_environment
                 cyber_global_data
-                cyber_macros
+                cyber_common_macros
                 cyber_time_conversion
                 cyber_types
                 cyber_util

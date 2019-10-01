@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.inc": "cmake",
+        "utility": "cpp",
+        "memory": "cpp",
+        "random": "cpp"
+    }
+}
