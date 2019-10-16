@@ -12,45 +12,6 @@
 using namespace apollo;
 typedef common::math::Vec2d Vec2d;
 
-//void plotCv(const planning::HybridAStartResult &coarse_traj,
-//            const Eigen::MatrixXd &smooth_traj,
-//            const std::vector<std::vector<Vec2d>> &obs_list,
-//            const std::vector<double> &map_bounds) {
-//    int horizon = coarse_traj.x.size() - 1;
-//    double r = 0.01;
-//    int rows = (map_bounds.at(3) - map_bounds.at(2)) / r;
-//    int cols = (map_bounds.at(1) - map_bounds.at(0)) / r;
-//    cv::Mat img(rows, cols, CV_8UC3, cv::Scalar(255, 255, 255));
-//    for (size_t i(0); i < obs_list.size(); ++i) {
-//        const auto &obs = obs_list.at(i);
-//        std::vector<cv::Point> pts(obs.size());
-//        for (size_t j(0); j < obs.size(); ++j) {
-//            pts[j] = cv::Point((obs.at(j).x() - map_bounds.at(0)) / r,
-//                               (obs.at(j).y() - map_bounds.at(2)) / r);
-//        }
-//        cv::polylines(img, pts, true, cv::Scalar(0, 0, 0));
-//    }
-//    for (int i = 0; i < horizon; ++i) {
-//        // coarse path:
-//        cv::Point p1((coarse_traj.x.at(i) - map_bounds.at(0)) / r,
-//                     (coarse_traj.y.at(i) - map_bounds.at(2)) / r);
-//
-//        cv::Point p2((coarse_traj.x.at(i + 1) - map_bounds.at(0)) / r,
-//                     (coarse_traj.y.at(i + 1) - map_bounds.at(2)) / r);
-//        cv::line(img, p1, p2, cv::Scalar(255, 0, 0));
-//        // smooth path:
-//        cv::Point p3((state(0, i) - map_bounds.at(0)) / r,
-//                     (state(1, i) - map_bounds.at(2)) / r);
-//
-//        cv::Point p4((state(0, i + 1) - map_bounds.at(0)) / r,
-//                     (state(1, i + 1) - map_bounds.at(2)) / r);
-//        cv::line(img, p3, p4, cv::Scalar(255, 255, 0));
-//    }
-//    cv::namedWindow("result", 0);
-//    cv::imshow("result", img);
-//    cv::waitKey();
-//}
-
 void plotPython(const planning::HybridAStartResult &coarse_traj,
                 const Eigen::MatrixXd &smooth_traj,
                 const std::vector<std::vector<Vec2d>> &obs_list,

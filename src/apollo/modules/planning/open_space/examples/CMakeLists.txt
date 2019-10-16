@@ -14,6 +14,6 @@ target_link_libraries(open_space_palnner_demo
   )
 
 install(TARGETS open_space_palnner_demo
-  RUNTIME DESTINATION bin/example
+  RUNTIME DESTINATION example
   INCLUDES DESTINATION .
   )
