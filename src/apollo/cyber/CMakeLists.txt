@@ -106,3 +106,22 @@ add_executable(mainboard mainboard/mainboard.cc
 target_link_libraries(mainboard pthread cyber::proto
                                         cyber::cyber_core)
 
+install(TARGETS cyber_binary
+                cyber_state
+                cyber_init
+                cyber_core
+                cyber
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )
+
+install(TARGETS mainboard
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )
+

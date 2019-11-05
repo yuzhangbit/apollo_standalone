@@ -33,9 +33,12 @@ install(TARGETS cyber_logger_util
                 cyber_log_file_object
                 cyber_async_logger
                 cyber_logger
-                logger_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+install(TARGETS logger_test
+        RUNTIME DESTINATION bin
+  )

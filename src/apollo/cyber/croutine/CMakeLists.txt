@@ -47,8 +47,13 @@ install(TARGETS cyber_routine_context
                 cyber_swap
                 cyber_croutine
     croutine_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS croutine_test
+        RUNTIME DESTINATION bin
+  )

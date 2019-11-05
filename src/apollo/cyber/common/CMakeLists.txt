@@ -78,11 +78,15 @@ install(TARGETS cyber_common
                 cyber_time_conversion
                 cyber_types
                 cyber_util
-                file_test
-		log_test
-                macros_test
-        LIBRARY DESTINATION lib
+				EXPORT apollo-export
+				LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS file_test
+								log_test
+								macros_test
+				RUNTIME DESTINATION bin
+	)

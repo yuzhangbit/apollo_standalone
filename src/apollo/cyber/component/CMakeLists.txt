@@ -29,3 +29,18 @@ add_library(cyber::timer_component ALIAS cyber_timer_component)
 ## gtest
 add_executable(timer_component_test timer_component_test.cc)
 target_link_libraries(timer_component_test gtest gtest_main gmock cyber::cyber)
+
+
+install(TARGETS cyber_component
+                cyber_component_base
+                cyber_timer_component
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )
+
+install(TARGETS timer_component_test
+        RUNTIME DESTINATION bin
+  )

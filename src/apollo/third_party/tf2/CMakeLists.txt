@@ -12,6 +12,7 @@ add_library(3rdparty::tf2 ALIAS 3rdparty_tf2)
 
 
 install(TARGETS 3rdparty_tf2
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

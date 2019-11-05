@@ -28,11 +28,17 @@ add_library(cyber::time ALIAS cyber_time)
 install(TARGETS cyber_duration
                 cyber_time
                 cyber_rate
-                duration_test
-                time_test
-                cyber_duration
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
 )
+
+install(TARGETS duration_test
+                time_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )

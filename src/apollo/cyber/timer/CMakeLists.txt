@@ -32,8 +32,9 @@ install(TARGETS cyber_timer_task
                 cyber_timer_bucket
                 cyber_timing_wheel
                 cyber_timer
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
 )

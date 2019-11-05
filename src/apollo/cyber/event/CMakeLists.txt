@@ -17,6 +17,7 @@ add_library(cyber::perf_event_cache ALIAS cyber_perf_event_cache)
 
 install(TARGETS cyber_perf_event
                 cyber_perf_event_cache
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

@@ -308,7 +308,14 @@ install(TARGETS cyber_identity
                 cyber_rtps_dispatcher
                 cyber_intra_dispatcher
                 cyber_transport
-    transport_test
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )
+
+install(TARGETS transport_test
                 common_test
                 dispatcher_test
                 intra_dispatcher_test
@@ -324,4 +331,4 @@ install(TARGETS cyber_identity
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
-        )
+  )

@@ -118,14 +118,16 @@ install(TARGETS cyber_base
                 cyber_thread_safe_queue
                 cyber_unbounded_queue
                 cyber_wait_strategy
-    signal_test
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        )
+
+install(TARGETS signal_test
                 atomic_hash_map_test
                 atomic_rw_lock_test
                 bounded_queue_test
                 for_each_test
                 object_pool_test
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
-        INCLUDES DESTINATION .
-        )
+  )

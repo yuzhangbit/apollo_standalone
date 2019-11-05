@@ -24,6 +24,7 @@ install(TARGETS cyber_client
                 cyber_client_base
                 cyber_service_base
                 cyber_service
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

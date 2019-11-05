@@ -16,6 +16,7 @@ target_link_libraries(cyber_class_loader cyber::class_loader)
 
 install(TARGETS cyber_class_loader
                 cyber_class_loader_manager
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

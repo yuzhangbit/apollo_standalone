@@ -27,10 +27,12 @@ install(TARGETS cyber_blocker
                 cyber_blocker_manager
                 cyber_intra_reader
                 cyber_intra_writer
-    cyber_blocker_test
-                cyber_blocker_manager_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
-        RUNTIME DESTINATION bin
-        INCLUDES DESTINATION .
 )
+
+install(TARGETS cyber_blocker_test
+                cyber_blocker_manager_test
+        RUNTIME DESTINATION bin
+  )

@@ -73,11 +73,15 @@ install(TARGETS cyber_protobuf_factory
                 cyber_intra_message
                 cyber_message_header
                 cyber_message_traits
-    message_header_test
-                # raw_message_test
-                # protobuf_factory_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS message_header_test
+  # raw_message_test
+  # protobuf_factory_test
+  RUNTIME DESTINATION bin
+  )

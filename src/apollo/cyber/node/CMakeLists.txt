@@ -78,10 +78,17 @@ install(TARGETS cyber_node
                 cyber_reader
                 cyber_writer_base
                 cyber_writer
-    writer_reader_test
-                node_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS writer_reader_test
+                node_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )

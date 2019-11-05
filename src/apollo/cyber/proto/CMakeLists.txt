@@ -27,6 +27,7 @@ add_library(cyber::proto ALIAS cyber_proto)
 
 
 install(TARGETS cyber_proto
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

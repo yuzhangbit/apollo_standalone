@@ -17,9 +17,16 @@ target_link_libraries(task_test gtest gtest_main gmock cyber::cyber_core)
 
 install(TARGETS cyber_task_manager
                 cyber_task
-    task_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
 )
+
+install(TARGETS task_test
+                LIBRARY DESTINATION lib
+                ARCHIVE DESTINATION lib
+                RUNTIME DESTINATION bin
+                INCLUDES DESTINATION .
+  )

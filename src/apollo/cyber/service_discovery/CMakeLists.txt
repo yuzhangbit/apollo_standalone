@@ -100,10 +100,17 @@ install(TARGETS cyber_role
                 cyber_participant_listner
                 cyber_serivce_manager
                 cyber_topology_manager
-    topology_manager_test
-                role_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS topology_manager_test
+                role_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )

@@ -76,14 +76,21 @@ install(TARGETS cyber_processor
                 cyber_cv_wrapper
                 cyber_scheduler_factory
                 cyber_scheduler_classic
+                cyber_scheduler_choreography
                 cyber_choreography_context
                 cyber_classic_context
-    scheduler_test
-                scheduler_classic_test
-                scheduler_choreo_test
-
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS scheduler_test
+                scheduler_classic_test
+                scheduler_choreo_test
+      LIBRARY DESTINATION lib
+      ARCHIVE DESTINATION lib
+      RUNTIME DESTINATION bin
+      INCLUDES DESTINATION .
+  )

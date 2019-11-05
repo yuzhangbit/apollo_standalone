@@ -74,13 +74,17 @@ install(TARGETS cyber_cache_buffer
                 cyber_data_fusion
                 cyber_all_latest
                 cyber_data
-    cache_buffer_test
-                data_visitor_test
-                data_dispatcher_test
-                channel_buffer_test
-                all_latest_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS cache_buffer_test
+                data_visitor_test
+                data_dispatcher_test
+                channel_buffer_test
+                all_latest_test
+        RUNTIME DESTINATION bin
+  )

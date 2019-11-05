@@ -65,19 +65,43 @@ include_directories(include
                     ${EIGEN3_INCLUDE_DIR})
 
 add_subdirectory(cyber)
-add_subdirectory(modules/common)
-add_subdirectory(modules/localization)
-add_subdirectory(modules/canbus)
-add_subdirectory(modules/map)
-add_subdirectory(modules/perception)
-add_subdirectory(modules/prediction)
-add_subdirectory(modules/routing)
-add_subdirectory(modules/planning)
-add_subdirectory(modules/dreamview)
+#add_subdirectory(modules/common)
+#add_subdirectory(modules/localization)
+#add_subdirectory(modules/canbus)
+#add_subdirectory(modules/map)
+#add_subdirectory(modules/perception)
+#add_subdirectory(modules/prediction)
+#add_subdirectory(modules/routing)
+#add_subdirectory(modules/planning)
+#add_subdirectory(modules/dreamview)
 add_subdirectory(third_party/json)
 add_subdirectory(third_party/tf2)
 
+set(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib")
+set(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}")
+set(CONFIG_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/apollo/cmake")
+install(EXPORT apollo-export
+  FILE apollo-export.cmake
+  DESTINATION share/apollo/cmake)
 
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+  apolloConfigVersion.cmake
+  VERSION 5.0.0
+  COMPATIBILITY AnyNewerVersion)
+
+configure_package_config_file(
+  cmake/apolloConfig.cmake.in
+  apolloConfig.cmake
+  INSTALL_DESTINATION ${CONFIG_INSTALL_DIR}
+  PATH_VARS INCLUDE_INSTALL_DIR LIB_INSTALL_DIR)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/apolloConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/apolloConfigVersion.cmake
+  DESTINATION share/apollo/cmake)
+
+install(DIRECTORY cmake
+        DESTINATION share/apollo/cmake)
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
         DESTINATION .
@@ -102,6 +126,12 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
         FILES_MATCHING PATTERN "*.conf"
         PATTERN ".svn" EXCLUDE
 )
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.h"
+        PATTERN ".svn" EXCLUDE
+  )
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
         DESTINATION .
