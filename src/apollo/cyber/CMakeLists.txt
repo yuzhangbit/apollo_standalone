@@ -50,6 +50,11 @@ target_link_libraries(cyber_init cyber::state
 add_library(cyber::init ALIAS cyber_init)
 
 add_library(cyber_core cyber.cc)
+target_include_directories(cyber_core
+  PUBLIC
+    ${FastRTPS_INCLUDE_DIR}
+    ${FastCDR_INCLUDE_DIR}
+    ${UUID_INCLUDE_DIR})
 target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  ${gflags_LIBRARIES}
                                  ${PROTOBUF_LIBRARIES}
