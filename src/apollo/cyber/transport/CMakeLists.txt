@@ -38,6 +38,7 @@ add_library(cyber::intra_transmitter ALIAS cyber_intra_transmitter)
 add_library(cyber_rtps_transmitter transmitter/rtps_transmitter.h)
 set_target_properties(cyber_rtps_transmitter PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(cyber_rtps_transmitter cyber::transmitter)
+target_include_directories(cyber_rtps_transmitter INTERFACE ${FastRTPS_INCLUDE_DIR})
 add_library(cyber::rtps_transmitter ALIAS cyber_rtps_transmitter)
 
 add_library(cyber_shm_transmitter transmitter/shm_transmitter.h)
@@ -98,12 +99,14 @@ add_library(cyber::notifier_factory ALIAS cyber_notifier_factory)
 
 add_library(cyber_underlay_message rtps/underlay_message.cc)
 target_link_libraries(cyber_underlay_message ${FastRTPS_LIBRARIES} ${FastCDR_LIBRARIES})
+target_include_directories(cyber_underlay_message PRIVATE ${FastRTPS_INCLUDE_DIR})
 add_library(cyber::underlay_message ALIAS cyber_underlay_message)
 
 add_library(cyber_underlay_message_type rtps/underlay_message_type.cc)
 target_link_libraries(cyber_underlay_message_type cyber::underlay_message
                                                   ${FastRTPS_LIBRARIES}
                                                   ${FastCDR_LIBRARIES})
+target_include_directories(cyber_underlay_message_type PUBLIC ${FastRTPS_INCLUDE_DIR})
 add_library(cyber::underlay_message_type ALIAS cyber_underlay_message_type)
 
 add_library(cyber_sub_listener rtps/sub_listener.cc)
@@ -137,6 +140,7 @@ target_link_libraries(cyber_attributes_filler cyber::qos_profile_conf
                                               cyber::log
                                               ${FastRTPS_LIBRARIES}
                                               ${FastCDR_LIBRARIES})
+target_include_directories(cyber_attributes_filler PUBLIC ${FastRTPS_INCLUDE_DIR})
 add_library(cyber::attributes_filler ALIAS cyber_attributes_filler)
 
 add_library(cyber_receiver receiver/receiver.h)
@@ -272,7 +276,47 @@ target_link_libraries(rtps_transceiver_test gtest gtest_main gmock cyber::cyber_
 add_executable(shm_transceiver_test transceiver/shm_transceiver_test.cc)
 target_link_libraries(shm_transceiver_test gtest gtest_main gmock cyber::cyber_core
                                                                   cyber::proto)
-install(TARGETS cyber_identity
+
+add_library(cyber_transport_total INTERFACE)
+target_link_libraries(cyber_transport_total INTERFACE
+                      cyber_identity
+                      cyber_endpoint
+                      cyber_message_info
+                      cyber_transmitter
+                      cyber_hybrid_transmitter
+                      cyber_intra_transmitter
+                      cyber_rtps_transmitter
+                      cyber_shm_transmitter
+                      cyber_shm_state
+                      cyber_shm_conf
+                      cyber_block
+                      cyber_segment
+                      cyber_readable_info
+                      cyber_notifier_base
+                      cyber_multicast_notifier
+                      cyber_condition_notifier
+                      cyber_notifier_factory
+                      cyber_underlay_message
+                      cyber_underlay_message_type
+                      cyber_sub_listener
+                      cyber_participant
+                      cyber_history_attributes
+                      cyber_history
+                      cyber_qos_profile_conf
+                      cyber_attributes_filler
+                      cyber_receiver
+                      cyber_shm_receiver
+                      cyber_rtps_receiver
+                      cyber_intra_receiver
+                      cyber_hybrid_receiver
+                      cyber_listener_handler
+                      cyber_dispatcher
+                      cyber_shm_dispatcher
+                      cyber_rtps_dispatcher
+                      cyber_intra_dispatcher
+                      cyber_transport)
+install(TARGETS cyber_transport_total
+                cyber_identity
                 cyber_endpoint
                 cyber_message_info
                 cyber_transmitter

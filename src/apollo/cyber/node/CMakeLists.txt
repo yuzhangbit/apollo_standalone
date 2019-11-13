@@ -70,8 +70,19 @@ add_executable(node_test node_test.cc)
 target_link_libraries(node_test gtest gtest_main gmock cyber::cyber
                                                        cyber::proto)
 
+add_library(cyber_node_total INTERFACE)
+target_link_libraries(cyber_node_total INTERFACE
+                      cyber_node
+                      cyber_node_channel_impl
+                      cyber_node_service_impl
+                      cyber_reader_base
+                      cyber_reader
+                      cyber_writer_base
+                      cyber_writer)
 
-install(TARGETS cyber_node
+
+install(TARGETS cyber_node_total
+                cyber_node
                 cyber_node_channel_impl
                 cyber_node_service_impl
                 cyber_reader_base

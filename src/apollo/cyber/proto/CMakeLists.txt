@@ -19,10 +19,11 @@ set(PROTOS choreography_conf.proto
 
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTOS})
 
-include_directories(${PROTOBUF_INCLUDE_DIRS})
 
 add_library(cyber_proto ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(cyber_proto ${PROTOBUF_LIBRARIES})
+target_include_directories(cyber_proto PUBLIC ${PROTOBUF_INCLUDE_DIRS}
+  INTERFACE ${CMAKE_INSTALL_PREFIX})
 add_library(cyber::proto ALIAS cyber_proto)
 
 

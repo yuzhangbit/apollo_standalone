@@ -65,11 +65,21 @@ target_link_libraries(log_test gtest gtest_main cyber::log)
 add_executable(macros_test macros_test.cc)
 target_link_libraries(macros_test gtest gtest_main cyber::base cyber::common cyber::proto)
 
+add_library(cyber_common_total INTERFACE)
+target_link_libraries(cyber_common_total INTERFACE
+											cyber_common
+											cyber_file
+											cyber_log
+											cyber_environment
+											cyber_global_data
+											cyber_common_macros
+											cyber_time_conversion
+											cyber_types
+											cyber_util)
 
 
-
-
-install(TARGETS cyber_common
+install(TARGETS cyber_common_total
+								cyber_common
                 cyber_file
                 cyber_log
                 cyber_environment

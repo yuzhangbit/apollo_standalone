@@ -22,8 +22,16 @@ target_link_libraries(cyber_blocker_test gtest gtest_main cyber::proto
 add_executable(cyber_blocker_manager_test blocker_manager_test.cc)
 target_link_libraries(cyber_blocker_manager_test gtest gtest_main cyber::proto
                                                                   cyber::cyber)
+add_library(cyber_blocker_total INTERFACE)
+target_link_libraries(cyber_blocker_total INTERFACE
+                      cyber_blocker
+                      cyber_blocker_manager
+                      cyber_intra_reader
+                      cyber_intra_writer
+  )
 
-install(TARGETS cyber_blocker
+install(TARGETS cyber_blocker_total
+                cyber_blocker
                 cyber_blocker_manager
                 cyber_intra_reader
                 cyber_intra_writer

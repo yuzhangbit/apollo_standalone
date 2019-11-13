@@ -1,8 +1,23 @@
+# Imported targets
+# ^^^^^^^^^^^^^^^^
+# This module defines the following `IMPORTED` targets:
+#
+# ``apollo::cyber``
+# ``apollo::cyber_proto``
+#
+# Example usage
+# ^^^^^^^^^^^^^
+# ::
+#     find_package(apollo REQUIRED)
+#     add_executable(foo foo.cc)
+#     target_link_libraries(foo apollo::cyber apollo::cyber_proto)
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 find_dependency(FastRTPS REQUIRED)
 find_dependency(UUID REQUIRED)
+
 include(${CMAKE_CURRENT_LIST_DIR}/apollo-export.cmake)
-set_and_check(APOLLO_INCLUDE_DIRS "@PACKAGE_INCLUDE_INSTALL_DIR@")
-set_and_check(APOLLO_LIBRARIES "@PACKAGE_LIB_INSTALL_DIR@")
+
+#set_and_check(APOLLO_INCLUDE_DIRS "@PACKAGE_INCLUDE_INSTALL_DIR@")
+#set_and_check(APOLLO_LIBRARIES "@PACKAGE_LIB_INSTALL_DIR@")

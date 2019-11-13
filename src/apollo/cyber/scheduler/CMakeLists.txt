@@ -68,8 +68,22 @@ add_executable(scheduler_choreo_test scheduler_choreo_test.cc)
 target_link_libraries(scheduler_choreo_test gtest gtest_main gmock cyber::cyber
                                                                    cyber::scheduler_factory)
 
+add_library(cyber_scheduler_total INTERFACE)
+target_link_libraries(cyber_scheduler_total INTERFACE
+                      cyber_processor
+                      cyber_processor_context
+                      cyber_scheduler
+                      cyber_mutex_wrapper
+                      cyber_cv_wrapper
+                      cyber_scheduler_factory
+                      cyber_scheduler_classic
+                      cyber_scheduler_choreography
+                      cyber_choreography_context
+                      cyber_classic_context)
 
-install(TARGETS cyber_processor
+
+install(TARGETS cyber_scheduler_total
+                cyber_processor
                 cyber_processor_context
                 cyber_scheduler
                 cyber_mutex_wrapper

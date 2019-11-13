@@ -6,12 +6,12 @@ ENABLE_LANGUAGE(ASM)
 
 find_package(UUID REQUIRED)
 find_package(FastRTPS REQUIRED)
-include_directories(${FastRTPS_INCLUDE_DIR}
-                    ${FastCDR_INCLUDE_DIR}
-                    ${GLOG_INCLUDE_DIRS}
-                    ${gflags_INCLUDE_DIRS}
-                    ${PROTOBUF_INCLUDE_DIRS}
-                    ${UUID_INCLUDE_DIR})
+#include_directories(${FastRTPS_INCLUDE_DIR}
+#                    ${FastCDR_INCLUDE_DIR}
+#                    ${GLOG_INCLUDE_DIRS}
+#                    ${gflags_INCLUDE_DIRS}
+#                    ${PROTOBUF_INCLUDE_DIRS}
+#                    ${UUID_INCLUDE_DIR})
 
 add_subdirectory(base)
 add_subdirectory(blocker)
@@ -102,7 +102,26 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
 add_library(cyber::cyber_core ALIAS cyber_core)
 
 add_library(cyber cyber.cc)
-target_link_libraries(cyber cyber::cyber_core)
+target_link_libraries(cyber
+                      cyber_base_total
+                      cyber_blocker_total
+                      cyber_class_loader_total
+                      cyber_common_total
+                      cyber_component_total
+                      cyber_croutine_total
+                      cyber_data_total
+                      cyber_event_total
+                      cyber_message_total
+                      cyber_node_total
+                      cyber_scheduler_total
+                      cyber_service_total
+                      cyber_service_discovery_total
+                      cyber_task_total
+                      cyber_time_total
+                      cyber_timer_total
+                      cyber_transport_total
+                      cyber_core)
+target_include_directories(cyber INTERFACE ${CMAKE_INSTALL_PREFIX})
 add_library(cyber::cyber ALIAS cyber)
 
 add_executable(mainboard mainboard/mainboard.cc
