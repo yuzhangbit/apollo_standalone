@@ -77,11 +77,9 @@ add_subdirectory(cyber)
 add_subdirectory(third_party/json)
 add_subdirectory(third_party/tf2)
 
-set(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib")
-set(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}")
-set(CONFIG_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/apollo/cmake")
 install(EXPORT apollo-export
   FILE apollo-export.cmake
+  NAMESPACE apollo::
   DESTINATION share/apollo/cmake)
 
 include(CMakePackageConfigHelpers)
@@ -93,8 +91,7 @@ write_basic_package_version_file(
 configure_package_config_file(
   cmake/apolloConfig.cmake.in
   apolloConfig.cmake
-  INSTALL_DESTINATION ${CONFIG_INSTALL_DIR}
-  PATH_VARS INCLUDE_INSTALL_DIR LIB_INSTALL_DIR)
+  INSTALL_DESTINATION ${CMAKE_INSTALL_PREFIX}/share/apollo/cmake)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/apolloConfig.cmake
   ${CMAKE_CURRENT_BINARY_DIR}/apolloConfigVersion.cmake

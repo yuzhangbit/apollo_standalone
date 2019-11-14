@@ -27,6 +27,7 @@ function run_all_test() {
                            "cyber_example_listener"
                            "cyber_example_service"
                            "cyber_example_talker"
+                           "mainboard"
                            )
     for file in `ls`
     do 
