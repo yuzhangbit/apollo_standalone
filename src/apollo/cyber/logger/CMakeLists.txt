@@ -26,15 +26,15 @@ add_library(cyber::logger ALIAS cyber_logger)
 add_executable(logger_test logger_test.cc)
 target_link_libraries(logger_test gtest gtest_main gmock cyber::cyber) #todo
 
-add_library(cyber_logger_total INTERFACE)
-target_link_libraries(cyber_logger_total INTERFACE
+add_library(cyber_logger_module INTERFACE)
+target_link_libraries(cyber_logger_module INTERFACE
                       cyber_logger_util
                       cyber_log_file_object
                       cyber_async_logger
                       cyber_logger)
 
 
-install(TARGETS cyber_logger_total
+install(TARGETS cyber_logger_module
                 cyber_logger_util
                 cyber_log_file_object
                 cyber_async_logger

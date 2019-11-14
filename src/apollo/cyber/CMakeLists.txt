@@ -103,23 +103,23 @@ add_library(cyber::cyber_core ALIAS cyber_core)
 
 add_library(cyber cyber.cc)
 target_link_libraries(cyber
-                      cyber_base_total
-                      cyber_blocker_total
-                      cyber_class_loader_total
-                      cyber_common_total
-                      cyber_component_total
-                      cyber_croutine_total
-                      cyber_data_total
-                      cyber_event_total
-                      cyber_message_total
-                      cyber_node_total
-                      cyber_scheduler_total
-                      cyber_service_total
-                      cyber_service_discovery_total
-                      cyber_task_total
-                      cyber_time_total
-                      cyber_timer_total
-                      cyber_transport_total
+                      cyber_base_module
+                      cyber_blocker_module
+                      cyber_class_loader_module
+                      cyber_common_module
+                      cyber_component_module
+                      cyber_croutine_module
+                      cyber_data_module
+                      cyber_event_module
+                      cyber_message_module
+                      cyber_node_module
+                      cyber_scheduler_module
+                      cyber_service_module
+                      cyber_service_discovery_module
+                      cyber_task_module
+                      cyber_time_module
+                      cyber_timer_module
+                      cyber_transport_module
                       cyber_core)
 target_include_directories(cyber INTERFACE ${CMAKE_INSTALL_PREFIX})
 add_library(cyber::cyber ALIAS cyber)

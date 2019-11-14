@@ -30,14 +30,14 @@ add_library(cyber::timer_component ALIAS cyber_timer_component)
 add_executable(timer_component_test timer_component_test.cc)
 target_link_libraries(timer_component_test gtest gtest_main gmock cyber::cyber)
 
-add_library(cyber_component_total INTERFACE)
-target_link_libraries(cyber_component_total INTERFACE
+add_library(cyber_component_module INTERFACE)
+target_link_libraries(cyber_component_module INTERFACE
                       cyber_component
                       cyber_component_base
                       cyber_timer_component)
 
 
-install(TARGETS cyber_component_total
+install(TARGETS cyber_component_module
                 cyber_component
                 cyber_component_base
                 cyber_timer_component

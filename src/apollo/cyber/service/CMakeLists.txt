@@ -19,15 +19,15 @@ target_link_libraries(cyber_service cyber::service_base
                                     cyber::scheduler)
 add_library(cyber::service ALIAS cyber_service)
 
-add_library(cyber_service_total INTERFACE)
-target_link_libraries(cyber_service_total INTERFACE
+add_library(cyber_service_module INTERFACE)
+target_link_libraries(cyber_service_module INTERFACE
                       cyber_client
                       cyber_client_base
                       cyber_service_base
                       cyber_service)
 
 
-install(TARGETS cyber_service_total
+install(TARGETS cyber_service_module
                 cyber_client
                 cyber_client_base
                 cyber_service_base

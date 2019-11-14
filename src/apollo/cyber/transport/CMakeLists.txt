@@ -277,8 +277,8 @@ add_executable(shm_transceiver_test transceiver/shm_transceiver_test.cc)
 target_link_libraries(shm_transceiver_test gtest gtest_main gmock cyber::cyber_core
                                                                   cyber::proto)
 
-add_library(cyber_transport_total INTERFACE)
-target_link_libraries(cyber_transport_total INTERFACE
+add_library(cyber_transport_module INTERFACE)
+target_link_libraries(cyber_transport_module INTERFACE
                       cyber_identity
                       cyber_endpoint
                       cyber_message_info
@@ -315,7 +315,7 @@ target_link_libraries(cyber_transport_total INTERFACE
                       cyber_rtps_dispatcher
                       cyber_intra_dispatcher
                       cyber_transport)
-install(TARGETS cyber_transport_total
+install(TARGETS cyber_transport_module
                 cyber_identity
                 cyber_endpoint
                 cyber_message_info

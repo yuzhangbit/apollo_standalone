@@ -89,8 +89,8 @@ target_link_libraries(topology_manager_test gtest gtest_main gmock cyber::cyber)
 add_executable(role_test role/role_test.cc)
 target_link_libraries(role_test gtest gtest_main gmock cyber::cyber)
 
-add_library(cyber_service_discovery_total INTERFACE)
-target_link_libraries(cyber_service_discovery_total INTERFACE
+add_library(cyber_service_discovery_module INTERFACE)
+target_link_libraries(cyber_service_discovery_module INTERFACE
                       cyber_role
                       cyber_graph
                       cyber_subscriber_listener
@@ -104,7 +104,7 @@ target_link_libraries(cyber_service_discovery_total INTERFACE
                       cyber_serivce_manager
                       cyber_topology_manager)
 
-install(TARGETS cyber_service_discovery_total
+install(TARGETS cyber_service_discovery_module
                 cyber_role
                 cyber_graph
                 cyber_subscriber_listener

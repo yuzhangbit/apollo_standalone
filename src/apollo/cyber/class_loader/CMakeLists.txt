@@ -13,15 +13,15 @@ add_library(cyber_class_loader_manager class_loader_manager.cc)
 add_library(cyber::class_loader_manager ALIAS cyber_class_loader_manager)
 target_link_libraries(cyber_class_loader cyber::class_loader)
 
-add_library(cyber_class_loader_total INTERFACE)
+add_library(cyber_class_loader_module INTERFACE)
 
-target_link_libraries(cyber_class_loader_total INTERFACE
+target_link_libraries(cyber_class_loader_module INTERFACE
                       cyber_class_loader
                       cyber_class_loader_manager
   )
 
 
-install(TARGETS cyber_class_loader_total
+install(TARGETS cyber_class_loader_module
                 cyber_class_loader
                 cyber_class_loader_manager
         EXPORT apollo-export

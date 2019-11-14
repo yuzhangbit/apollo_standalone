@@ -65,8 +65,8 @@ target_link_libraries(channel_buffer_test gtest gtest_main gmock cyber::cyber)
 add_executable(all_latest_test fusion/all_latest_test.cc)
 target_link_libraries(all_latest_test gtest gtest_main gmock cyber::cyber)
 
-add_library(cyber_data_total INTERFACE)
-target_link_libraries(cyber_data_total INTERFACE
+add_library(cyber_data_module INTERFACE)
+target_link_libraries(cyber_data_module INTERFACE
                       cyber_cache_buffer
                       cyber_data_dispatcher
                       cyber_data_visitor
@@ -77,7 +77,7 @@ target_link_libraries(cyber_data_total INTERFACE
                       cyber_all_latest
                       cyber_data)
 
-install(TARGETS cyber_data_total
+install(TARGETS cyber_data_module
                 cyber_cache_buffer
                 cyber_data_dispatcher
                 cyber_data_visitor

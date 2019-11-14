@@ -41,15 +41,15 @@ add_library(cyber::croutine ALIAS cyber_croutine)
 add_executable(croutine_test croutine_test.cc)
 target_link_libraries(croutine_test gtest gtest_main gmock cyber::cyber)
 
-add_library(cyber_croutine_total INTERFACE)
-target_link_libraries(cyber_croutine_total INTERFACE
+add_library(cyber_croutine_module INTERFACE)
+target_link_libraries(cyber_croutine_module INTERFACE
                       cyber_routine_context
                       cyber_routine_factory
                       cyber_swap
                       cyber_croutine)
 
 
-install(TARGETS cyber_croutine_total
+install(TARGETS cyber_croutine_module
                 cyber_routine_context
                 cyber_routine_factory
                 cyber_swap
