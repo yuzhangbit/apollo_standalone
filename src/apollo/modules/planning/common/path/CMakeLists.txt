@@ -48,8 +48,8 @@ install(TARGETS planning_discretized_path
         INCLUDES DESTINATION .
         )
 
-install(discretized_path_test
-        frenet_frame_path_test
+install(TARGETS discretized_path_test
+                frenet_frame_path_test
 LIBRARY DESTINATION lib
 ARCHIVE DESTINATION lib
 RUNTIME DESTINATION bin

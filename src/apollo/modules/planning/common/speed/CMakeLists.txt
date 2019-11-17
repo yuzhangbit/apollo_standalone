@@ -42,7 +42,7 @@ install(TARGETS planning_st_point
                 planning_st_boundary
                 planning_speed_data
                 planning_common_speed_module
-        export apollo-export
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
