@@ -31,9 +31,17 @@ target_link_libraries(planning_collision_checker
     prediction::proto)
 add_library(planning::collision_checker ALIAS planning_collision_checker)
 
+add_library(planning_constraint_checker_module INTERFACE)
+target_link_libraries(planning_constraint_checker_module INTERFACE
+    planning_constraint_checker
+    planning_constraint_checker1d
+    planning_collision_checker)
+
 install(TARGETS planning_constraint_checker
                 planning_constraint_checker1d
                 planning_collision_checker
+                planning_constraint_checker_module
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

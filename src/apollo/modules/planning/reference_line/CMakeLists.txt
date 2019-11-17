@@ -103,13 +103,31 @@ add_executable(discrete_points_reference_line_smoother_test discrete_points_refe
 target_link_libraries(discrete_points_reference_line_smoother_test planning::discrete_points_reference_line_smoother
                                                                    gtest
                                                                    gtest_main)
+add_library(planning_reference_line_module INTERFACE)
+target_link_libraries(planning_reference_line_module INTERFACE
+        planning_reference_line
+        planning_reference_line_smoother
+        planning_reference_line_provider
+        planning_spiral_smoother_util
+        planning_qp_spline_reference_line_smoother
+        planning_spiral_reference_line_smoother
+        planning_discrete_points_reference_line_smoother)
 
 install(TARGETS planning_reference_line
                 planning_reference_line_smoother
                 planning_qp_spline_reference_line_smoother
                 planning_spiral_reference_line_smoother
+                planning_reference_line_provider
                 planning_discrete_points_reference_line_smoother
-                spiral_reference_line_smoother_test
+                planning_spiral_smoother_util
+                planning_reference_line_module
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .)
+
+install(TARGETS spiral_reference_line_smoother_test
                 qp_spline_reference_line_smoother_test
                 discrete_points_reference_line_smoother_test
         LIBRARY DESTINATION lib

@@ -28,10 +28,17 @@ target_link_libraries(planning_feasible_region
     planning::planning_gflags)
 add_library(planning::feasible_region ALIAS planning_feasible_region)
 
+add_library(planning_lattice_behavior_module INTERFACE)
+target_link_libraries(planning_lattice_behavior_module INTERFACE
+    planning_path_time_graph
+    planning_prediction_querier
+    planning_feasible_region)
 
 install(TARGETS planning_path_time_graph
                 planning_prediction_querier
                 planning_feasible_region
+                planning_lattice_behavior_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
