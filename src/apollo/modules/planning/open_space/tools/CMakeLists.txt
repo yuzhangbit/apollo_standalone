@@ -28,7 +28,7 @@ target_link_libraries(planning_open_space_tools_module
 install(TARGETS distance_approach_problem_wrapper
                 open_space_roi_wrapper
                 planning_open_space_tools_module
-    export apollo-export
+    EXPORT apollo-export
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     RUNTIME DESTINATION bin
