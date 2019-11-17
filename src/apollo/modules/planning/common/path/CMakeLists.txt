@@ -20,7 +20,6 @@ target_link_libraries(planning_path_data common::math
                                          planning::reference_line)
 add_library(planning::path_data ALIAS planning_path_data)
 
-
 add_executable(discretized_path_test discretized_path_test.cc)
 target_link_libraries(discretized_path_test planning::discretized_path
                                             common::util
@@ -31,13 +30,28 @@ add_executable(frenet_frame_path_test frenet_frame_path_test.cc)
 target_link_libraries(frenet_frame_path_test planning::frenet_frame_path
                                              gtest
                                              gtest_main)
+
+add_library(planning_common_path_module INTERFACE)
+target_link_libraries(planning_common_path_module INTERFACE
+        planning_discretized_path
+        planning_frenet_frame_path
+        planning_path_data)
+
 install(TARGETS planning_discretized_path
                 planning_frenet_frame_path
                 planning_path_data
-                discretized_path_test
-                frenet_frame_path_test
+                planning_common_path_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(discretized_path_test
+        frenet_frame_path_test
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION bin
+INCLUDES DESTINATION .
+)

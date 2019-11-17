@@ -133,6 +133,23 @@ target_link_libraries(osqp_spline_2d_solver_test planning::osqp_spline_2d_solver
                                                  gtest
                                                  gtest_main)
 
+add_library(planning_math_smoothing_spline_module INTERFACE)
+target_link_libraries(planning_math_smoothing_spline_module INTERFACE
+        planning_affine_constraint
+        planning_spline_1d_seg
+        planning_spline_1d
+        planning_spline_1d_constraint
+        planning_spline_2d_seg
+        planning_spline_2d
+        planning_spline_2d_constraint
+        planning_spline_2d_kernel
+        planning_spline_2d_solver
+        planning_active_set_spline_2d_solver
+        planning_osqp_spline_2d_solver
+        planning_piecewise_linear_constraint
+        planning_piecewise_linear_generator
+        planning_piecewise_linear_kernel)
+
 
 install(TARGETS planning_affine_constraint
                 planning_spline_1d_seg
@@ -148,10 +165,18 @@ install(TARGETS planning_affine_constraint
                 planning_piecewise_linear_constraint
                 planning_piecewise_linear_generator
                 planning_piecewise_linear_kernel
-                active_set_spline_2d_solver_test
-                osqp_spline_2d_solver_test
+                planning_math_smoothing_spline_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS active_set_spline_2d_solver_test
+                osqp_spline_2d_solver_test
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION bin
+INCLUDES DESTINATION .
+)

@@ -31,12 +31,27 @@ target_link_libraries(st_boundary_test planning::st_boundary
                                        common::util
                                        gtest
                                        gtest_main)
+
+add_library(planning_common_speed_module INTERFACE)
+target_link_libraries(planning_common_speed_module INTERFACE
+        planning_st_point
+        planning_st_boundary
+        planning_speed_data)
+
 install(TARGETS planning_st_point
                 planning_st_boundary
                 planning_speed_data
-                st_boundary_test
+                planning_common_speed_module
+        export apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS st_boundary_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+)

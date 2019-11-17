@@ -55,6 +55,7 @@ target_link_libraries(planning_proto ${PROTOBUF_LIBRARIES}
 add_library(planning::proto ALIAS planning_proto)
 
 install(TARGETS planning_proto
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
