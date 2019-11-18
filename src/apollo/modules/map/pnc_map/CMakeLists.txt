@@ -4,7 +4,8 @@ add_library(map_pnc_map_path path.cc)
 target_link_libraries(map_pnc_map_path common::math
                                        map::hdmap
                                        map::hdmap_util
-                                       map::proto)
+                                       map::proto
+                                       routing::proto)
 add_library(map::pnc_map_path ALIAS map_pnc_map_path)
 
 
