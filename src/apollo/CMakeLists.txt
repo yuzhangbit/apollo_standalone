@@ -65,7 +65,7 @@ include_directories(include
                     ${EIGEN3_INCLUDE_DIR})
 
 add_subdirectory(cyber)
-#add_subdirectory(modules/common)
+add_subdirectory(modules/common)
 #add_subdirectory(modules/localization)
 #add_subdirectory(modules/canbus)
 #add_subdirectory(modules/map)

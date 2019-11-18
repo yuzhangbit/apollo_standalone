@@ -12,7 +12,14 @@ target_link_libraries(common_configs_proto
         common::proto)
 add_library(common::configs_proto ALIAS common_configs_proto)
 
+add_library(common_configs_proto_module INTERFACE)
+target_link_libraries(common_configs_proto_module INTERFACE
+        common_configs_proto
+        )
+
 install(TARGETS common_configs_proto
+                common_configs_proto_module
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

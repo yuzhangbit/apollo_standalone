@@ -121,6 +121,22 @@ target_link_libraries(disjoint_set_test gtest
                                         common::disjoint_set
                                         cyber::common)
 
+add_library(common_util_module INTERFACE)
+target_link_libraries(common_util_module INTERFACE
+        common_string_util
+        common_string_util_test
+        common_string_tokenizer
+        common_disjoint_set
+        common_lru_cache
+        common_color
+        common_message_util
+        common_map_util
+        common_factory
+        common_points_downsampler
+        common_json_util
+        common_util
+        )
+
 install(TARGETS common_string_util
                 common_string_util_test
                 common_string_tokenizer
@@ -132,16 +148,24 @@ install(TARGETS common_string_util
                 common_factory
                 common_points_downsampler
                 common_json_util
-                common_message_util_test
+                common_util
+                common_util_module
+        EXPORT  apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )
+
+install(TARGETS common_message_util_test
                 common_string_tokenizer_test
                 factory_test
                 lru_cache_test
                 points_downsampler_test
                 json_util_test
                 disjoint_set_test
-                common_util
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
-        )
+)

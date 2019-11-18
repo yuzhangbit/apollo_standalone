@@ -18,13 +18,25 @@ add_library(common::vehicle_config_helper ALIAS common_vehicle_config_helper)
 add_executable(vehicle_config_helper_test vehicle_config_helper_test.cc)
 target_link_libraries(vehicle_config_helper_test gtest gtest_main common::vehicle_config_helper)
 
-
+add_library(common_configs_module INTERFACE)
+target_link_libraries(common_configs_module INTERFACE
+        common_config_gflags
+        common_vehicle_config_helper
+        )
 
 install(TARGETS common_config_gflags
                 common_vehicle_config_helper
-                vehicle_config_helper_test
+                common_configs_module
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS vehicle_config_helper_test
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION bin
+INCLUDES DESTINATION .
+)

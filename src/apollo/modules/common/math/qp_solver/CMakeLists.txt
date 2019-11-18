@@ -21,12 +21,27 @@ target_link_libraries(active_set_qp_solver_test common::active_set_qp_solver
                                                 gtest
                                                 gtest_main)
 
-install(TARGETS active_set_qp_solver_test
-                common_active_set_qp_solver
+add_library(common_qp_solver_module INTERFACE)
+target_link_libraries(common_qp_solver_module INTERFACE
+        common_active_set_qp_solver
+        common_qp_solver
+        common_qp_solver_gflags
+        )
+
+install(TARGETS common_active_set_qp_solver
                 common_qp_solver
                 common_qp_solver_gflags
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
+                common_qp_solver_module
+        EXPORT  apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+)
+
+install(TARGETS active_set_qp_solver_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
 )

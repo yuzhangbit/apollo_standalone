@@ -194,6 +194,29 @@ add_executable(cartesian_frenet_conversion_test cartesian_frenet_conversion_test
 target_link_libraries(cartesian_frenet_conversion_test gtest gtest_main
 common::cartesian_frenet_conversion)
 
+add_library(common_math_module INTERFACE)
+target_link_libraries(common_math_module INTERFACE
+        common_geometry
+        common_sin_table
+        common_euler_angles_zxy
+        common_quaternion
+        common_curve_fitting
+        common_matrix_operations
+        common_kalman_filter
+        common_extended_kalman_filter
+        common_factorial
+        common_path_matcher
+        common_linear_interpolation
+        common_nonlinear_interpolation
+        common_search
+        common_integral
+        common_lqr
+        common_mpc
+        common_cartesian_frenet_conversion
+        common_hermite_spline
+        common_math
+        )
+
 install(TARGETS common_geometry
                 common_sin_table
                 common_euler_angles_zxy
@@ -228,6 +251,29 @@ install(TARGETS common_geometry
                 line_segment2d_test
                 kalman_filter_test
                 common_math
+                common_math_module
+        EXPORT  apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+)
+
+install(TARGETS mpc_test
+                angle_test
+                math_utils_test
+                linear_interpolation_test
+                search_test
+                integral_test
+                vec2d_test
+                quaternion_test
+                euler_angles_zxy_test
+                aabox2d_test
+                aaboxkdtree2d_test
+                box2d_test
+                polygon2d_test
+                line_segment2d_test
+                kalman_filter_test
 LIBRARY DESTINATION lib
 ARCHIVE DESTINATION lib
 RUNTIME DESTINATION bin
