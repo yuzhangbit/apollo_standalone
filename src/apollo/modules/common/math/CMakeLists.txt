@@ -196,6 +196,7 @@ common::cartesian_frenet_conversion)
 
 add_library(common_math_module INTERFACE)
 target_link_libraries(common_math_module INTERFACE
+        common_angle
         common_geometry
         common_sin_table
         common_euler_angles_zxy
@@ -218,6 +219,7 @@ target_link_libraries(common_math_module INTERFACE
         )
 
 install(TARGETS common_geometry
+                common_angle
                 common_sin_table
                 common_euler_angles_zxy
                 common_quaternion

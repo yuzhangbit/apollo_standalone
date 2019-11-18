@@ -134,6 +134,7 @@ target_link_libraries(common_util_module INTERFACE
         common_factory
         common_points_downsampler
         common_json_util
+        http_client
         common_util
         )
 
@@ -148,6 +149,7 @@ install(TARGETS common_string_util
                 common_factory
                 common_points_downsampler
                 common_json_util
+                http_client
                 common_util
                 common_util_module
         EXPORT  apollo-export

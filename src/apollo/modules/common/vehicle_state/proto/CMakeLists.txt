@@ -14,6 +14,7 @@ target_link_libraries(common_vehicle_state_proto
 add_library(common::vehicle_state_proto ALIAS common_vehicle_state_proto)
 
 install(TARGETS common_vehicle_state_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

@@ -66,8 +66,8 @@ include_directories(include
 
 add_subdirectory(cyber)
 add_subdirectory(modules/common)
-#add_subdirectory(modules/localization)
-#add_subdirectory(modules/canbus)
+add_subdirectory(modules/localization)
+add_subdirectory(modules/canbus)
 #add_subdirectory(modules/map)
 #add_subdirectory(modules/perception)
 #add_subdirectory(modules/prediction)
