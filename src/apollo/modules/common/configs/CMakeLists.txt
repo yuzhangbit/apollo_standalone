@@ -35,8 +35,8 @@ install(TARGETS common_config_gflags
         )
 
 install(TARGETS vehicle_config_helper_test
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
 )

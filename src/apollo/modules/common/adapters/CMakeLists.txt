@@ -6,7 +6,7 @@ add_library(common::adapter_gflags ALIAS adapter_gflags)
 
 add_library(common_adapters_module INTERFACE)
 target_link_libraries(common_adapters_module INTERFACE
-    adapter_gflags)
+        adapter_gflags)
 
 install(TARGETS adapter_gflags
                 common_adapters_module

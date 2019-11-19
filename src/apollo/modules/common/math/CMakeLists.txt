@@ -259,7 +259,7 @@ install(TARGETS common_geometry
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
-)
+        )
 
 install(TARGETS mpc_test
                 angle_test
@@ -276,8 +276,8 @@ install(TARGETS mpc_test
                 polygon2d_test
                 line_segment2d_test
                 kalman_filter_test
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
-)
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )

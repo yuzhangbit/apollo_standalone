@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(common)
 
-add_subdirectory(util) #done
-add_subdirectory(proto) #done
-add_subdirectory(math) #done
-add_subdirectory(configs) #done
-add_subdirectory(time) #done
-add_subdirectory(status) #done
-add_subdirectory(adapters) #done
-add_subdirectory(vehicle_state) #done
-add_subdirectory(vehicle_model) #done
+add_subdirectory(util)
+add_subdirectory(proto)
+add_subdirectory(math)
+add_subdirectory(configs)
+add_subdirectory(time)
+add_subdirectory(status)
+add_subdirectory(adapters)
+add_subdirectory(vehicle_state)
+add_subdirectory(vehicle_model)
 
 add_library(common INTERFACE)
 target_link_libraries(common INTERFACE
