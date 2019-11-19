@@ -27,9 +27,18 @@ target_link_libraries(map_pnc_map map::route_segments
 add_library(map::pnc_map ALIAS map_pnc_map)
 
 
+add_library(map_pnc_map_module INTERFACE)
+target_link_libraries(map_pnc_map_module INTERFACE
+        map_pnc_map_path
+        map_route_segments
+        map_pnc_map
+        )
+
 install(TARGETS map_pnc_map_path
                 map_route_segments
                 map_pnc_map
+                map_pnc_map_module
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

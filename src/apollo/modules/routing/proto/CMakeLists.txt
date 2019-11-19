@@ -17,6 +17,7 @@ target_link_libraries(routing_proto
 add_library(routing::proto ALIAS routing_proto)
 
 install(TARGETS routing_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
