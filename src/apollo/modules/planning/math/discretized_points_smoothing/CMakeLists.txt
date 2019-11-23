@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-find_package(osqp REQUIRED)
-include_directories(${osqp_INCLUDE_DIRS})
-
-
 add_library(planning_cos_theta_ipopt_interface cos_theta_ipopt_interface.cc)
 target_link_libraries(planning_cos_theta_ipopt_interface cyber::common
                                                          ${ADOLC_LIBRARIES}
