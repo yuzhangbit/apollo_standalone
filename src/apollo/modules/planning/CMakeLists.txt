@@ -13,6 +13,11 @@ add_subdirectory(open_space/trajectory_smoother)
 add_subdirectory(open_space/tools)
 
 add_library(planning INTERFACE)
+target_include_directories(planning INTERFACE
+    ${osqp_INCLUDE_DIRS}
+    ${IPOPT_INCLUDE_DIRS}
+    ${ADOLC_INCLUDE_DIRS}
+    ${CUDA_INCLUDE_DIRS})
 target_link_libraries(planning INTERFACE
     planning_proto
     planning_common_module
