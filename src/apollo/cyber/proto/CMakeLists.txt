@@ -21,9 +21,9 @@ PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTOS})
 
 
 add_library(cyber_proto ${PROTO_SRCS} ${PROTO_HDRS})
-target_link_libraries(cyber_proto ${PROTOBUF_LIBRARIES})
+target_link_libraries(cyber_proto ${PROTOBUF_LIBRARIES} cyber_examples_proto)
 target_include_directories(cyber_proto PUBLIC ${PROTOBUF_INCLUDE_DIRS}
-  INTERFACE ${CMAKE_INSTALL_PREFIX})
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}>)
 add_library(cyber::proto ALIAS cyber_proto)
 
 
