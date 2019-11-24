@@ -42,4 +42,17 @@ function run_all_test() {
     echo "Test $file_count files Over"
 }
 
+function build_example() {
+    echo "script path is $SCRIPTS_PATH"
+    cd $SCRIPTS_PATH
+    cd ../src/example_project
+    rm -rf build
+    mkdir build
+    cd build
+    cmake ..
+    make
+    echo "example build successfully!"
+}
+
 run_all_test
+build_example

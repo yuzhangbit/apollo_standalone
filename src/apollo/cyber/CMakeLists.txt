@@ -52,6 +52,8 @@ add_library(cyber::init ALIAS cyber_init)
 add_library(cyber_core cyber.cc)
 target_include_directories(cyber_core
   PUBLIC
+    ${GLOG_INCLUDE_DIRS}
+    ${gflags_INCLUDE_DIRS}
     ${FastRTPS_INCLUDE_DIR}
     ${FastCDR_INCLUDE_DIR}
     ${UUID_INCLUDE_DIR})
