@@ -30,6 +30,7 @@ add_subdirectory(examples)
 add_subdirectory(io)
 add_subdirectory(logger)
 add_subdirectory(proto)
+add_subdirectory(parameter)
 add_subdirectory(message)
 add_subdirectory(node)
 add_subdirectory(scheduler)
@@ -90,8 +91,8 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  cyber::py_message_traits
                                  cyber::raw_message_traits
                                  cyber::node
-                                 #cyber::parameter_client
-                                 #cyber::parameter_server
+                                 cyber::parameter_client
+                                 cyber::parameter_server
                                  cyber::proto
                                  cyber::record
                                  cyber::scheduler
