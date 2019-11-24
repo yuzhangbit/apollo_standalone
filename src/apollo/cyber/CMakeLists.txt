@@ -6,6 +6,7 @@ ENABLE_LANGUAGE(ASM)
 
 find_package(UUID REQUIRED)
 find_package(FastRTPS REQUIRED)
+find_package(Threads REQUIRED)
 #include_directories(${FastRTPS_INCLUDE_DIR}
 #                    ${FastCDR_INCLUDE_DIR}
 #                    ${GLOG_INCLUDE_DIRS}
@@ -100,7 +101,8 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  cyber::transport
                                  cyber::participant
                                  cyber::sub_listener
-                                 3rdparty::tf2)
+                                 3rdparty::tf2
+                                 Threads::Threads)
 add_library(cyber::cyber_core ALIAS cyber_core)
 
 add_library(cyber cyber.cc)
@@ -129,8 +131,8 @@ add_library(cyber::cyber ALIAS cyber)
 add_executable(mainboard mainboard/mainboard.cc
                          mainboard/module_argument.cc
                          mainboard/module_controller.cc)
-target_link_libraries(mainboard pthread cyber::proto
-                                        cyber::cyber_core)
+target_link_libraries(mainboard  cyber::proto
+                                 cyber::cyber_core)
 
 install(TARGETS cyber_binary
                 cyber_state

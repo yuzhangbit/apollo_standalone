@@ -5,7 +5,7 @@ target_link_libraries(cyber_routine_context cyber::common)
 add_library(cyber::routine_context ALIAS cyber_routine_context)
 
 add_library(cyber_routine_factory routine_factory.h)
-set_target_properties(cyber_routine_factory PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(cyber_routine_factory PROPERTIES LINKER_LANGUAGE CXX CXX_STANDARD 14)
 target_link_libraries(cyber_routine_context cyber::common
                                             cyber::perf_event_cache)
 add_library(cyber::routine_factory ALIAS cyber_routine_factory)
