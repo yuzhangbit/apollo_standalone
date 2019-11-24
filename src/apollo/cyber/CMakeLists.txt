@@ -33,6 +33,7 @@ add_subdirectory(proto)
 add_subdirectory(message)
 add_subdirectory(node)
 add_subdirectory(scheduler)
+add_subdirectory(record)
 add_subdirectory(service)
 add_subdirectory(service_discovery)
 add_subdirectory(time)
@@ -92,7 +93,7 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  #cyber::parameter_client
                                  #cyber::parameter_server
                                  cyber::proto
-                                 # cyber::record
+                                 cyber::record
                                  cyber::scheduler
                                  cyber::scheduler_factory
                                  cyber::service
