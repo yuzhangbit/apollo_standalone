@@ -124,6 +124,12 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
         PATTERN ".svn" EXCLUDE
 )
 
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/modules
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.h"
+        PATTERN ".svn" EXCLUDE
+)
+  
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
         DESTINATION .
         FILES_MATCHING PATTERN "*.h"
