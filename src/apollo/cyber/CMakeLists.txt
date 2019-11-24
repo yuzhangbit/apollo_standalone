@@ -27,6 +27,7 @@ add_subdirectory(croutine)
 add_subdirectory(data)
 add_subdirectory(event)
 add_subdirectory(examples)
+add_subdirectory(io)
 add_subdirectory(logger)
 add_subdirectory(proto)
 add_subdirectory(message)
@@ -80,7 +81,7 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  cyber::croutine
                                  cyber::data
                                  cyber::perf_event_cache
-                                 #cyber::io
+                                 cyber::io
                                  cyber::logger
                                  cyber::async_logger
                                  cyber::message_traits
