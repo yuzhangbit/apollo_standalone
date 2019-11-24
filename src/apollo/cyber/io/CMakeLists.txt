@@ -25,13 +25,13 @@ target_link_libraries(cyber_session cyber::poll_handler
                                     cyber::log)
 add_library(cyber::session ALIAS cyber_session)
 
-add_library(cyber_io INTERFACE)
-target_link_libraries(cyber_io INTERFACE
+add_library(cyber_io_module INTERFACE)
+target_link_libraries(cyber_io_module INTERFACE
         cyber_poll_data
         cyber_poller
         cyber_poll_handler
         cyber_session)
-add_library(cyber::io ALIAS cyber_io)
+add_library(cyber::io ALIAS cyber_io_module)
 
 
 ## gtest
@@ -56,7 +56,7 @@ install(TARGETS cyber_poll_data
                 cyber_poller
                 cyber_poll_handler
                 cyber_session
-                cyber_io
+                cyber_io_module
         EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
