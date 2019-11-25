@@ -64,6 +64,7 @@ add_library(cyber_participant_listner communication/participant_listener.cc)
 target_link_libraries(cyber_participant_listner cyber::log
                                                 ${FastRTPS_LIBRARIES}
                                                 ${FastCDR_LIBRARIES})
+target_include_directories(cyber_participant_listner PUBLIC ${FastRTPS_INCLUDE_DIR})
 add_library(cyber::participant_listner ALIAS cyber_participant_listner)
 
 add_library(cyber_serivce_manager specific_manager/service_manager.cc)
@@ -88,7 +89,23 @@ target_link_libraries(topology_manager_test gtest gtest_main gmock cyber::cyber)
 add_executable(role_test role/role_test.cc)
 target_link_libraries(role_test gtest gtest_main gmock cyber::cyber)
 
-install(TARGETS cyber_role
+add_library(cyber_service_discovery_module INTERFACE)
+target_link_libraries(cyber_service_discovery_module INTERFACE
+                      cyber_role
+                      cyber_graph
+                      cyber_subscriber_listener
+                      cyber_manager
+                      cyber_warehouse_base
+                      cyber_multi_value_warehouse
+                      cyber_single_value_warehouse
+                      cyber_channel_manager
+                      cyber_node_manager
+                      cyber_participant_listner
+                      cyber_serivce_manager
+                      cyber_topology_manager)
+
+install(TARGETS cyber_service_discovery_module
+                cyber_role
                 cyber_graph
                 cyber_subscriber_listener
                 cyber_manager

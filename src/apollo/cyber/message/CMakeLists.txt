@@ -63,8 +63,20 @@ target_link_libraries(message_header_test gtest gtest_main gmock cyber::cyber) #
 # target_link_libraries(raw_message_test gtest gtest_main gmock cyber::proto
 #                                                               cyber::cyber) #todo cyber
 
+add_library(cyber_message_module INTERFACE)
+target_link_libraries(cyber_message_module INTERFACE
+                      cyber_protobuf_factory
+                      cyber_protobuf_traits
+                      cyber_raw_message
+                      cyber_raw_message_traits
+                      cyber_py_message
+                      cyber_py_message_traits
+                      cyber_intra_message
+                      cyber_message_header
+                      cyber_message_traits)
 
-install(TARGETS cyber_protobuf_factory
+install(TARGETS cyber_message_module
+                cyber_protobuf_factory
                 cyber_protobuf_traits
                 cyber_raw_message
                 cyber_raw_message_traits

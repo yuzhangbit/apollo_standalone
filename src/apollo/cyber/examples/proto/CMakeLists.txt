@@ -12,6 +12,7 @@ add_library(cyber::examples_proto ALIAS cyber_examples_proto)
 
 
 install(TARGETS cyber_examples_proto
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

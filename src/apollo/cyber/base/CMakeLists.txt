@@ -102,8 +102,27 @@ add_library(cyber_unbounded_queue unbounded_queue.h)
 set_target_properties(cyber_unbounded_queue PROPERTIES LINKER_LANGUAGE CXX)
 add_library(cyber::unbounded_queue ALIAS cyber_unbounded_queue)
 
+add_library(cyber_base_module INTERFACE)
+target_link_libraries(cyber_base_module INTERFACE
+                      cyber_base
+                      cyber_atomic_hash_map
+                      cyber_atomic_rw_lock
+                      cyber_bounded_queue
+                      cyber_concurrent_object_pool
+                      cyber_for_each
+                      cyber_base_macros
+                      cyber_object_pool
+                      cyber_reentrant_rw_lock
+                      cyber_rw_lock_guard
+                      cyber_signal
+                      cyber_thread_pool
+                      cyber_thread_safe_queue
+                      cyber_unbounded_queue
+                      cyber_wait_strategy)
 
-install(TARGETS cyber_base
+
+install(TARGETS cyber_base_module
+                cyber_base
                 cyber_atomic_hash_map
                 cyber_atomic_rw_lock
                 cyber_bounded_queue

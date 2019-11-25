@@ -14,8 +14,14 @@ add_library(cyber::task ALIAS cyber_task)
 add_executable(task_test task_test.cc)
 target_link_libraries(task_test gtest gtest_main gmock cyber::cyber_core)
 
+add_library(cyber_task_module INTERFACE)
+target_link_libraries(cyber_task_module INTERFACE
+                      cyber_task_manager
+                      cyber_task)
 
-install(TARGETS cyber_task_manager
+
+install(TARGETS cyber_task_module
+                cyber_task_manager
                 cyber_task
         EXPORT apollo-export
         LIBRARY DESTINATION lib
