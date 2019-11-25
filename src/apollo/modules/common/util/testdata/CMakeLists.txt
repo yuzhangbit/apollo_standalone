@@ -12,6 +12,7 @@ target_link_libraries(common_util_proto ${PROTOBUF_LIBRARIES}
 add_library(common::util_proto ALIAS common_util_proto)
 
 install(TARGETS common_util_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

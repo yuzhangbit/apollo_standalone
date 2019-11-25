@@ -28,6 +28,13 @@ function run_all_test() {
                            "cyber_example_service"
                            "cyber_example_talker"
                            "mainboard"
+                           "record_file_test"
+                           "record_reader_test"
+                           "record_viewer_test"
+                           "tcp_echo_client"
+                           "tcp_echo_server"
+                           "udp_echo_client"
+                           "udp_echo_server"
                            )
     for file in `ls`
     do 

@@ -13,6 +13,7 @@ target_link_libraries(common_configs_proto
 add_library(common::configs_proto ALIAS common_configs_proto)
 
 install(TARGETS common_configs_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

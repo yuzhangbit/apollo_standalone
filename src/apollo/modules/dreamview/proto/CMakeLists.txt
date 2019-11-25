@@ -13,6 +13,7 @@ target_link_libraries(dreamview_proto
 add_library(dreamview::proto ALIAS dreamview_proto)
 
 install(TARGETS dreamview_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

@@ -14,6 +14,7 @@ target_link_libraries(canbus_proto
 add_library(canbus::proto ALIAS canbus_proto)
 
 install(TARGETS canbus_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

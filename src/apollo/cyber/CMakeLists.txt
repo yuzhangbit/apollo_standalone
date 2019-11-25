@@ -27,11 +27,14 @@ add_subdirectory(croutine)
 add_subdirectory(data)
 add_subdirectory(event)
 add_subdirectory(examples)
+add_subdirectory(io)
 add_subdirectory(logger)
 add_subdirectory(proto)
+add_subdirectory(parameter)
 add_subdirectory(message)
 add_subdirectory(node)
 add_subdirectory(scheduler)
+add_subdirectory(record)
 add_subdirectory(service)
 add_subdirectory(service_discovery)
 add_subdirectory(time)
@@ -80,7 +83,7 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  cyber::croutine
                                  cyber::data
                                  cyber::perf_event_cache
-                                 #cyber::io
+                                 cyber::io
                                  cyber::logger
                                  cyber::async_logger
                                  cyber::message_traits
@@ -88,10 +91,10 @@ target_link_libraries(cyber_core ${GLOG_LIBRARIES}
                                  cyber::py_message_traits
                                  cyber::raw_message_traits
                                  cyber::node
-                                 #cyber::parameter_client
-                                 #cyber::parameter_server
+                                 cyber::parameter_client
+                                 cyber::parameter_server
                                  cyber::proto
-                                 # cyber::record
+                                 cyber::record
                                  cyber::scheduler
                                  cyber::scheduler_factory
                                  cyber::service

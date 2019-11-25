@@ -21,8 +21,14 @@ target_link_libraries(map_opendrive_adapter common::math
 
 add_library(map::opendrive_adapter ALIAS map_opendrive_adapter)
 
+add_library(map_opendrive_adapter_module INTERFACE)
+target_link_libraries(map_opendrive_adapter_module INTERFACE
+        map_opendrive_adapter
+        )
 
 install(TARGETS map_opendrive_adapter
+                map_opendrive_adapter_module
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

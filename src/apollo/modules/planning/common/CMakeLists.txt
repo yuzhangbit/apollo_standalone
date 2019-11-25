@@ -266,8 +266,7 @@ target_link_libraries(st_graph_data_test
         gtest
         gtest_main)
 
-install(TARGETS planning_gflags
-                planning_planning_context
+install(TARGETS planning_planning_context
                 planning_path_boundary
                 planning_path_decision
                 planning_reference_line_info
@@ -293,6 +292,15 @@ install(TARGETS planning_gflags
                 ego_info_test
                 open_space_info_test
                 st_graph_data_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )
+
+## use only for verify for other module export
+install(TARGETS planning_gflags
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

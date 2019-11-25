@@ -20,6 +20,7 @@ target_link_libraries(perception_proto
 add_library(perception::proto ALIAS perception_proto)
 
 install(TARGETS perception_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
