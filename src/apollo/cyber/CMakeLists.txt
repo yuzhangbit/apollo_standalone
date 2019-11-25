@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5.1)
 
 project(cyber)
 
+set(CMAKE_CXX_STANDARD 14)
+
 ENABLE_LANGUAGE(ASM)
 
 find_package(UUID REQUIRED)
@@ -125,7 +127,7 @@ target_link_libraries(cyber
                       cyber_timer_module
                       cyber_transport_module
                       cyber_core)
-target_include_directories(cyber INTERFACE ${CMAKE_INSTALL_PREFIX})
+target_include_directories(cyber PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}>)
 add_library(cyber::cyber ALIAS cyber)
 
 add_executable(mainboard mainboard/mainboard.cc
