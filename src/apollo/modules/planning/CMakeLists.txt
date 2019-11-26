@@ -24,7 +24,7 @@ target_link_libraries(planning INTERFACE
     planning_reference_line_module
     planning_constraint_checker_module
     planning_lattice_behavior_module
-    planning_lattice_trajecotory_generation_module
+    planning_lattice_trajectory_generation_module
     planning_open_space_trajectory_smoother_module
     planning_open_space_tools_module)
 
