@@ -5,7 +5,8 @@ set(PROTOS cos_theta_smoother_config.proto
            decision.proto
            dp_st_speed_config.proto
            fem_pos_deviation_smoother_config.proto
-           lane_change_decider_config.proto           lattice_sampling_config.proto
+           lane_change_decider_config.proto
+           lattice_sampling_config.proto
            lattice_structure.proto
            navi_obstacle_decider_config.proto
            navi_path_decider_config.proto
@@ -39,9 +40,11 @@ set(PROTOS cos_theta_smoother_config.proto
 
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTOS})
 
-include_directories(${PROTOBUF_INCLUDE_DIRS})
-
 add_library(planning_proto ${PROTO_SRCS} ${PROTO_HDRS})
+target_include_directories(planning_proto
+    PUBLIC
+    ${PROTOBUF_INCLUDE_DIRS}
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}>)
 target_link_libraries(planning_proto ${PROTOBUF_LIBRARIES}
                                      canbus::proto
                                      common::proto
@@ -55,6 +58,7 @@ target_link_libraries(planning_proto ${PROTOBUF_LIBRARIES}
 add_library(planning::proto ALIAS planning_proto)
 
 install(TARGETS planning_proto
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

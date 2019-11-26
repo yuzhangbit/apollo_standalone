@@ -5,11 +5,11 @@ set(CMAKE_CXX_STANDARD 11)
 
 list(APPEND CMAKE_PREFIX_PATH "/apollo")
 
-find_package(apollo CONFIG REQUIRED)
+find_package(apollo 5.0.0 CONFIG REQUIRED)
 
 add_executable(listener src/listener.cc)
-target_link_libraries(listener apollo::cyber apollo::cyber_proto)
+target_link_libraries(listener apollo::cyber)
 
 add_executable(talker src/talker.cc)
-target_link_libraries(talker apollo::cyber apollo::cyber_proto)
+target_link_libraries(talker apollo::cyber)
 

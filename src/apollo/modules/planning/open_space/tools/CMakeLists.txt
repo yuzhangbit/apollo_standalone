@@ -20,12 +20,24 @@ target_link_libraries(open_space_roi_wrapper
     planning::planning_gflags
     planning::proto)
 
+add_library(planning_open_space_tools_module INTERFACE)
+target_link_libraries(planning_open_space_tools_module
+    INTERFACE distance_approach_problem_wrapper
+              open_space_roi_wrapper)
+
+install(TARGETS distance_approach_problem_wrapper
+                open_space_roi_wrapper
+                planning_open_space_tools_module
+    EXPORT apollo-export
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    INCLUDES DESTINATION .
+)
 
 install(TARGETS hybrid_a_star_wrapper
-                distance_approach_problem_wrapper
-                open_space_roi_wrapper
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    INCLUDES DESTINATION .
 )

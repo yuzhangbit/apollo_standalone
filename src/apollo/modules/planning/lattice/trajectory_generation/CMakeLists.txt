@@ -16,9 +16,16 @@ target_link_libraries(planning_end_condition_sampler
     planning::proto)
 add_library(planning::end_condition_sampler ALIAS planning_end_condition_sampler)
 
+add_library(planning_lattice_trajectory_generation_module INTERFACE)
+
+target_link_libraries(planning_lattice_trajectory_generation_module INTERFACE
+    planning_lattice_trajectory1d
+    planning_end_condition_sampler)
 
 install(TARGETS planning_lattice_trajectory1d
                 planning_end_condition_sampler
+                planning_lattice_trajectory_generation_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

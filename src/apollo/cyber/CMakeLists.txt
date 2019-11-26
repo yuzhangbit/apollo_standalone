@@ -131,7 +131,8 @@ target_link_libraries(cyber
                       cyber_time_module
                       cyber_timer_module
                       cyber_transport_module
-                      cyber_core)
+                      cyber_core
+                      cyber_proto)
 target_include_directories(cyber PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}>)
 add_library(cyber::cyber ALIAS cyber)
 

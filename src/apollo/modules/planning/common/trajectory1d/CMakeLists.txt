@@ -21,7 +21,6 @@ target_link_libraries(planning_constant_deceleration_trajectory1d
     planning::curve1d)
 add_library(planning::constant_deceleration_trajectory1d ALIAS planning_constant_deceleration_trajectory1d)
 
-
 add_library(planning_piecewise_trajectory1d piecewise_trajectory1d.cc)
 target_link_libraries(planning_piecewise_trajectory1d
     cyber::common
@@ -30,7 +29,6 @@ target_link_libraries(planning_piecewise_trajectory1d
     planning::curve1d)
 add_library(planning::piecewise_trajectory1d ALIAS planning_piecewise_trajectory1d)
 
-
 add_library(planning_constant_jerk_trajectory1d constant_jerk_trajectory1d.cc)
 target_link_libraries(planning_constant_jerk_trajectory1d
     cyber::common
@@ -38,13 +36,19 @@ target_link_libraries(planning_constant_jerk_trajectory1d
     planning::curve1d)
 add_library(planning::constant_jerk_trajectory1d ALIAS planning_constant_jerk_trajectory1d)
 
-
 add_library(planning_piecewise_jerk_trajectory1d piecewise_jerk_trajectory1d.cc)
 target_link_libraries(planning_piecewise_jerk_trajectory1d
     planning::constant_jerk_trajectory1d)
 add_library(planning::piecewise_jerk_trajectory1d ALIAS planning_piecewise_jerk_trajectory1d)
 
-
+add_library(planning_common_trajectory1d_module INTERFACE)
+target_link_libraries(planning_common_trajectory1d_module INTERFACE
+    planning_standing_still_trajectory1d
+    planning_piecewise_acceleration_trajectory1d
+    planning_constant_deceleration_trajectory1d
+    planning_piecewise_trajectory1d
+    planning_constant_jerk_trajectory1d
+    planning_piecewise_jerk_trajectory1d)
 
 install(TARGETS planning_standing_still_trajectory1d
                 planning_piecewise_acceleration_trajectory1d
@@ -52,8 +56,11 @@ install(TARGETS planning_standing_still_trajectory1d
                 planning_piecewise_trajectory1d
                 planning_constant_jerk_trajectory1d
                 planning_piecewise_jerk_trajectory1d
+                planning_common_trajectory1d_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+

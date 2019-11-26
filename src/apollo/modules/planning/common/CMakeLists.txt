@@ -18,7 +18,6 @@ target_link_libraries(planning_indexed_queue
         common::map_util)
 add_library(planning::indexed_queue ALIAS planning_indexed_queue)
 
-
 add_library(planning_obstacle obstacle.cc)
 target_link_libraries(planning_obstacle
         planning::indexed_list
@@ -266,7 +265,33 @@ target_link_libraries(st_graph_data_test
         gtest
         gtest_main)
 
-install(TARGETS planning_planning_context
+add_library(planning_common_module INTERFACE)
+target_link_libraries(planning_common_module INTERFACE
+        planning_gflags
+        planning_planning_context
+        planning_path_boundary
+        planning_path_decision
+        planning_reference_line_info
+        planning_speed_profile_generator
+        planning_local_view
+        planning_frame
+        planning_speed_limit
+        planning_ego_info
+        planning_trajectory_stitcher
+        planning_open_space_info
+        planning_st_graph_data
+        planning_indexed_list
+        planning_indexed_queue
+        planning_obstacle
+        planning_obstacle_blocking_analyzer
+        planning_common_path_module
+        planning_common_speed_module
+        planning_common_trajectory_module
+        planning_common_trajectory1d_module
+        planning_common_util_module)
+
+install(TARGETS planning_gflags
+                planning_planning_context
                 planning_path_boundary
                 planning_path_decision
                 planning_reference_line_info
@@ -282,7 +307,14 @@ install(TARGETS planning_planning_context
                 planning_indexed_queue
                 planning_obstacle
                 planning_obstacle_blocking_analyzer
-                indexed_list_test
+                planning_common_module
+        EXPORT  apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )
+install(TARGETS indexed_list_test
                 indexed_queue_test
                 obstacle_test
                 reference_line_info_test
@@ -292,17 +324,9 @@ install(TARGETS planning_planning_context
                 ego_info_test
                 open_space_info_test
                 st_graph_data_test
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
-        RUNTIME DESTINATION bin
-        INCLUDES DESTINATION .
-        )
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION bin
+INCLUDES DESTINATION .
+)
 
-## use only for verify for other module export
-install(TARGETS planning_gflags
-        EXPORT apollo-export
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
-        RUNTIME DESTINATION bin
-        INCLUDES DESTINATION .
-        )
