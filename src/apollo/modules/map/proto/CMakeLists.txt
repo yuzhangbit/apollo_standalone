@@ -29,6 +29,7 @@ target_link_libraries(map_proto
 add_library(map::proto ALIAS map_proto)
 
 install(TARGETS map_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

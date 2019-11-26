@@ -19,6 +19,7 @@ target_link_libraries(map_relative_map_proto
 add_library(map::relative_map_proto ALIAS map_relative_map_proto)
 
 install(TARGETS map_relative_map_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

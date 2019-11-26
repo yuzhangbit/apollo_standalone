@@ -6,6 +6,7 @@ add_library(3rdparty::json ALIAS 3rdparty_json)
 
 
 install(TARGETS 3rdparty_json
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

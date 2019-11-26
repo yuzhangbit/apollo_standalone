@@ -20,6 +20,7 @@ target_link_libraries(prediction_proto
 add_library(prediction::proto ALIAS prediction_proto)
 
 install(TARGETS prediction_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

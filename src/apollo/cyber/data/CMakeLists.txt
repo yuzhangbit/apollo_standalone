@@ -65,7 +65,20 @@ target_link_libraries(channel_buffer_test gtest gtest_main gmock cyber::cyber)
 add_executable(all_latest_test fusion/all_latest_test.cc)
 target_link_libraries(all_latest_test gtest gtest_main gmock cyber::cyber)
 
-install(TARGETS cyber_cache_buffer
+add_library(cyber_data_module INTERFACE)
+target_link_libraries(cyber_data_module INTERFACE
+                      cyber_cache_buffer
+                      cyber_data_dispatcher
+                      cyber_data_visitor
+                      cyber_data_visitor_base
+                      cyber_data_notifier
+                      cyber_channel_buffer
+                      cyber_data_fusion
+                      cyber_all_latest
+                      cyber_data)
+
+install(TARGETS cyber_data_module
+                cyber_cache_buffer
                 cyber_data_dispatcher
                 cyber_data_visitor
                 cyber_data_visitor_base
@@ -74,13 +87,17 @@ install(TARGETS cyber_cache_buffer
                 cyber_data_fusion
                 cyber_all_latest
                 cyber_data
-    cache_buffer_test
-                data_visitor_test
-                data_dispatcher_test
-                channel_buffer_test
-                all_latest_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS cache_buffer_test
+                data_visitor_test
+                data_dispatcher_test
+                channel_buffer_test
+                all_latest_test
+        RUNTIME DESTINATION bin
+  )

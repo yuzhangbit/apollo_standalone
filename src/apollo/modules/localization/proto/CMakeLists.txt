@@ -15,6 +15,7 @@ target_link_libraries(localization_proto
 add_library(localization::proto ALIAS localization_proto)
 
 install(TARGETS localization_proto
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

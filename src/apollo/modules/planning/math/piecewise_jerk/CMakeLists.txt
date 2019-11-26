@@ -19,11 +19,17 @@ target_link_libraries(planning_piecewise_jerk_speed_problem
         planning::piecewise_jerk_problem)
 add_library(planning::piecewise_jerk_speed_problem ALIAS planning_piecewise_jerk_speed_problem)
 
-
+add_library(planning_math_piecewise_jerk_module INTERFACE)
+target_link_libraries(planning_math_piecewise_jerk_module INTERFACE
+        planning_piecewise_jerk_problem
+        planning_piecewise_jerk_path_problem
+        planning_piecewise_jerk_speed_problem)
 
 install(TARGETS planning_piecewise_jerk_problem
                 planning_piecewise_jerk_path_problem
                 planning_piecewise_jerk_speed_problem
+                planning_math_piecewise_jerk_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin

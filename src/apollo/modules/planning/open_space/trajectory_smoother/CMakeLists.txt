@@ -207,6 +207,21 @@ target_link_libraries(dual_variable_warm_start_problem_test
     gtest
     gtest_main)
 
+add_library(planning_open_space_trajectory_smoother_module INTERFACE)
+target_link_libraries(planning_open_space_trajectory_smoother_module INTERFACE
+    planning_iterative_anchoring_smoother
+    planning_distance_approach_ipopt_cuda_interface
+    planning_distance_approach_ipopt_interface
+    planning_distance_approach_ipopt_relax_end_interface
+    planning_distance_approach_ipopt_fixed_dual_interface
+    planning_distance_approach_ipopt_fixed_ts_interface
+    planning_distance_approach_problem
+    planning_dual_variable_warm_start_ipopt_qp_interface
+    planning_dual_variable_warm_start_ipopt_interface
+    planning_dual_variable_warm_start_problem
+    planning_dual_variable_warm_start_osqp_interface
+    ${planning_block})
+
 install(TARGETS planning_iterative_anchoring_smoother
                 planning_distance_approach_ipopt_cuda_interface
                 planning_distance_approach_ipopt_interface
@@ -224,11 +239,24 @@ install(TARGETS planning_iterative_anchoring_smoother
                 dual_variable_warm_start_osqp_interface_test
                 dual_variable_warm_start_problem_test
                 ${planning_block}
+                planning_open_space_trajectory_smoother_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS distance_approach_ipopt_interface_test
+                distance_approach_problem_test
+                dual_variable_warm_start_ipopt_interface_test
+                dual_variable_warm_start_osqp_interface_test
+                dual_variable_warm_start_problem_test
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION bin
+INCLUDES DESTINATION .
+)
 
 if(ENABLE_CUDA)
     install(TARGETS ${planning_block}

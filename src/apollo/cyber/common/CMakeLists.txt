@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-add_library(cyber_common dummy.cc)
-target_link_libraries(cyber_common cyber::environment
-                                   cyber::file
-                                   cyber::global_data
-                                   cyber::log
-                                   cyber::common_macros
-                                   cyber::time_conversion
-                                   cyber::types
-                                   cyber::util)
+add_library(cyber_common INTERFACE)
+target_link_libraries(cyber_common INTERFACE
+    cyber::environment
+    cyber::file
+    cyber::global_data
+    cyber::log
+    cyber::common_macros
+    cyber::time_conversion
+    cyber::types
+    cyber::util)
 add_library(cyber::common ALIAS cyber_common)
 
 
@@ -65,11 +66,21 @@ target_link_libraries(log_test gtest gtest_main cyber::log)
 add_executable(macros_test macros_test.cc)
 target_link_libraries(macros_test gtest gtest_main cyber::base cyber::common cyber::proto)
 
+add_library(cyber_common_module INTERFACE)
+target_link_libraries(cyber_common_module INTERFACE
+											cyber_common
+											cyber_file
+											cyber_log
+											cyber_environment
+											cyber_global_data
+											cyber_common_macros
+											cyber_time_conversion
+											cyber_types
+											cyber_util)
 
 
-
-
-install(TARGETS cyber_common
+install(TARGETS cyber_common_module
+								cyber_common
                 cyber_file
                 cyber_log
                 cyber_environment
@@ -78,11 +89,15 @@ install(TARGETS cyber_common
                 cyber_time_conversion
                 cyber_types
                 cyber_util
-                file_test
-		log_test
-                macros_test
-        LIBRARY DESTINATION lib
+				EXPORT apollo-export
+				LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS file_test
+								log_test
+								macros_test
+				RUNTIME DESTINATION bin
+	)

@@ -29,11 +29,26 @@ target_link_libraries(hdmap_map_test gtest
                                      common::util
                                      map::hdmap)
 
+add_library(map_hdmap_module INTERFACE)
+target_link_libraries(map_hdmap_module INTERFACE
+        map_hdmap
+        map_hdmap_util
+        )
+
 install(TARGETS map_hdmap
                 map_hdmap_util
-                hdmap_map_test
+                map_hdmap_module
+        EXPORT  apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS hdmap_map_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+)
+

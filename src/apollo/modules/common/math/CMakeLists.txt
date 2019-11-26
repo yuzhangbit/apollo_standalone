@@ -1,20 +1,21 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-add_library(common_math dummy.cc)
-target_link_libraries(common_math common::angle
-                                  common::cartesian_frenet_conversion
-                                  common::curve_fitting
-                                  common::euler_angles_zxy
-                                  common::factorial
-                                  common::geometry
-                                  common::integral
-                                  common::kalman_filter
-                                  common::linear_interpolation
-                                  common::lqr
-                                  common::mpc
-                                  common::quaternion
-                                  common::search
-                                  common::sin_table)
+add_library(common_math INTERFACE)
+target_link_libraries(common_math INTERFACE
+    common::angle
+    common::cartesian_frenet_conversion
+    common::curve_fitting
+    common::euler_angles_zxy
+    common::factorial
+    common::geometry
+    common::integral
+    common::kalman_filter
+    common::linear_interpolation
+    common::lqr
+    common::mpc
+    common::quaternion
+    common::search
+    common::sin_table)
 add_library(common::math ALIAS common_math)
 
 add_library(common_geometry aabox2d.cc
@@ -194,7 +195,32 @@ add_executable(cartesian_frenet_conversion_test cartesian_frenet_conversion_test
 target_link_libraries(cartesian_frenet_conversion_test gtest gtest_main
 common::cartesian_frenet_conversion)
 
+add_library(common_math_module INTERFACE)
+target_link_libraries(common_math_module INTERFACE
+        common_angle
+        common_geometry
+        common_sin_table
+        common_euler_angles_zxy
+        common_quaternion
+        common_curve_fitting
+        common_matrix_operations
+        common_kalman_filter
+        common_extended_kalman_filter
+        common_factorial
+        common_path_matcher
+        common_linear_interpolation
+        common_nonlinear_interpolation
+        common_search
+        common_integral
+        common_lqr
+        common_mpc
+        common_cartesian_frenet_conversion
+        common_hermite_spline
+        common_math
+        )
+
 install(TARGETS common_geometry
+                common_angle
                 common_sin_table
                 common_euler_angles_zxy
                 common_quaternion
@@ -212,7 +238,16 @@ install(TARGETS common_geometry
                 common_mpc
                 common_cartesian_frenet_conversion
                 common_hermite_spline
-                mpc_test
+                common_math
+                common_math_module
+        EXPORT  apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )
+
+install(TARGETS mpc_test
                 angle_test
                 math_utils_test
                 linear_interpolation_test
@@ -227,9 +262,8 @@ install(TARGETS common_geometry
                 polygon2d_test
                 line_segment2d_test
                 kalman_filter_test
-                common_math
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
-)
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+        )

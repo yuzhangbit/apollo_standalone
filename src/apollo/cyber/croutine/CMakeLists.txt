@@ -5,8 +5,15 @@ target_link_libraries(cyber_routine_context cyber::common)
 add_library(cyber::routine_context ALIAS cyber_routine_context)
 
 add_library(cyber_routine_factory routine_factory.h)
-set_target_properties(cyber_routine_factory PROPERTIES LINKER_LANGUAGE CXX)
-target_link_libraries(cyber_routine_context cyber::common
+set_target_properties(cyber_routine_factory PROPERTIES
+  LINKER_LANGUAGE CXX
+  CXX_STANDARD 14
+  CXX_STANDARD_REQUIRED YES)
+target_compile_features(cyber_routine_factory
+  PUBLIC
+  cxx_lambda_init_captures
+  cxx_lambdas)
+target_link_libraries(cyber_routine_factory cyber::common
                                             cyber::perf_event_cache)
 add_library(cyber::routine_factory ALIAS cyber_routine_factory)
 
@@ -41,14 +48,26 @@ add_library(cyber::croutine ALIAS cyber_croutine)
 add_executable(croutine_test croutine_test.cc)
 target_link_libraries(croutine_test gtest gtest_main gmock cyber::cyber)
 
+add_library(cyber_croutine_module INTERFACE)
+target_link_libraries(cyber_croutine_module INTERFACE
+                      cyber_routine_context
+                      cyber_routine_factory
+                      cyber_swap
+                      cyber_croutine)
 
-install(TARGETS cyber_routine_context
+
+install(TARGETS cyber_croutine_module
+                cyber_routine_context
                 cyber_routine_factory
                 cyber_swap
                 cyber_croutine
-    croutine_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS croutine_test
+        RUNTIME DESTINATION bin
+  )

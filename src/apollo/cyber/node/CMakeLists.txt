@@ -70,18 +70,36 @@ add_executable(node_test node_test.cc)
 target_link_libraries(node_test gtest gtest_main gmock cyber::cyber
                                                        cyber::proto)
 
+add_library(cyber_node_module INTERFACE)
+target_link_libraries(cyber_node_module INTERFACE
+                      cyber_node
+                      cyber_node_channel_impl
+                      cyber_node_service_impl
+                      cyber_reader_base
+                      cyber_reader
+                      cyber_writer_base
+                      cyber_writer)
 
-install(TARGETS cyber_node
+
+install(TARGETS cyber_node_module
+                cyber_node
                 cyber_node_channel_impl
                 cyber_node_service_impl
                 cyber_reader_base
                 cyber_reader
                 cyber_writer_base
                 cyber_writer
-    writer_reader_test
-                node_test
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS writer_reader_test
+                node_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )

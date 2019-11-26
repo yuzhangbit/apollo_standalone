@@ -27,8 +27,9 @@ target_link_libraries(planning_grid_search
     planning::proto)
 add_library(planning::grid_search ALIAS planning_grid_search)
 
-add_library(planning_open_space_utils dummy.cc)
+add_library(planning_open_space_utils INTERFACE)
 target_link_libraries(planning_open_space_utils
+    INTERFACE
     planning::grid_search
     planning::node3d
     planning::reeds_shepp_path)
@@ -60,11 +61,28 @@ target_link_libraries(hybrid_a_star_test
     gtest
     gtest_main)
 
+add_library(planning_open_space_coarse_trajectory_generator_module INTERFACE)
+target_link_libraries(planning_open_space_coarse_trajectory_generator_module
+    INTERFACE planning_node3d
+              planning_reeds_shepp_path
+              planning_grid_search
+              planning_open_space_utils
+              planning_hybrid_a_star)
+
 install(TARGETS planning_node3d
                 planning_reeds_shepp_path
                 planning_grid_search
                 planning_hybrid_a_star
-                node3d_test
+                planning_open_space_utils
+                planning_open_space_coarse_trajectory_generator_module
+      EXPORT  apollo-export
+      LIBRARY DESTINATION lib
+      ARCHIVE DESTINATION lib
+      RUNTIME DESTINATION bin
+      INCLUDES DESTINATION .
+      )
+
+install(TARGETS node3d_test
                 hybrid_a_star_test
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib

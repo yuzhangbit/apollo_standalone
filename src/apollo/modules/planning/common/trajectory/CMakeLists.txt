@@ -30,12 +30,26 @@ target_link_libraries(publishable_trajectory_test
     common::util
     gtest
     gtest_main)
+
+add_library(planning_common_trajectory_module INTERFACE)
+target_link_libraries(planning_common_trajectory_module INTERFACE
+    planning_discretized_trajectory
+    planning_publishable_trajectory)
+
 install(TARGETS planning_discretized_trajectory
                 planning_publishable_trajectory
-                discretized_trajectory_test
-                publishable_trajectory_test
+                planning_common_trajectory_module
+        EXPORT apollo-export
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION .
         )
+
+install(TARGETS discretized_trajectory_test
+                publishable_trajectory_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+)

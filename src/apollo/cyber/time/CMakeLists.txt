@@ -24,15 +24,28 @@ add_library(cyber_time time.cc)
 target_link_libraries(cyber_time cyber::duration)
 add_library(cyber::time ALIAS cyber_time)
 
+add_library(cyber_time_module INTERFACE)
+target_link_libraries(cyber_time_module INTERFACE
+                      cyber_duration
+                      cyber_time
+                      cyber_rate)
 
-install(TARGETS cyber_duration
+
+install(TARGETS cyber_time_module
+                cyber_duration
                 cyber_time
                 cyber_rate
-                duration_test
-                time_test
-                cyber_duration
-LIBRARY DESTINATION lib
-ARCHIVE DESTINATION lib
-RUNTIME DESTINATION bin
-INCLUDES DESTINATION .
+        EXPORT apollo-export
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
 )
+
+install(TARGETS duration_test
+                time_test
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION .
+  )

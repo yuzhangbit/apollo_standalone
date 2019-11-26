@@ -67,13 +67,33 @@ target_link_libraries(quintic_polynomial_curve1d_test planning::quartic_polynomi
                                                       cyber::common
                                                       gtest
                                                       gtest_main)
-install(TARGETS planning_piecewise_quintic_spiral_path
+
+add_library(planning_math_curve1d_module INTERFACE)
+target_link_libraries(planning_math_curve1d_module INTERFACE
+    planning_curve1d
+    planning_polynomial_curve1d
+    planning_piecewise_quintic_spiral_path
+    planning_quintic_spiral_path
+    planning_cubic_polynomial_curve1d
+    planning_quintic_polynomial_curve1d
+    planning_quartic_polynomial_curve1d)
+
+install(TARGETS planning_curve1d
+                planning_polynomial_curve1d
+                planning_piecewise_quintic_spiral_path
                 planning_quintic_spiral_path
                 planning_cubic_polynomial_curve1d
                 planning_quintic_polynomial_curve1d
                 planning_quartic_polynomial_curve1d
-                planning_curve1d
-                quartic_polynomial_curve1d_test
+                planning_math_curve1d_module
+        EXPORT  apollo-export
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    INCLUDES DESTINATION .
+)
+
+install(TARGETS quartic_polynomial_curve1d_test
                 cubic_polynomial_curve1d_test
                 quintic_polynomial_curve1d_test
     LIBRARY DESTINATION lib
