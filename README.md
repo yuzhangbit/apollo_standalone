@@ -2,7 +2,7 @@
 
 **Tested OS: ubuntu 16.04 LTS**
 
-This is a cmake version of the Apollo5.0 release. The project structure is much more clear and simpler than our previous work – [port_apollo](https://github.com/yuzhangbit/port_apollo).  Every `CMakelists.txt` file corresponds to a `bazel` `BUILD` file in the same folder.  
+This is a cmake version of the Apollo5.0 release. The project structure is much more clear and simpler than our previous work – [port_apollo](https://github.com/yuzhangbit/port_apollo).  Every `CMakelists.txt` file corresponds to a `bazel` `BUILD` file in the same folder.
 
 ## Dependencies
 
@@ -46,7 +46,7 @@ make -j$(nproc)
 sudo make install
 ```
 
-## Run Tests 
+## Run Tests
 
 ```bash
 bash run_all_test.bash
@@ -56,8 +56,10 @@ Since apollo tests need to load test data in `/apollo` directory to run, you hav
 
 **NOTE**: Not all the modules of apollo have been converted to cmake projects. We only convert codes related to `open space planners` under `apollo/modules/planning` directory.  But by referring to our CMakeLists examples, you can convert interested apollo modules to cmake projects with ease.  Below is the current converting status of apollo_standalone.
 
-* `apollo/cyber` (partial, only logging functions are enabled)
+* `apollo/cyber` (done)
 * `apollo/modules/common`  (done)
 * `apollo/modules/planning`  (most of the functions are enabled)
 * `apollo/modules/xxx` (only proto interfaces are enabled)
 
+## How to use apollo codes in other projects?
+All the libraries 
