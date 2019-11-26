@@ -11,6 +11,7 @@ add_subdirectory(lattice/trajectory_generation)
 add_subdirectory(open_space/coarse_trajectory_generator)
 add_subdirectory(open_space/trajectory_smoother)
 add_subdirectory(open_space/tools)
+add_subdirectory(open_space/examples)
 
 add_library(planning INTERFACE)
 target_include_directories(planning INTERFACE
@@ -35,3 +36,6 @@ install(TARGETS planning
     RUNTIME DESTINATION bin
     INCLUDES DESTINATION .
 )
+
+
+
