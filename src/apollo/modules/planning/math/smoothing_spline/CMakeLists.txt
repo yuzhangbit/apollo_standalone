@@ -135,6 +135,7 @@ target_link_libraries(osqp_spline_2d_solver_test planning::osqp_spline_2d_solver
 
 add_library(planning_math_smoothing_spline_module INTERFACE)
 target_link_libraries(planning_math_smoothing_spline_module INTERFACE
+        planning_spline_seg_kernel
         planning_affine_constraint
         planning_spline_1d_seg
         planning_spline_1d
@@ -152,6 +153,7 @@ target_link_libraries(planning_math_smoothing_spline_module INTERFACE
 
 
 install(TARGETS planning_affine_constraint
+                planning_spline_seg_kernel
                 planning_spline_1d_seg
                 planning_spline_1d
                 planning_spline_1d_constraint

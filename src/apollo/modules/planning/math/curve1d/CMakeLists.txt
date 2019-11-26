@@ -70,13 +70,17 @@ target_link_libraries(quintic_polynomial_curve1d_test planning::quartic_polynomi
 
 add_library(planning_math_curve1d_module INTERFACE)
 target_link_libraries(planning_math_curve1d_module INTERFACE
+    planning_curve1d
+    planning_polynomial_curve1d
     planning_piecewise_quintic_spiral_path
     planning_quintic_spiral_path
     planning_cubic_polynomial_curve1d
     planning_quintic_polynomial_curve1d
     planning_quartic_polynomial_curve1d)
 
-install(TARGETS planning_piecewise_quintic_spiral_path
+install(TARGETS planning_curve1d
+                planning_polynomial_curve1d
+                planning_piecewise_quintic_spiral_path
                 planning_quintic_spiral_path
                 planning_cubic_polynomial_curve1d
                 planning_quintic_polynomial_curve1d
