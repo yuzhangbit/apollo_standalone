@@ -32,6 +32,9 @@ add_library(planning::qp_spline_reference_line_smoother ALIAS planning_qp_spline
 
 add_library(planning_spiral_reference_line_smoother spiral_reference_line_smoother.cc
                                                     spiral_problem_interface.cc)
+target_include_directories(planning_spiral_reference_line_smoother
+        PUBLIC
+        ${IPOPT_INCLUDE_DIRS})
 target_link_libraries(planning_spiral_reference_line_smoother
         planning::proto
         planning::reference_line

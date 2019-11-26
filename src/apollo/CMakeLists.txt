@@ -24,8 +24,9 @@ find_package(TINYXML2 REQUIRED)
 find_package(PROJ4 REQUIRED)
 find_package(IPOPT REQUIRED)
 find_package(ADOLC REQUIRED)
-find_package(Eigen3 QUIET)
 find_package(OpenMP)
+find_package(Eigen3 REQUIRED)
+include(cmake/ImportEigen3.cmake)
 
 if(ENABLE_CUDA)
   find_package(CUDA REQUIRED)
@@ -40,29 +41,17 @@ endif(ENABLE_CUDA)
 set(CMAKE_INSTALL_PREFIX /apollo)
 
 if (OPENMP_FOUND)
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-    set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 endif()
 
-if(NOT EIGEN3_FOUND)
-  find_package(PkgConfig REQUIRED)
-  pkg_check_modules(EIGEN3 REQUIRED eigen3)
-  set(EIGEN3_INCLUDE_DIR ${EIGEN3_INCLUDE_DIRS})
-endif()
-include_directories(include
-                    ${gtest_SOURCE_DIR}/include/
-                    ${gmock_SOURCE_DIR}/include/
-                    ${gtest_SOURCE_DIR}
-                    ${CMAKE_CURRENT_SOURCE_DIR}
-                    ${qpOASES_INCLUDE_DIRS}
-                    ${osqp_INCLUDE_DIRS}
-                    ${TINYXML2_INCLUDE_DIRS}
-                    ${IPOPT_INCLUDE_DIRS}
-                    ${PROJ4_INCLUDE_DIRS}
-                    ${ADOLC_INCLUDE_DIRS}
-                    ${CUDA_INCLUDE_DIRS}
-                    ${EIGEN3_INCLUDE_DIR})
+include_directories(
+  include
+  ${gtest_SOURCE_DIR}/include/
+  ${gmock_SOURCE_DIR}/include/
+  ${gtest_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_subdirectory(cyber)
 add_subdirectory(modules/common)

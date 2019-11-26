@@ -7,6 +7,7 @@ add_library(common::qp_solver_gflags ALIAS common_qp_solver_gflags)
 
 add_library(common_qp_solver qp_solver.cc)
 add_library(common::qp_solver ALIAS common_qp_solver)
+target_link_libraries(common_qp_solver Eigen3::Eigen)
 
 add_library(common_active_set_qp_solver active_set_qp_solver.cc)
 target_link_libraries(common_active_set_qp_solver cyber::common

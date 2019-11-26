@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 add_library(planning_affine_constraint affine_constraint.cc)
-target_link_libraries(planning_affine_constraint planning::polynomial_xd)
+target_link_libraries(planning_affine_constraint
+        planning::polynomial_xd
+        Eigen3::Eigen)
 add_library(planning::affine_constraint ALIAS planning_affine_constraint)
 
 add_library(planning_spline_1d_seg spline_1d_seg.cc)
-target_link_libraries(planning_spline_1d_seg planning::polynomial_xd)
+target_link_libraries(planning_spline_1d_seg
+        planning::polynomial_xd
+        Eigen3::Eigen)
 add_library(planning::spline_1d_seg ALIAS planning_spline_1d_seg)
 
 add_library(planning_spline_1d_kernel spline_1d_kernel.cc)
@@ -29,7 +33,7 @@ add_library(planning::spline_1d_constraint ALIAS planning_spline_1d_constraint)
 
 
 add_library(planning_spline_seg_kernel spline_seg_kernel.cc)
-target_link_libraries(planning_spline_seg_kernel cyber::common)
+target_link_libraries(planning_spline_seg_kernel cyber::common Eigen3::Eigen)
 add_library(planning::spline_seg_kernel ALIAS planning_spline_seg_kernel)
 
 add_library(planning_spline_1d_solver spline_1d_solver.cc)
@@ -57,7 +61,8 @@ add_library(planning::spline_2d_seg ALIAS planning_spline_2d_seg)
 
 add_library(planning_spline_2d spline_2d.cc)
 target_link_libraries(planning_spline_2d planning::spline_2d_seg
-                                         planning::polynomial_xd)
+                                         planning::polynomial_xd
+                                         Eigen3::Eigen)
 add_library(planning::spline_2d ALIAS planning_spline_2d)
 
 
@@ -106,11 +111,15 @@ add_library(planning::osqp_spline_2d_solver ALIAS planning_osqp_spline_2d_solver
 
 
 add_library(planning_piecewise_linear_constraint piecewise_linear_constraint.cc)
-target_link_libraries(planning_piecewise_linear_constraint cyber::common)
+target_link_libraries(planning_piecewise_linear_constraint
+        cyber::common
+        Eigen3::Eigen)
 add_library(planning::piecewise_linear_constraint ALIAS planning_piecewise_linear_constraint)
 
 add_library(planning_piecewise_linear_kernel piecewise_linear_kernel.cc)
-target_link_libraries(planning_piecewise_linear_kernel cyber::common)
+target_link_libraries(planning_piecewise_linear_kernel
+        cyber::common
+        Eigen3::Eigen)
 add_library(planning::piecewise_linear_kernel ALIAS planning_piecewise_linear_kernel)
 
 

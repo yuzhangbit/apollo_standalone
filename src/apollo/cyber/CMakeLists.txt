@@ -11,12 +11,6 @@ ENABLE_LANGUAGE(ASM)
 find_package(UUID REQUIRED)
 find_package(FastRTPS REQUIRED)
 find_package(Threads REQUIRED)
-#include_directories(${FastRTPS_INCLUDE_DIR}
-#                    ${FastCDR_INCLUDE_DIR}
-#                    ${GLOG_INCLUDE_DIRS}
-#                    ${gflags_INCLUDE_DIRS}
-#                    ${PROTOBUF_INCLUDE_DIRS}
-#                    ${UUID_INCLUDE_DIR})
 
 add_subdirectory(base)
 add_subdirectory(blocker)

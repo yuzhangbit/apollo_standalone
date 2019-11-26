@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 add_library(planning_cos_theta_ipopt_interface cos_theta_ipopt_interface.cc)
+target_include_directories(planning_cos_theta_ipopt_interface
+    PUBLIC
+    ${IPOPT_INCLUDE_DIRS}
+    ${ADOLC_INCLUDE_DIRS})
 target_link_libraries(planning_cos_theta_ipopt_interface cyber::common
                                                          ${ADOLC_LIBRARIES}
                                                          ${IPOPT_LIBRARIES})
@@ -8,6 +12,10 @@ add_library(planning::cos_theta_ipopt_interface ALIAS planning_cos_theta_ipopt_i
 
 
 add_library(planning_fem_pos_deviation_ipopt_interface fem_pos_deviation_ipopt_interface.cc)
+target_include_directories(planning_fem_pos_deviation_ipopt_interface
+    PUBLIC
+    ${IPOPT_INCLUDE_DIRS}
+    ${ADOLC_INCLUDE_DIRS})
 target_link_libraries(planning_fem_pos_deviation_ipopt_interface cyber::common
                                                                  ${ADOLC_LIBRARIES}
                                                                  ${IPOPT_LIBRARIES})
@@ -15,6 +23,9 @@ add_library(planning::fem_pos_deviation_ipopt_interface ALIAS planning_fem_pos_d
 
 
 add_library(planning_fem_pos_deviation_osqp_interface fem_pos_deviation_osqp_interface.cc)
+target_include_directories(planning_fem_pos_deviation_osqp_interface
+    PUBLIC
+    ${osqp_INCLUDE_DIRS})
 target_link_libraries(planning_fem_pos_deviation_osqp_interface cyber::common
                                                                 ${osqp_LIBRARIES})
 add_library(planning::fem_pos_deviation_osqp_interface ALIAS planning_fem_pos_deviation_osqp_interface)
