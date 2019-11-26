@@ -1,20 +1,21 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-add_library(common_math dummy.cc)
-target_link_libraries(common_math common::angle
-                                  common::cartesian_frenet_conversion
-                                  common::curve_fitting
-                                  common::euler_angles_zxy
-                                  common::factorial
-                                  common::geometry
-                                  common::integral
-                                  common::kalman_filter
-                                  common::linear_interpolation
-                                  common::lqr
-                                  common::mpc
-                                  common::quaternion
-                                  common::search
-                                  common::sin_table)
+add_library(common_math INTERFACE)
+target_link_libraries(common_math INTERFACE
+    common::angle
+    common::cartesian_frenet_conversion
+    common::curve_fitting
+    common::euler_angles_zxy
+    common::factorial
+    common::geometry
+    common::integral
+    common::kalman_filter
+    common::linear_interpolation
+    common::lqr
+    common::mpc
+    common::quaternion
+    common::search
+    common::sin_table)
 add_library(common::math ALIAS common_math)
 
 add_library(common_geometry aabox2d.cc
@@ -237,21 +238,6 @@ install(TARGETS common_geometry
                 common_mpc
                 common_cartesian_frenet_conversion
                 common_hermite_spline
-                mpc_test
-                angle_test
-                math_utils_test
-                linear_interpolation_test
-                search_test
-                integral_test
-                vec2d_test
-                quaternion_test
-                euler_angles_zxy_test
-                aabox2d_test
-                aaboxkdtree2d_test
-                box2d_test
-                polygon2d_test
-                line_segment2d_test
-                kalman_filter_test
                 common_math
                 common_math_module
         EXPORT  apollo-export

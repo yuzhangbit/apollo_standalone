@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-add_library(cyber_common dummy.cc)
-target_link_libraries(cyber_common cyber::environment
-                                   cyber::file
-                                   cyber::global_data
-                                   cyber::log
-                                   cyber::common_macros
-                                   cyber::time_conversion
-                                   cyber::types
-                                   cyber::util)
+add_library(cyber_common INTERFACE)
+target_link_libraries(cyber_common INTERFACE
+    cyber::environment
+    cyber::file
+    cyber::global_data
+    cyber::log
+    cyber::common_macros
+    cyber::time_conversion
+    cyber::types
+    cyber::util)
 add_library(cyber::common ALIAS cyber_common)
 
 
