@@ -28,6 +28,7 @@ add_library(common_geometry aabox2d.cc
 target_link_libraries(common_geometry cyber::common
                                       common::string_util
                                       common::proto
+                                      Eigen3::Eigen
                                       ${osqp_LIBRARIES})
 add_library(common::geometry ALIAS common_geometry)
 
@@ -56,7 +57,7 @@ target_link_libraries(common_curve_fitting common::matrix_operations)
 add_library(common::curve_fitting ALIAS common_curve_fitting)
 
 add_library(common_matrix_operations matrix_operations.cc)
-target_link_libraries(common_matrix_operations cyber::common)
+target_link_libraries(common_matrix_operations cyber::common Eigen3::Eigen)
 add_library(common::matrix_operations ALIAS common_matrix_operations)
 
 add_library(common_kalman_filter kalman_filter.h)
@@ -102,7 +103,7 @@ target_link_libraries(common_integral cyber::common)
 add_library(common::integral ALIAS common_integral)
 
 add_library(common_lqr linear_quadratic_regulator.cc)
-target_link_libraries(common_lqr cyber::common)
+target_link_libraries(common_lqr cyber::common Eigen3::Eigen)
 add_library(common::lqr ALIAS common_lqr)
 
 add_library(common_mpc mpc_solver.cc)

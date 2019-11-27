@@ -25,3 +25,14 @@ else(ADOLC_FOUND)
     message(FATAL_ERROR "Could not find adolc library.")
   endif(ADOLC_FIND_REQUIRED)
 endif(ADOLC_FOUND)
+
+if(ADOLC_FOUND AND NOT TARGET adolc::adolc)
+    find_package(OpenMP)
+    add_library(adolc::adolc INTERFACE IMPORTED)
+    set_property(TARGET adolc::adolc PROPERTY
+        INTERFACE_INCLUDE_DIRECTORIES "${ADOLC_INCLUDE_DIRS}")
+    set_property(TARGET adolc::adolc
+                 PROPERTY INTERFACE_COMPILE_OPTIONS ${OpenMP_CXX_FLAGS})
+    set_property(TARGET adolc::adolc
+                 PROPERTY INTERFACE_LINK_LIBRARIES ${OpenMP_CXX_FLAGS} ${ADOLC_LIBRARIES})
+endif()
