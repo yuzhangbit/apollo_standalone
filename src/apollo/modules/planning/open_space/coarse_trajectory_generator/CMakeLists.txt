@@ -17,7 +17,7 @@ target_link_libraries(planning_reeds_shepp_path
     planning::planning_gflags
     planning::node3d
     planning::proto
-    ${ADOLC_LIBRARIES})
+    adolc::adolc)
 add_library(planning::reeds_shepp_path ALIAS planning_reeds_shepp_path)
 
 add_library(planning_grid_search grid_search.cc)

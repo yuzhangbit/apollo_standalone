@@ -28,7 +28,7 @@ find_dependency(TINYXML2 REQUIRED)
 find_dependency(PROJ4 REQUIRED)
 find_dependency(IPOPT REQUIRED)
 find_dependency(ADOLC REQUIRED)
-find_dependency(Eigen3 QUIET)
+find_dependency(Eigen3 REQUIRED)
 find_dependency(OpenMP)
 
 include(${CMAKE_CURRENT_LIST_DIR}/apollo-export.cmake)

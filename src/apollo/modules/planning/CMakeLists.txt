@@ -36,6 +36,3 @@ install(TARGETS planning
     RUNTIME DESTINATION bin
     INCLUDES DESTINATION .
 )
-
-
-

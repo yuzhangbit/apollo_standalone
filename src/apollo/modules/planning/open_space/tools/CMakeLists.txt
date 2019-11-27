@@ -8,8 +8,7 @@ add_library(distance_approach_problem_wrapper distance_approach_problem_wrapper.
 target_link_libraries(distance_approach_problem_wrapper
     planning::hybrid_a_star
     planning::distance_approach_problem
-    planning::dual_variable_warm_start_problem
-    ${OpenMP_CXX_FLAGS})
+    planning::dual_variable_warm_start_problem)
 
 
 add_library(open_space_roi_wrapper open_space_roi_wrapper.cc)
