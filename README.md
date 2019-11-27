@@ -55,8 +55,8 @@ bash run_all_test.bash
 Since apollo tests need to load test data in `/apollo` directory to run, you have to do `sudo make install` first.
 
 ## Example
-We provide a simple [example](./src/apollo/modules/planning/open_space/examples/open_space_demo.cpp) for open_space planner, here is the result.
-![d](./src/apollo/modules/planning/open_space/examples/parking.png)
+We provide a simple [example](./src/example_project/src/open_space_demo.cpp) for open_space planner, here is the result.
+![d](./src/example_project/parking.png)
 
 **NOTE**: Not all the modules of apollo have been converted to cmake projects. We only convert codes related to `open space planners` under `apollo/modules/planning` directory.  But by referring to our CMakeLists examples, you can convert interested apollo modules to cmake projects with ease.  Below is the current converting status of apollo_standalone.
 

@@ -34,3 +34,8 @@
 # protobuf generated files
 *.pb.cc
 *.pb.h
+
+# IDE folder
+.vscode/
+.idea/
+cmake-build-debug/
