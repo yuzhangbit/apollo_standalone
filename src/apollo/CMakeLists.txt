@@ -26,7 +26,6 @@ find_package(IPOPT REQUIRED)
 find_package(ADOLC REQUIRED)
 find_package(OpenMP)
 find_package(Eigen3 REQUIRED)
-include(cmake/ImportEigen3.cmake)
 
 if(ENABLE_CUDA)
   find_package(CUDA REQUIRED)
