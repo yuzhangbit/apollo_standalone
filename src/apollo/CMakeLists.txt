@@ -128,3 +128,5 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/cyber
         FILES_MATCHING PATTERN "*.conf"
         PATTERN ".svn" EXCLUDE
 )
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/deps/googletest/googletest/include/gtest/gtest_prod.h
+  DESTINATION gtest/)
