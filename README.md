@@ -83,7 +83,7 @@ target_link_libraries(listener apollo::cyber)
 add_executable(talker src/talker.cc)
 target_link_libraries(talker apollo::cyber)
 ```
-An `example_project` is provided in [src/example_prject](./src/example_project).
+An `example_project` is provided at [src/example_project](./src/example_project).
 
 ## Modules Exported
 ### Core Libraries
